@@ -16,7 +16,7 @@ error_reporting(0);           // Turn off all error reporting
     <meta name="author" content="">
     <link rel="shortcut icon" href="./img/trust-icon.png" type="image/png">
 
-    <title>Register | Sovereign Nexar Capital</title>
+    <title>Register | Altium Capitals.</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -54,7 +54,7 @@ error_reporting(0);           // Turn off all error reporting
                             </div><br>
 
                             <div class="text-left">
-                                <h1 class="h4 text-gray-900 mb-4">Create an Account with us at Sovereign Nexar Capital.</h1>
+                                <h1 class="h4 text-gray-900 mb-4">Create an Account with us at Altium Capitals..</h1>
                                 Complete the form below to get started <br><br><span style="color:red;">All fields are
                                     compulsory *</span><br><br>
                             </div>

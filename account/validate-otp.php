@@ -42,7 +42,7 @@ session_start();
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 						 				<!-- BEGIN login-brand -->
 				<div class="login-brand">
-					<a href="#"><span class=" fa fa-lock logo"></i></span> Sovereign Nexar Capital</a>
+					<a href="#"><span class=" fa fa-lock logo"></i></span> Altium Capitals.</a>
 				</div>
 				<!-- END login-brand -->
 				<!-- BEGIN login-desc -->
@@ -71,7 +71,7 @@ session_start();
                 </form>
 				<!-- END login-form --><br><br><br><br><br><br><br><br><br><br><br>
 				<footer class="">
-		&copy; <?php echo date('Y'); ?> Sovereign Nexar Capital Savings. All Rights Reserved.
+		&copy; <?php echo date('Y'); ?> Altium Capitals. Savings. All Rights Reserved.
 			
 		</footer>
 			</div>

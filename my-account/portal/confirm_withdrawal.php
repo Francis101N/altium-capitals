@@ -49,7 +49,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $mail->SMTPSecure = 'ssl';
   $mail->Port = 465;
 
-  $mail->setFrom('notification@sovereignnexarcapital.org', 'Sovereign Nexar Capital');
+  $mail->setFrom('notification@sovereignnexarcapital.org', 'Altium Capitals.');
             $mail->addAddress('sovereignnexarcapitalorganizat@gmail.com', 'Admin');
             $mail->isHTML(true);
             $mail->Subject = 'New Withdrawal Request From - ' . $username;

@@ -125,20 +125,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $mail->Username = 'notification@sovereignnexarcapital.org';
     $mail->Password = 'sovereignnexarCAPITAL1972$$$';
     $mail->From = 'notification@sovereignnexarcapital.org';
-    $mail->FromName = 'Sovereign Nexar Capital';
+    $mail->FromName = 'Altium Capitals.';
     $mail->isHTML(true);
     $mail->addAddress($email);
-    $mail->Subject = "Welcome to Sovereign Nexar Capital!";
+    $mail->Subject = "Welcome to Altium Capitals.!";
     $mail->Body = "
             <h2 style='color:#2e95c4;'>Account Created Successfully!</h2>
             <p>Dear $fname,</p>
-            <p>Your account has been successfully created on <strong>Sovereign Nexar Capital</strong>.</p>
+            <p>Your account has been successfully created on <strong>Altium Capitals.</strong>.</p>
             <p><strong>Account ID:</strong> $account_id<br>
             <strong>Username:</strong> $username<br>
             <strong>Password:</strong> $password</p>
             " . ($referral ? "<p>Referred by: <strong>$referral</strong></p>" : "") . "
             <p>We’re happy to have you on board!</p>
-            <p style='color:#2e95c4;'>Sovereign Nexar Capital</p>
+            <p style='color:#2e95c4;'>Altium Capitals.</p>
         ";
     $mail->send();
 
@@ -152,7 +152,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $admin->Username = 'notification@sovereignnexarcapital.org';
     $admin->Password = 'sovereignnexarCAPITAL1972$$$';
     $admin->From = 'notification@sovereignnexarcapital.org';
-    $admin->FromName = 'Sovereign Nexar Capital';
+    $admin->FromName = 'Altium Capitals.';
     $admin->isHTML(true);
     $admin->addAddress('sovereignnexarcapitalorganizat@gmail.com');
     $admin->Subject = "New Account Registration";
@@ -165,7 +165,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <p><strong>Phone:</strong> $phone</p>
             <p><strong>Referral:</strong> " . ($referral ? $referral : 'None') . "</p>
             <p style='margin-top:15px;'>Please log in to the admin panel to review and manage this account.</p>
-            <p style='color:#2e95c4; font-weight:bold;'>Sovereign Nexar Capital Notification System</p>
+            <p style='color:#2e95c4; font-weight:bold;'>Altium Capitals. Notification System</p>
         ";
     $admin->send();
 

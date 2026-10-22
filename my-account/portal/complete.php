@@ -14,7 +14,7 @@ require_once('fns.php');
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Registration Complete | Sovereign Nexar Capital</title>
+    <title>Registration Complete | Altium Capitals.</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">

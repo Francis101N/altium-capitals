@@ -251,16 +251,19 @@ $email = "support@altiumcapitals.com";
                     </h2>
                 </div>
                 <div class="flex flex-wrap gap-3">
-                    <a href="altiumcapitalholdingscert.jpeg" class="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold px-5 py-3 rounded-full shadow-lg transition">
-                        COMPANY CERT
+                    <!-- View Company Certificate (Opens in New Tab) -->
+                    <a href="./assets/images/company-cert.jpeg" target="_blank" rel="noopener noreferrer" class="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold px-5 py-3 rounded-full shadow-lg hover:shadow-blue-500/25 transition duration-300 transform hover:-translate-y-0.5">
+                        <span>COMPANY CERT</span>
                         <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
                         </svg>
                     </a>
-                    <a href="altiumcapitalholdings.pdf" class="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold px-5 py-3 rounded-full shadow-lg transition">
-                        COMPANY PDF
+
+                    <!-- View Company PDF (Opens in New Tab) -->
+                    <a href="./assets/images/altiumcapitals.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold px-5 py-3 rounded-full shadow-lg hover:shadow-blue-500/25 transition duration-300 transform hover:-translate-y-0.5">
+                        <span>COMPANY PDF</span>
                         <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
                         </svg>
                     </a>
                 </div>
@@ -900,7 +903,7 @@ $email = "support@altiumcapitals.com";
                     </div>
 
                     <!-- CTA Button -->
-                    <a href="deposit.php" class="w-full bg-slate-800/80 hover:bg-[#3b82f6] border border-slate-700/80 hover:border-transparent text-white text-xs font-extrabold py-4 rounded-xl text-center flex items-center justify-center space-x-2 transition duration-300 transform group-hover:scale-[1.02]">
+                    <a href="signin.php" class="w-full bg-slate-800/80 hover:bg-[#3b82f6] border border-slate-700/80 hover:border-transparent text-white text-xs font-extrabold py-4 rounded-xl text-center flex items-center justify-center space-x-2 transition duration-300 transform group-hover:scale-[1.02]">
                         <span>Select Plan</span>
                         <span class="text-base leading-none">→</span>
                     </a>
@@ -977,7 +980,7 @@ $email = "support@altiumcapitals.com";
                     </div>
 
                     <!-- CTA Button -->
-                    <a href="deposit.php" class="w-full bg-gradient-to-r from-[#3b82f6] to-[#2563eb] hover:from-[#2563eb] hover:to-[#1d4ed8] text-white text-xs font-extrabold py-4 rounded-xl text-center flex items-center justify-center space-x-2 shadow-lg shadow-blue-500/25 transition duration-300 transform group-hover:scale-[1.02]">
+                    <a href="signin.php" class="w-full bg-gradient-to-r from-[#3b82f6] to-[#2563eb] hover:from-[#2563eb] hover:to-[#1d4ed8] text-white text-xs font-extrabold py-4 rounded-xl text-center flex items-center justify-center space-x-2 shadow-lg shadow-blue-500/25 transition duration-300 transform group-hover:scale-[1.02]">
                         <span>Select Growth Plan</span>
                         <span class="text-base leading-none">→</span>
                     </a>
@@ -1050,7 +1053,7 @@ $email = "support@altiumcapitals.com";
                     </div>
 
                     <!-- CTA Button -->
-                    <a href="deposit.php" class="w-full bg-slate-800/80 hover:bg-[#3b82f6] border border-slate-700/80 hover:border-transparent text-white text-xs font-extrabold py-4 rounded-xl text-center flex items-center justify-center space-x-2 transition duration-300 transform group-hover:scale-[1.02]">
+                    <a href="signin.php" class="w-full bg-slate-800/80 hover:bg-[#3b82f6] border border-slate-700/80 hover:border-transparent text-white text-xs font-extrabold py-4 rounded-xl text-center flex items-center justify-center space-x-2 transition duration-300 transform group-hover:scale-[1.02]">
                         <span>Select Plan</span>
                         <span class="text-base leading-none">→</span>
                     </a>
@@ -1521,12 +1524,17 @@ $email = "support@altiumcapitals.com";
     <section class="py-16 bg-white text-gray-900 font-sans">
 
         <!-- Section Header Banner -->
-        <div class="w-full py-4 mb-12 text-center shadow-sm">
-            <h2 class="text-xl md:text-2xl font-extrabold text-primary-400 tracking-wider uppercase">
+        <div class="w-full py-5 mb-10 text-center bg-white border-bottom shadow-sm rounded-4 px-4">
+            <span class="badge bg-primary-subtle text-primary border border-primary-subtle px-3 py-1.5 rounded-pill font-mono fw-bold mb-2" style="font-size: 0.7rem;">
+                <i class="bx bx-play-circle me-1"></i> Investor Success Stories
+            </span><br><br>
+            <h2 class="text-xl md:text-2xl font-extrabold text-dark tracking-wider uppercase m-0">
                 TESTIMONIAL VIDEOS
             </h2>
+            <p class="text-muted small mt-1 max-w-md mx-auto">
+                Hear firsthand experiences from our global partners and investors sharing their portfolio growth journey.
+            </p>
         </div>
-
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 
 

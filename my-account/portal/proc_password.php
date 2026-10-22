@@ -49,7 +49,7 @@ if ($result) {
     $mail->Username = 'notifications@Altium Capitals.org';
     $mail->Password = 'Altium Capitals@1972$$';
     $mail->From = 'notifications@Altium Capitals.org';
-    $mail->FromName = 'Sovereign Nexar Capital';
+    $mail->FromName = 'Altium Capitals.';
     $mail->isHTML(true);
     $mail->addAddress($email);
 
@@ -58,7 +58,7 @@ if ($result) {
         <p>Dear {$fullname},</p>
         <p>This is a confirmation that your password for your account <strong>{$username}</strong> has been successfully updated.</p>
         <p>If you did not perform this change, please contact our support team immediately.</p>
-        <p>Best regards,<br> Sovereign Nexar Capital</p>
+        <p>Best regards,<br> Altium Capitals.</p>
     ";
 
     if(!$mail->send()) {

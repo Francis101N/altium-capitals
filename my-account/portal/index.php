@@ -75,7 +75,7 @@ if ($result_) {
     name="viewport"
     content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 
-  <title>Dashboard | Sovereign Nexar Capital</title>
+  <title>Dashboard | Altium Capitals.</title>
 
   <meta name="description" content="" />
 
@@ -341,87 +341,133 @@ if ($result_) {
               </div>
             </div>
 
-            <div class="row">
+            <!-- Executive Financial Metrics Grid -->
+            <div class="row g-4 mb-5">
 
-              <div class="col-lg-6 col-md-4 order-1">
-                <div class="row">
-                  <div class="col-lg-6 col-md-12 col-sm-12 col-12 mb-3">
-                    <div class="card h-100">
-                      <div class="card-body">
-                        <div class="d-flex align-items-start justify-content-between mb-2">
-                          <div class="avatar flex-shrink-0">
-                            <img
-                              src="../assets/img/icons/unicons/wallet.png"
-                              alt="account balance"
-                              class="rounded"
-                              style="width: 40px; height: 40px; object-fit: contain;" />
-                          </div>
-                        </div>
+              <!-- 1. Account Balance Card -->
+              <div class="col-12 col-sm-6 col-xl-3">
+                <div class="card border-0 rounded-4 shadow-sm h-100 overflow-hidden relative transition-all duration-300 hover:-translate-y-1 hover:shadow-lg" style="background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%); border: 1px solid #e2e8f0 !important;">
+                  <div class="card-body p-4 d-flex flex-column justify-content-between">
 
-                        <span class="text-uppercase fw-semibold small">Account Balance</span>
-                        <h3 class="card-title mb-1" style="max-width: 100%;">
-                          <?php echo '$' . number_format($row['account_balance'], 2); ?>
-                        </h3>
+                    <!-- Top Row: Icon & Status -->
+                    <div class="d-flex align-items-center justify-content-between mb-4">
+                      <div class="d-flex align-items-center justify-content-center rounded-3 p-3 shadow-sm" style="background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%); width: 48px; height: 48px;">
+                        <i class="bx bx-wallet-alt text-white fs-4"></i>
+                      </div>
+                      <span class="badge bg-primary-subtle text-primary border border-primary-subtle rounded-pill font-mono fw-bold px-3 py-1.5" style="font-size: 0.7rem;">
+                        <i class="bx bx-check-shield me-1"></i>Liquid
+                      </span>
+                    </div>
+
+                    <!-- Metric Details -->
+                    <div>
+                      <span class="d-block text-uppercase text-secondary fw-bold mb-1" style="font-size: 0.72rem; letter-spacing: 0.5px;">Account Balance</span>
+                      <h3 class="fw-extrabold text-dark mb-2 text-truncate tracking-tight" style="font-size: 1.65rem;">
+                        <?php echo '$' . number_format($row['account_balance'] ?? 0, 2); ?>
+                      </h3>
+                      <div class="d-flex align-items-center text-success small font-mono fw-bold">
+                        <i class="bx bx-trending-up me-1"></i>
+                        <span>+2.4% <span class="text-muted fw-normal ms-1">this week</span></span>
                       </div>
                     </div>
-                  </div>
 
-                  <div class="col-lg-6 col-md-12 col-sm-12 col-12 mb-3">
-                    <div class="card h-100">
-                      <div class="card-body">
-                        <div class="d-flex align-items-start justify-content-between mb-2">
-                          <div class="avatar flex-shrink-0">
-                            <i class="menu-icon tf-icons bx bx-down-arrow-circle text-success fs-3 p-1"
-                              style="background-color: #e8fadf; border-radius: 5px;"></i>
-                          </div>
-                        </div>
-                        <span class="text-uppercase fw-semibold small">Total Deposit</span>
-                        <h3 class="card-title mb-1" style="max-width: 100%;">
-                          <?php echo '$' . number_format($total_deposit, 2); ?>
-                        </h3>
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-              <!-- Total Revenue -->
-
-              <!--/ Total Revenue -->
-              <div class="col-12 col-md-8 col-lg-6 order-3 order-md-2">
-                <div class="row">
-                  <div class="col-lg-6 col-md-12 col-sm-12 col-12 mb-4">
-                    <div class="card h-100">
-                      <div class="card-body">
-                        <div class="d-flex align-items-start justify-content-between mb-2">
-                          <div class="avatar flex-shrink-0">
-                            <i class="menu-icon tf-icons bx bx-up-arrow-circle text-primary fs-3 p-1"
-                              style="background-color: #ffe7e3; border-radius: 5px;"></i>
-                          </div>
-                        </div>
-                        <span class="text-uppercase fw-semibold small">Total Withdrawal</span>
-                        <h3 class="card-title mb-2" style="word-break: break-word; overflow-wrap: break-word;">
-                          <?php echo '$' . number_format($total_withdraw, 2); ?>
-                        </h3>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-lg-6 col-md-12 col-sm-12 col-12 mb-4">
-                    <div class="card h-100">
-                      <div class="card-body">
-                        <div class="d-flex align-items-start justify-content-between mb-2">
-                          <div class="avatar flex-shrink-0">
-                            <i class="menu-icon tf-icons bx bx-bell text-warning fs-3 p-1" style="background-color: #fff2d6; border-radius: 5px;"></i>
-                          </div>
-                        </div>
-                        <span class="fw-semibold d-block mb-1 text-uppercase">PENDING WITHDRAWALS</span>
-                        <h3 class="text-warning fw-bold mb-0"><?php echo $pending_count; ?></h3>
-                      </div>
-                    </div>
                   </div>
                 </div>
               </div>
+
+              <!-- 2. Total Deposit Card -->
+              <div class="col-12 col-sm-6 col-xl-3">
+                <div class="card border-0 rounded-4 shadow-sm h-100 overflow-hidden relative transition-all duration-300 hover:-translate-y-1 hover:shadow-lg" style="background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%); border: 1px solid #e2e8f0 !important;">
+                  <div class="card-body p-4 d-flex flex-column justify-content-between">
+
+                    <!-- Top Row: Icon & Status -->
+                    <div class="d-flex align-items-center justify-content-between mb-4">
+                      <div class="d-flex align-items-center justify-content-center rounded-3 p-3 shadow-sm" style="background: linear-gradient(135deg, #10b981 0%, #047857 100%); width: 48px; height: 48px;">
+                        <i class="bx bx-down-arrow-circle text-white fs-4"></i>
+                      </div>
+                      <span class="badge bg-success-subtle text-success border border-success-subtle rounded-pill font-mono fw-bold px-3 py-1.5" style="font-size: 0.7rem;">
+                        Active Capital
+                      </span>
+                    </div>
+
+                    <!-- Metric Details -->
+                    <div>
+                      <span class="d-block text-uppercase text-secondary fw-bold mb-1" style="font-size: 0.72rem; letter-spacing: 0.5px;">Total Deposit</span>
+                      <h3 class="fw-extrabold text-dark mb-2 text-truncate tracking-tight" style="font-size: 1.65rem;">
+                        <?php echo '$' . number_format($total_deposit ?? 0, 2); ?>
+                      </h3>
+                      <div class="d-flex align-items-center text-primary small font-mono fw-bold">
+                        <i class="bx bx-shield-check me-1"></i>
+                        <span class="text-muted fw-semibold">100% Guaranteed Principal</span>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+              <!-- 3. Total Withdrawal Card -->
+              <div class="col-12 col-sm-6 col-xl-3">
+                <div class="card border-0 rounded-4 shadow-sm h-100 overflow-hidden relative transition-all duration-300 hover:-translate-y-1 hover:shadow-lg" style="background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%); border: 1px solid #e2e8f0 !important;">
+                  <div class="card-body p-4 d-flex flex-column justify-content-between">
+
+                    <!-- Top Row: Icon & Status -->
+                    <div class="d-flex align-items-center justify-content-between mb-4">
+                      <div class="d-flex align-items-center justify-content-center rounded-3 p-3 shadow-sm" style="background: linear-gradient(135deg, #6366f1 0%, #4338ca 100%); width: 48px; height: 48px;">
+                        <i class="bx bx-up-arrow-circle text-white fs-4"></i>
+                      </div>
+                      <span class="badge bg-indigo-subtle text-indigo border border-indigo-subtle rounded-pill font-mono fw-bold px-3 py-1.5" style="font-size: 0.7rem; color: #4338ca; background-color: #e0e7ff;">
+                        Cleared Payouts
+                      </span>
+                    </div>
+
+                    <!-- Metric Details -->
+                    <div>
+                      <span class="d-block text-uppercase text-secondary fw-bold mb-1" style="font-size: 0.72rem; letter-spacing: 0.5px;">Total Withdrawal</span>
+                      <h3 class="fw-extrabold text-dark mb-2 text-truncate tracking-tight" style="font-size: 1.65rem;">
+                        <?php echo '$' . number_format($total_withdraw ?? 0, 2); ?>
+                      </h3>
+                      <div class="d-flex align-items-center text-muted small font-mono fw-semibold">
+                        <i class="bx bx-time-five me-1"></i>
+                        <span>Instant Settlement Log</span>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+              <!-- 4. Pending Withdrawals Card -->
+              <div class="col-12 col-sm-6 col-xl-3">
+                <div class="card border-0 rounded-4 shadow-sm h-100 overflow-hidden relative transition-all duration-300 hover:-translate-y-1 hover:shadow-lg" style="background: linear-gradient(145deg, #ffffff 0%, #fffbeb 100%); border: 1px solid #fde68a !important;">
+                  <div class="card-body p-4 d-flex flex-column justify-content-between">
+
+                    <!-- Top Row: Icon & Status -->
+                    <div class="d-flex align-items-center justify-content-between mb-4">
+                      <div class="d-flex align-items-center justify-content-center rounded-3 p-3 shadow-sm" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); width: 48px; height: 48px;">
+                        <i class="bx bx-bell text-white fs-4"></i>
+                      </div>
+                      <span class="badge bg-warning-subtle text-warning border border-warning-subtle rounded-pill font-mono fw-bold px-3 py-1.5" style="font-size: 0.7rem;">
+                        Processing
+                      </span>
+                    </div>
+
+                    <!-- Metric Details -->
+                    <div>
+                      <span class="d-block text-uppercase text-secondary fw-bold mb-1" style="font-size: 0.72rem; letter-spacing: 0.5px;">Pending Requests</span>
+                      <h3 class="fw-extrabold text-warning mb-2 text-truncate tracking-tight" style="font-size: 1.65rem;">
+                        <?php echo htmlspecialchars($pending_count ?? 0, ENT_QUOTES, 'UTF-8'); ?>
+                      </h3>
+                      <div class="d-flex align-items-center text-warning small font-mono fw-bold">
+                        <i class="bx bx-refresh me-1 rotate-spin"></i>
+                        <span>Awaiting Admin Signoff</span>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
             </div>
             <div class="row">
               <!-- Order Statistics -->
@@ -478,55 +524,74 @@ if ($result_) {
         <!-- / Content -->
         <br>
         <div class=" container col-md-12 col-lg-12">
-          <div class="card h-100">
-            <div class="card-header d-flex align-items-center justify-content-between">
-              <h5 class="card-title m-0 me-2 text-primary">TRANSACTIONS <img src="../assets/img/bell red.gif" alt="bell-img" width="50px"> <small style="color:red;">(Top 5 most recent)</small> </h5>
+          <div class="card border-0 shadow-sm rounded-4 overflow-hidden border h-100" style="background: #ffffff; border-color: #e2e8f0 !important;">
+
+            <!-- Card Header -->
+            <div class="card-header bg-dark text-white py-3 px-4 d-flex align-items-center justify-content-between">
+              <div class="d-flex align-items-center">
+                <div class="w-8 h-8 rounded-2 bg-primary text-white d-flex align-items-center justify-content-center me-2">
+                  <i class="bx bx-history fs-5"></i>
+                </div>
+                <h5 class="mb-0 fw-bold text-white d-flex align-items-center">
+                  Transactions
+                  <img src="../assets/img/bell red.gif" alt="bell-img" style="width: 32px; height: 32px; object-fit: contain;" class="ms-2">
+                </h5>
+              </div>
+              <span class="badge bg-secondary font-mono">Top 5 Most Recent</span>
             </div>
-            <div class="card-body">
-              <ul class="p-0 m-0">
-                <li class="d-flex flex-column">
-                  <?php
-                  $query_t = "SELECT * FROM transactions WHERE account_id = '" . $row['account_id'] . "' ORDER BY id DESC LIMIT 5";
-                  $result_t = mysqli_query($conn, $query_t);
 
-                  if (mysqli_num_rows($result_t) > 0) {
-                    while ($row_t = mysqli_fetch_assoc($result_t)) {
+            <!-- Card Body -->
+            <div class="card-body p-4">
+              <div class="list-group list-group-flush">
+                <?php
+                $account_id_clean = mysqli_real_escape_string($conn, $row['account_id']);
+                $query_t = "SELECT * FROM transactions WHERE account_id = '{$account_id_clean}' ORDER BY id DESC LIMIT 5";
+                $result_t = mysqli_query($conn, $query_t);
 
-                      // Badge style
-                      $is_deposit = strtolower($row_t['type']) === 'deposit';
-                      $type_badge = $is_deposit
-                        ? "<span class='badge bg-success'>Deposit</span>"
-                        : "<span class='badge' style='background-color:red;' >Withdraw</span>";
+                if ($result_t && mysqli_num_rows($result_t) > 0) {
+                  while ($row_t = mysqli_fetch_assoc($result_t)) {
 
-                      // Add + or - to amount
-                      $amount_prefix = $is_deposit ? '+' : '-';
+                    $is_deposit = strtolower($row_t['type']) === 'deposit';
+                    $type_badge = $is_deposit
+                      ? "<span class='badge bg-success-subtle text-success fw-bold px-2.5 py-1 rounded-pill uppercase font-mono' style='font-size: 0.65rem;'>Deposit</span>"
+                      : "<span class='badge bg-danger-subtle text-danger fw-bold px-2.5 py-1 rounded-pill uppercase font-mono' style='font-size: 0.65rem;'>Withdraw</span>";
 
-                      echo "
-      <div class='col-12 col-lg-12 col-md-12 mb-2 border-bottom pb-2'>
-        <div class='d-flex justify-content-between align-items-center'>
-          <div>
-            <h6 class='mb-1 text-dark'>$type_badge - " . htmlspecialchars($row_t['currency']) . "</h6>
-            <p class='mb-0 small' style='color: #000;'>" . htmlspecialchars($row_t['description']) . "</p>
-          </div>
-          <div class='text-end'>
-            <h6 class='mb-1 fw-semibold' style='color:" . ($is_deposit ? '#16a34a' : '#dc2626') . ";'>
-              $amount_prefix" . number_format($row_t['amount'], 2) . "
-            </h6>
-            <p class='mb-0 text-muted small'>" . date('M d, Y h:i A', strtotime($row_t['created_at'])) . "</p>
-          </div>
-        </div>
-      </div>";
-                    }
-                  } else {
-                    echo "<p class='text-muted small'>No recent transactions available.</p>";
+                    $amount_prefix = $is_deposit ? '+' : '-';
+                    $amount_color  = $is_deposit ? 'text-success' : 'text-danger';
+
+                    echo '
+          <div class="py-3 border-bottom d-flex align-items-center justify-content-between">
+            <div class="d-flex align-items-start me-3">
+              <div class="w-10 h-10 rounded-circle ' . ($is_deposit ? 'bg-success-subtle text-success' : 'bg-danger-subtle text-danger') . ' d-flex align-items-center justify-content-center flex-shrink-0 me-3 mt-1">
+                <i class="bx ' . ($is_deposit ? 'bx-down-arrow-alt' : 'bx-up-arrow-alt') . ' fs-4"></i>
+              </div>
+              <div>
+                <div class="d-flex align-items-center gap-2 mb-1">
+                  ' . $type_badge . '
+                  <span class="fw-bold text-dark small">' . htmlspecialchars($row_t['currency']) . '</span>
+                </div>
+                <p class="mb-0 text-muted small text-truncate" style="max-width: 240px;">' . htmlspecialchars($row_t['description']) . '</p>
+              </div>
+            </div>
+            <div class="text-end flex-shrink-0">
+              <h6 class="mb-1 fw-extrabold ' . $amount_color . '">
+                ' . $amount_prefix . '$' . number_format((float)$row_t['amount'], 2) . '
+              </h6>
+              <span class="text-muted font-mono" style="font-size: 0.72rem;">' . date('M d, Y h:i A', strtotime($row_t['created_at'])) . '</span>
+            </div>
+          </div>';
                   }
-                  ?>
-
-                </li>
-
-
-              </ul>
+                } else {
+                  echo '
+        <div class="text-center py-4 text-muted">
+          <i class="bx bx-info-circle fs-3 mb-2"></i>
+          <p class="small mb-0">No recent transactions available.</p>
+        </div>';
+                }
+                ?>
+              </div>
             </div>
+
           </div>
         </div>
 
@@ -540,7 +605,7 @@ if ($result_) {
               <script>
                 document.write(new Date().getFullYear());
               </script>
-              , <strong>Sovereign Nexar Capital Investment.</strong>
+              , <strong>Altium Capitals.</strong>
             </div>
           </div><br>
         </footer>

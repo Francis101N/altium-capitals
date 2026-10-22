@@ -39,7 +39,7 @@ if (isset($_GET['error'])) {
 
 <head>
     <meta charset="utf-8" />
-    <title>Login | Sovereign Nexar Capital</title>
+    <title>Login | Altium Capitals.</title>
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
     <meta content="" name="description" />
     <meta content="" name="author" />
@@ -77,7 +77,7 @@ if (isset($_GET['error'])) {
                     <!-- BEGIN login-brand -->
                     <div class="login-brand">
                         <i class="fa fa-lock logo text-primary me-2"></i>
-                        <h3 class="fw-bold ">Sovereign Nexar Capital</h3>
+                        <h3 class="fw-bold ">Altium Capitals.</h3>
 
         </a>
     </div>
@@ -117,7 +117,7 @@ if (isset($_GET['error'])) {
     </form>
     <!-- END login-form --><br><br><br><br><br><br><br><br><br><br><br>
     <footer class="">
-        &copy; <?php echo date('Y'); ?> Sovereign Nexar Capital. All Rights Reserved.
+        &copy; <?php echo date('Y'); ?> Altium Capitals.. All Rights Reserved.
 
     </footer>
     </div>

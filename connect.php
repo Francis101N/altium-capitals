@@ -6,7 +6,7 @@ ini_set('display_errors', 1);
 date_default_timezone_set('America/New_York');
 
 
-    $mysqlUserName      = "altuimholdings";
+    $mysqlUserName      = "z";
     $mysqlPassword      = "altuimHOLDINGS123456$";
     $mysqlHostName      = "localhost";
     $DbName             = "altuimholdings";

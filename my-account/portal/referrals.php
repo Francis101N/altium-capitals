@@ -84,7 +84,7 @@ if ($total_referrals >= 20 || $total_earnings >= 200) {
     name="viewport"
     content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 
-  <title>Referrals | Sovereign Nexar Capital</title>
+  <title>Referrals | Altium Capitals.</title>
 
   <meta name="description" content="" />
 

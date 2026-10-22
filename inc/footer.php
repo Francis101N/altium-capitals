@@ -10,15 +10,15 @@
                 <!-- Column 1: Brand Info -->
                 <div class="lg:col-span-1">
                     <!-- Logo -->
-                   <a href="index.php"
-            class="flex items-center flex-shrink-0"
-            aria-label="Altium Capitals Home">
+                    <a href="index.php"
+                        class="flex items-center flex-shrink-0"
+                        aria-label="Altium Capitals Home">
 
-            <img
-                src="./assets/images/altium-logo.png"
-                alt="Altium Capitals Logo"
-                class="h-10 sm:h-12 w-auto max-w-[180px] object-contain">
-        </a>
+                        <img
+                            src="./assets/images/altium-logo.png"
+                            alt="Altium Capitals Logo"
+                            class="h-10 sm:h-12 w-auto max-w-[180px] object-contain">
+                    </a> <br>
                     <!-- About Paragraph -->
                     <p class="text-xs text-blue-50 leading-relaxed font-normal">
                         We provide a unique opportunity to make profits online, based on our innovative developments that allow us to conduct risk-free bot trading on the largest cryptocurrency and stock exchanges.

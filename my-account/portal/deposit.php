@@ -43,7 +43,7 @@ $row = mysqli_fetch_array($res);
     name="viewport"
     content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 
-  <title>Deposits | Sovereign Nexar Capital</title>
+  <title>Deposits | Altium Capitals.</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 
@@ -454,9 +454,13 @@ $row = mysqli_fetch_array($res);
                 <p class="text-muted small">Enter your deposit configuration below to generate payment address details.</p>
               </div>
 
-              <form action="confirm_deposit" method="POST">
+              <!-- Deposit Form -->
+              <form action="confirm_deposit" method="POST" id="depositForm" onsubmit="return validateDepositBalance(event)">
 
-                <!-- Account Balance -->
+                <!-- Hidden Account Balance Value for JS Validation (Float format) -->
+                <input type="hidden" id="rawAccountBalance" value="<?php echo floatval($row['account_balance'] ?? 0); ?>">
+
+                <!-- Account Balance Display -->
                 <div class="mb-3">
                   <label for="accountBalance" class="form-label fw-bold text-secondary small uppercase tracking-wider">Account Balance</label>
                   <div class="input-group">
@@ -497,6 +501,9 @@ $row = mysqli_fetch_array($res);
                     <span class="input-group-text bg-white fw-bold">$</span>
                     <input type="number" class="form-control py-2.5 fw-semibold" id="amount" name="amount" placeholder="0.00" min="200" step="any" required>
                   </div>
+                  <div id="balanceError" class="form-text text-danger fw-semibold mt-1" style="display: none;">
+                    <i class="bi bi-exclamation-triangle-fill me-1"></i> Insufficient funds! Amount entered exceeds your available account balance.
+                  </div>
                 </div>
 
                 <!-- Submit CTA Button -->
@@ -507,6 +514,26 @@ $row = mysqli_fetch_array($res);
                 </div>
 
               </form>
+
+              <!-- Validation JavaScript -->
+              <script>
+                function validateDepositBalance(event) {
+                  const rawBalance = parseFloat(document.getElementById('rawAccountBalance').value) || 0;
+                  const inputAmount = parseFloat(document.getElementById('amount').value) || 0;
+                  const errorDiv = document.getElementById('balanceError');
+
+                  if (inputAmount > rawBalance) {
+                    event.preventDefault(); // Stop form submission
+                    errorDiv.style.display = 'block';
+                    alert('Insufficient Account Balance! You cannot deposit $' + inputAmount.toLocaleString() + ' with an available balance of $' + rawBalance.toLocaleString() + '.');
+                    document.getElementById('amount').focus();
+                    return false;
+                  }
+
+                  errorDiv.style.display = 'none';
+                  return true;
+                }
+              </script>
             </div>
 
           </div>

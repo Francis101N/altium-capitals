@@ -50,7 +50,7 @@ if ($count > 0) {
 
     // set random OTP as session for this user
     $_SESSION['otp'] = rand(111111, 999999);
-    $subject = 'Sovereign Nexar Capital Otp';
+    $subject = 'Altium Capitals. Otp';
 
     //mail customer
 
@@ -68,7 +68,7 @@ if ($count > 0) {
     $mail->Username = 'notification@sovereignnexarcapital.org';
     $mail->Password = 'sovereignnexarCAPITAL1972$$$';
     $mail->From = 'notification@sovereignnexarcapital.org';
-    $mail->FromName = 'Sovereign Nexar Capital';
+    $mail->FromName = 'Altium Capitals.';
 
     $mail->addAddress($row['email']);
     $mail->isHTML(true);

@@ -57,7 +57,7 @@ $result = $stmt->get_result();
     name="viewport"
     content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 
-  <title>Withdraw | Sovereign Nexar Capital</title>
+  <title>Withdraw | Altium Capitals.</title>
 
   <meta name="description" content="" />
 

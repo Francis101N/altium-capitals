@@ -30,7 +30,7 @@ ini_set('display_errors', 0);
       content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
     />
 
-    <title>Validate OTP| Sovereign Nexar Capital</title>
+    <title>Validate OTP| Altium Capitals.</title>
 
     <meta name="description" content="" />
 

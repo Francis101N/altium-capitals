@@ -105,7 +105,7 @@
 <body>
   <div class="redirect-box">
     <div class="circle-loader"></div>
-    <h2>Welcome to Sovereign Nexar Capital!</h2>
+    <h2>Welcome to Altium Capitals.!</h2>
     <p>Registered successful.</p>
     <p>Redirecting to Login <span class="dot">.</span><span class="dot">.</span><span class="dot">.</span></p>
   </div>

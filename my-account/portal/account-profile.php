@@ -45,7 +45,7 @@ $row = mysqli_fetch_array($res);
     name="viewport"
     content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 
-  <title>Account Profile | Sovereign Nexar Capital</title>
+  <title>Account Profile | Altium Capitals.</title>
 
   <meta name="description" content="" />
 
