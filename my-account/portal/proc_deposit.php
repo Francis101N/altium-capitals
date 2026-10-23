@@ -64,20 +64,99 @@ if ($stmt) {
   $admin->Subject = "New Investment Deposit Request - " . $username;
 
   $admin->Body = "
-        <div style='font-family: Arial, sans-serif; padding: 20px; background: #f8fafc; color: #333;'>
-          <h2 style='color: #1e293b;'>Altium Capitals - Admin Alert</h2>
-          <h3 style='color: #3b82f6;'>New Deposit Submitted</h3>
-          <p><strong>Username:</strong> {$username}</p>
-          <p><strong>Investment Package:</strong> {$package}</p>
-          <p><strong>Payment Method:</strong> {$payment_method}</p>
-          <p><strong>Amount:</strong> \${$amount}</p>
-          <p><strong>Expected Daily Return:</strong> \${$profit}</p>
-          <p><strong>Target Wallet:</strong> {$wallet_address}</p>
-          <p><strong>Status:</strong> Pending Approval</p>
-          <hr style='border: none; border-top: 1px solid #e2e8f0; margin: 20px 0;'>
-          <p style='font-size: 12px; color: #64748b;'>Log in to your executive dashboard control panel to review and approve this transaction.</p>
-        </div>
-    ";
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>New Deposit Notification</title>
+</head>
+<body style='margin: 0; padding: 0; background-color: #f8fafc; font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif;'>
+    <table border='0' cellpadding='0' cellspacing='0' width='100%' style='background-color: #f8fafc; padding: 30px 15px;'>
+        <tr>
+            <td align='center'>
+                <table border='0' cellpadding='0' cellspacing='0' width='100%' style='max-width: 600px; background-color: #ffffff; border-radius: 12px; overflow: hidden; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);'>
+                    
+                    <!-- BRAND HEADER -->
+                    <tr>
+                        <td style='background-color: #1e293b; padding: 28px 32px;'>
+                            <table border='0' cellpadding='0' cellspacing='0' width='100%'>
+                                <tr>
+                                    <td>
+                                        <h2 style='color: #ffffff; margin: 0; font-size: 20px; font-weight: 800; letter-spacing: 0.5px;'>ALTIUM CAPITALS</h2>
+                                        <p style='color: #94a3b8; margin: 4px 0 0 0; font-size: 12px; font-weight: 500;'>Administrative Security & Telemetry Portal</p>
+                                    </td>
+                                    <td align='right'>
+                                        <span style='background-color: rgba(245, 158, 11, 0.15); color: #f59e0b; border: 1px solid rgba(245, 158, 11, 0.3); padding: 5px 12px; border-radius: 20px; font-size: 11px; font-weight: 700; text-transform: uppercase;'>Pending Deposit</span>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- CONTENT BODY -->
+                    <tr>
+                        <td style='padding: 32px;'>
+                            <h3 style='color: #0f172a; font-size: 18px; font-weight: 700; margin-top: 0; margin-bottom: 8px;'>New Deposit Submitted</h3>
+                            <p style='color: #64748b; font-size: 14px; margin-top: 0; margin-bottom: 24px; line-height: 1.5;'>An investor has submitted a new capital deposit request. Review the transaction parameters below:</p>
+
+                            <!-- TRANSACTION DETAILS TABLE -->
+                            <table border='0' cellpadding='0' cellspacing='0' width='100%' style='background-color: #f8fafc; border-radius: 8px; border: 1px solid #cbd5e1; margin-bottom: 24px;'>
+                                <tr>
+                                    <td style='padding: 14px 18px; border-bottom: 1px solid #e2e8f0; font-size: 13px; color: #64748b; font-weight: 600;'>Investor Username</td>
+                                    <td style='padding: 14px 18px; border-bottom: 1px solid #e2e8f0; font-size: 14px; color: #0f172a; font-weight: 700; font-family: monospace;'>{$username}</td>
+                                </tr>
+                                <tr>
+                                    <td style='padding: 14px 18px; border-bottom: 1px solid #e2e8f0; font-size: 13px; color: #64748b; font-weight: 600;'>Deposit Amount</td>
+                                    <td style='padding: 14px 18px; border-bottom: 1px solid #e2e8f0; font-size: 16px; color: #16a34a; font-weight: 800; font-family: monospace;'>\${$amount}</td>
+                                </tr>
+                                <tr>
+                                    <td style='padding: 14px 18px; border-bottom: 1px solid #e2e8f0; font-size: 13px; color: #64748b; font-weight: 600;'>Investment Package</td>
+                                    <td style='padding: 14px 18px; border-bottom: 1px solid #e2e8f0; font-size: 14px; color: #0f172a; font-weight: 700;'>{$package}</td>
+                                </tr>
+                                <tr>
+                                    <td style='padding: 14px 18px; border-bottom: 1px solid #e2e8f0; font-size: 13px; color: #64748b; font-weight: 600;'>Payment Method</td>
+                                    <td style='padding: 14px 18px; border-bottom: 1px solid #e2e8f0; font-size: 14px; color: #0f172a; font-weight: 700;'>{$payment_method}</td>
+                                </tr>
+                                <tr>
+                                    <td style='padding: 14px 18px; border-bottom: 1px solid #e2e8f0; font-size: 13px; color: #64748b; font-weight: 600;'>Expected Daily Return</td>
+                                    <td style='padding: 14px 18px; border-bottom: 1px solid #e2e8f0; font-size: 14px; color: #16a34a; font-weight: 700; font-family: monospace;'>\${$profit}</td>
+                                </tr>
+                                <tr>
+                                    <td style='padding: 14px 18px; border-bottom: 1px solid #e2e8f0; font-size: 13px; color: #64748b; font-weight: 600;'>Target Wallet Address</td>
+                                    <td style='padding: 14px 18px; border-bottom: 1px solid #e2e8f0; font-size: 12px; color: #334155; font-family: monospace; word-break: break-all;'>{$wallet_address}</td>
+                                </tr>
+                                <tr>
+                                    <td style='padding: 14px 18px; font-size: 13px; color: #64748b; font-weight: 600;'>Timestamp</td>
+                                    <td style='padding: 14px 18px; font-size: 13px; color: #475569; font-family: monospace;'>" . date('Y-m-d H:i:s') . " WAT</td>
+                                </tr>
+                            </table>
+
+                            <!-- ACTION BUTTON -->
+                            <table border='0' cellpadding='0' cellspacing='0' width='100%' style='margin-top: 28px; margin-bottom: 12px;'>
+                                <tr>
+                                    <td align='center'>
+                                        <a href='https://altiumcapitals.com/admin' target='_blank' style='background-color: #2563eb; color: #ffffff; display: inline-block; padding: 14px 28px; font-size: 14px; font-weight: 700; text-decoration: none; border-radius: 8px; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.2);'>Review Deposit in Admin Console &rarr;</a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- FOOTER -->
+                    <tr>
+                        <td style='background-color: #f1f5f9; padding: 20px 32px; text-align: center; border-top: 1px solid #e2e8f0;'>
+                            <p style='color: #94a3b8; font-size: 11px; margin: 0; line-height: 1.4;'>&copy; " . date('Y') . " Altium Capitals Ltd. Automated System Alert.<br>No reply is required for this transactional email.</p>
+                        </td>
+                    </tr>
+
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
+";
   @$admin->send(); // Suppress mail errors if SMTP auth requires adjustment on live server
 
   // ===================== SUCCESS REDIRECT PAGE =====================
@@ -112,7 +191,7 @@ if ($stmt) {
     </head>
     <body>
       <div class="success-box">
-        <div class="w-16 h-16 rounded-circle bg-success-subtle text-success mx-auto mb-3 d-flex align-items-center justify-content-center" style="font-size: 2.5rem;">
+        <div class="w-16 h-16 rounded-circle text-success mx-auto mb-3 d-flex align-items-center justify-content-center" style="font-size: 2.5rem;">
           <i class="bx bx-check-circle"></i>
         </div>
         <h4 class="fw-extrabold text-dark mt-2">Deposit Saved Successfully!</h4>

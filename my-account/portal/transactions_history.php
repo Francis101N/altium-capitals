@@ -89,7 +89,7 @@ $total = 0;
     name="viewport"
     content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 
-  <title>Deposit | Altium Capitals.</title>
+  <title>Transactions History | Altium Capitals.</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 
@@ -399,12 +399,14 @@ $total = 0;
                   <!-- Currency Selector -->
                   <div class="col-md-3 col-6">
                     <label for="currency" class="form-label fw-bold text-secondary small uppercase tracking-wider">Currency</label>
-                    <select id="currency" name="currency" class="form-select fw-semibold">
+                    <select id="currency" name="currency" class="form-select fw-semibold text-dark font-mono">
                       <option value="All eCurrencies" <?= ($currency ?? '') == 'All eCurrencies' ? 'selected' : '' ?>>All eCurrencies</option>
                       <option value="Bitcoin" <?= ($currency ?? '') == 'Bitcoin' ? 'selected' : '' ?>>Bitcoin (BTC)</option>
                       <option value="Ethereum" <?= ($currency ?? '') == 'Ethereum' ? 'selected' : '' ?>>Ethereum (ETH)</option>
                       <option value="USDT (TRC20)" <?= ($currency ?? '') == 'USDT (TRC20)' ? 'selected' : '' ?>>USDT (TRC20)</option>
                       <option value="USDC (ERC20)" <?= ($currency ?? '') == 'USDC (ERC20)' ? 'selected' : '' ?>>USDC (ERC20)</option>
+                      <option value="USDT (ERC20)" <?= ($currency ?? '') == 'USDT (ERC20)' ? 'selected' : '' ?>>USDT (ERC20)</option>
+                      <option value="Tron" <?= ($currency ?? '') == 'Tron' ? 'selected' : '' ?>>Tron (TRX)</option>
                     </select>
                   </div>
 
@@ -433,7 +435,7 @@ $total = 0;
                       <?php if (isset($result) && $result->num_rows > 0): ?>
                         <?php while ($row = $result->fetch_assoc()):
                           $total += $row['amount'];
-                          $typeClass = (strtolower($row['type']) == 'deposit' || strtolower($row['type']) == 'earning') ? 'bg-success-subtle text-success' : 'bg-primary-subtle text-primary';
+                          $typeClass = (strtolower($row['type']) == 'deposit' || strtolower($row['type']) == 'earning') ? 'bg-success-subtle text-success' : 'bg-danger-subtle text-danger';
                         ?>
                           <tr>
                             <td>

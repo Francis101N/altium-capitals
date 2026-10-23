@@ -44,6 +44,15 @@ if ($result_) {
   $row_ = mysqli_fetch_assoc($result_);
   $pending_count = $row_['pending_count'];
 }
+// Query to count all pending deposits for this user
+$query_ = "SELECT COUNT(*) AS pending_count FROM deposit WHERE username = '$username' AND status = 'Pending'";
+$result_ = mysqli_query($conn, $query_);
+
+$pending_counts = 0;
+if ($result_) {
+  $row_ = mysqli_fetch_assoc($result_);
+  $pending_counts = $row_['pending_count'];
+}
 
 
 ?>
@@ -442,10 +451,14 @@ if ($result_) {
                 <div class="card border-0 rounded-4 shadow-sm h-100 overflow-hidden relative transition-all duration-300 hover:-translate-y-1 hover:shadow-lg" style="background: linear-gradient(145deg, #ffffff 0%, #fffbeb 100%); border: 1px solid #fde68a !important;">
                   <div class="card-body p-4 d-flex flex-column justify-content-between">
 
-                    <!-- Top Row: Icon & Status -->
+                    <!-- Top Row: SVG Icon & Status Badge -->
                     <div class="d-flex align-items-center justify-content-between mb-4">
-                      <div class="d-flex align-items-center justify-content-center rounded-3 p-3 shadow-sm" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); width: 48px; height: 48px;">
-                        <i class="bx bx-bell text-white fs-4"></i>
+                      <div class="d-flex align-items-center justify-content-center rounded-3 shadow-sm" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); width: 48px; height: 48px;">
+                        <!-- Clock / Pending SVG Icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white">
+                          <circle cx="12" cy="12" r="10"></circle>
+                          <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
                       </div>
                       <span class="badge bg-warning-subtle text-warning border border-warning-subtle rounded-pill font-mono fw-bold px-3 py-1.5" style="font-size: 0.7rem;">
                         Processing
@@ -454,12 +467,56 @@ if ($result_) {
 
                     <!-- Metric Details -->
                     <div>
-                      <span class="d-block text-uppercase text-secondary fw-bold mb-1" style="font-size: 0.72rem; letter-spacing: 0.5px;">Pending Requests</span>
+                      <span class="d-block text-uppercase text-secondary fw-bold mb-1" style="font-size: 0.72rem; letter-spacing: 0.5px;">Pending Withdrawals</span>
                       <h3 class="fw-extrabold text-warning mb-2 text-truncate tracking-tight" style="font-size: 1.65rem;">
                         <?php echo htmlspecialchars($pending_count ?? 0, ENT_QUOTES, 'UTF-8'); ?>
                       </h3>
                       <div class="d-flex align-items-center text-warning small font-mono fw-bold">
-                        <i class="bx bx-refresh me-1 rotate-spin"></i>
+                        <!-- Animated Refresh SVG Icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="me-1 animate-spin">
+                          <path d="M21.5 2v6h-6"></path>
+                          <path d="M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"></path>
+                        </svg>
+                        <span>Awaiting Admin Signoff</span>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+              <!-- 5. Pending Deposits Card -->
+              <div class="col-12 col-sm-6 col-xl-3">
+                <div class="card border-0 rounded-4 shadow-sm h-100 overflow-hidden relative transition-all duration-300 hover:-translate-y-1 hover:shadow-lg" style="background: linear-gradient(145deg, #ffffff 0%, #fffbeb 100%); border: 1px solid #fde68a !important;">
+                  <div class="card-body p-4 d-flex flex-column justify-content-between">
+
+                    <!-- Top Row: SVG Icon & Status Badge -->
+                    <div class="d-flex align-items-center justify-content-between mb-4">
+                      <div class="d-flex align-items-center justify-content-center rounded-3 shadow-sm" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); width: 48px; height: 48px;">
+                        <!-- Wallet / Deposit SVG Icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white">
+                          <path d="M20 12V8H6a2 2 0 0 1-2-2c0-1.1.9-2 2-2h12v4"></path>
+                          <path d="M4 6v12c0 1.1.9 2 2 2h14v-4"></path>
+                          <path d="M18 12a2 2 0 0 0-2 2c0 1.1.9 2 2 2h4v-4h-4z"></path>
+                        </svg>
+                      </div>
+                      <span class="badge bg-warning-subtle text-warning border border-warning-subtle rounded-pill font-mono fw-bold px-3 py-1.5" style="font-size: 0.7rem;">
+                        Processing
+                      </span>
+                    </div>
+
+                    <!-- Metric Details -->
+                    <div>
+                      <span class="d-block text-uppercase text-secondary fw-bold mb-1" style="font-size: 0.72rem; letter-spacing: 0.5px;">Pending Deposits</span>
+                      <h3 class="fw-extrabold text-warning mb-2 text-truncate tracking-tight" style="font-size: 1.65rem;">
+                        <?php echo htmlspecialchars($pending_counts ?? 0, ENT_QUOTES, 'UTF-8'); ?>
+                      </h3>
+                      <div class="d-flex align-items-center text-warning small font-mono fw-bold">
+                        <!-- Animated Refresh SVG Icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="me-1 animate-spin">
+                          <path d="M21.5 2v6h-6"></path>
+                          <path d="M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"></path>
+                        </svg>
                         <span>Awaiting Admin Signoff</span>
                       </div>
                     </div>
@@ -475,186 +532,295 @@ if ($result_) {
 
               </div>
 
-              <section class="exchange-table-wrap pb-75">
+              <!-- Live Currency Rates & Crypto Converter Section -->
+              <section class="exchange-table-wrap py-5 bg-light">
                 <div class="container">
-                  <div class="row gx-5">
-                    <div class="col-lg-6">
-                      <div class="section-title style1 text-center mb-25">
-                        <h3 class="mt-4">Live Currency Rates</h3>
-                      </div>
-                      <div>
-                        <script defer src="https://www.livecoinwatch.com/static/lcw-widget.js"></script>
-                        <div class="livecoinwatch-widget-3" lcw-base="USD" lcw-d-head="true" lcw-d-name="true"
-                          lcw-d-code="true" lcw-d-icon="true" lcw-color-tx="#ffffff" lcw-color-bg="#1f2434"
-                          lcw-border-w="1"></div>
-                        <div>
+                  <div class="row g-4 align-items-stretch">
+
+                    <!-- 1. Live Currency Rates -->
+                    <div class="col-lg-6 d-flex">
+                      <div class="card border-0 shadow-sm rounded-4 overflow-hidden w-100 bg-white" style="border: 1px solid #e2e8f0 !important;">
+
+                        <!-- Executive Card Header -->
+                        <div class="card-header bg-dark text-white py-3.5 px-4 d-flex align-items-center justify-content-between">
+                          <div class="d-flex align-items-center">
+                            <div class="rounded-3 bg-primary text-white d-flex align-items-center justify-content-center me-3 shadow-sm" style="width: 40px; height: 40px;">
+                              <!-- Coin/Trend SVG Icon -->
+                              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="8" cy="8" r="6"></circle>
+                                <path d="M18 8a6 6 0 0 1-6 6"></path>
+                                <path d="M22 12a6 6 0 0 1-6 6"></path>
+                              </svg>
+                            </div>
+                            <div>
+                              <h5 class="mb-0 fw-extrabold text-white fs-6">Live Currency Rates</h5>
+                              <span class="text-muted small" style="font-size: 0.72rem;">Real-time market valuation and asset price tracking</span>
+                            </div>
+                          </div>
+                          <span class="badge bg-primary-subtle text-primary border border-primary-subtle font-mono fw-bold px-3 py-1.5 rounded-pill" style="font-size: 0.7rem;">
+                            Live Feeds
+                          </span>
                         </div>
-                      </div>
 
-                    </div>
-                    <div class="col-lg-6">
-                      <div class="section-title style1 text-center mb-25">
-                        <h3 class="mt-4">Crypto Currency Converter</h3>
+                        <!-- Widget Body Container -->
+                        <div class="card-body p-3 d-flex flex-column justify-content-center bg-dark rounded-bottom-4">
+                          <script defer src="https://www.livecoinwatch.com/static/lcw-widget.js"></script>
+                          <div class="livecoinwatch-widget-3 w-100 rounded-3 overflow-hidden"
+                            lcw-base="USD"
+                            lcw-d-head="true"
+                            lcw-d-name="true"
+                            lcw-d-code="true"
+                            lcw-d-icon="true"
+                            lcw-color-tx="#ffffff"
+                            lcw-color-bg="#1f2434"
+                            lcw-border-w="0">
+                          </div>
+                        </div>
+
                       </div>
-                      <!-- START CODE Attention! Do not modify this code; -->
-                      <script>
-                        var fm = "BTC";
-                        var to = "USD";
-                        var tz = "timezone";
-                        var sz = "1x1";
-                        var lg = "en";
-                        var st = "primary";
-                        var lr = "0";
-                        var rd = "0";
-                      </script>
-                      <script src="//currencyrate.today/converter"></script>
-                      <div style="text-align:right"><a href="https://currencyrate.today">CurrencyRate</a></div><!-- Attention! Do not modify this code; END CODE -->
                     </div>
+
+                    <!-- 2. Crypto Currency Converter -->
+                    <div class="col-lg-6 d-flex">
+                      <div class="card border-0 shadow-sm rounded-4 overflow-hidden w-100 bg-white" style="border: 1px solid #e2e8f0 !important;">
+
+                        <!-- Executive Card Header -->
+                        <div class="card-header bg-dark text-white py-3.5 px-4 d-flex align-items-center justify-content-between">
+                          <div class="d-flex align-items-center">
+                            <div class="rounded-3 bg-success text-white d-flex align-items-center justify-content-center me-3 shadow-sm" style="width: 40px; height: 40px;">
+                              <!-- Repeat / Exchange SVG Icon -->
+                              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="17 1 21 5 17 9"></polyline>
+                                <path d="M3 11V9a4 4 0 0 1 4-4h14"></path>
+                                <polyline points="7 23 3 19 7 15"></polyline>
+                                <path d="M21 13v2a4 4 0 0 1-4 4H3"></path>
+                              </svg>
+                            </div>
+                            <div>
+                              <h5 class="mb-0 fw-extrabold text-white fs-6">Crypto Currency Converter</h5>
+                              <span class="text-muted small" style="font-size: 0.72rem;">Instant crypto-to-fiat exchange rate calculation</span>
+                            </div>
+                          </div>
+                          <span class="badge bg-success-subtle text-success border border-success-subtle font-mono fw-bold px-3 py-1.5 rounded-pill" style="font-size: 0.7rem;">
+                            Calculator
+                          </span>
+                        </div>
+
+                        <!-- Widget Body Container -->
+                        <div class="card-body p-0 d-flex flex-column justify-content-between bg-dark rounded-bottom-4" style="min-height: 350px;">
+                          <div style="height: 326px; width: 100%; overflow: hidden;">
+                            <iframe src="https://widget.coinlib.io/widget?type=converter&theme=dark&from=BTC&to=USD"
+                              width="100%"
+                              height="326px"
+                              scrolling="no"
+                              marginwidth="0"
+                              marginheight="0"
+                              frameborder="0"
+                              border="0"
+                              style="border: 0; margin: 0; padding: 0; width: 100%;">
+                            </iframe>
+                          </div>
+                          <div class="px-3 py-1 text-end" style="background-color: #1B2030; font-size: 11px; font-family: Verdana, sans-serif;">
+                            <a href="https://coinlib.io/converter/btc/usd" target="_blank" rel="nofollow" class="text-white-50 text-decoration-none fw-semibold">
+                              Powered by Coinlib
+                            </a>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+
                   </div>
-
                 </div>
+              </section>
+
+
+
+
+
             </div>
-
-
-
-            </section>
-
           </div>
-        </div>
-        <!-- / Content -->
-        <br>
-        <div class=" container col-md-12 col-lg-12">
-          <div class="card border-0 shadow-sm rounded-4 overflow-hidden border h-100" style="background: #ffffff; border-color: #e2e8f0 !important;">
+          <!-- / Content -->
+          <br>
+          <div class=" container col-md-12 col-lg-12">
+            <div class="card border-0 shadow-sm rounded-4 overflow-hidden border h-100" style="background: #ffffff; border-color: #e2e8f0 !important;">
 
-            <!-- Card Header -->
-            <div class="card-header bg-dark text-white py-3 px-4 d-flex align-items-center justify-content-between">
-              <div class="d-flex align-items-center">
-                <div class="w-8 h-8 rounded-2 bg-primary text-white d-flex align-items-center justify-content-center me-2">
-                  <i class="bx bx-history fs-5"></i>
+              <!-- Card Header -->
+              <div class="card-header bg-dark text-white py-3 px-4 d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center">
+                  <div class="w-8 h-8 rounded-2 bg-primary text-white d-flex align-items-center justify-content-center me-2">
+                    <i class="bx bx-history fs-5"></i>
+                  </div>
+                  <h5 class="mb-0 fw-bold text-white d-flex align-items-center">
+                    Transactions
+                    <img src="../assets/img/bell red.gif" alt="bell-img" style="width: 32px; height: 32px; object-fit: contain;" class="ms-2">
+                  </h5>
                 </div>
-                <h5 class="mb-0 fw-bold text-white d-flex align-items-center">
-                  Transactions
-                  <img src="../assets/img/bell red.gif" alt="bell-img" style="width: 32px; height: 32px; object-fit: contain;" class="ms-2">
-                </h5>
+                <span class="badge bg-secondary font-mono">Top 5 Most Recent</span>
               </div>
-              <span class="badge bg-secondary font-mono">Top 5 Most Recent</span>
-            </div>
 
-            <!-- Card Body -->
-            <div class="card-body p-4">
-              <div class="list-group list-group-flush">
-                <?php
-                $account_id_clean = mysqli_real_escape_string($conn, $row['account_id']);
-                $query_t = "SELECT * FROM transactions WHERE account_id = '{$account_id_clean}' ORDER BY id DESC LIMIT 5";
-                $result_t = mysqli_query($conn, $query_t);
+              <!-- Card Body -->
+              <div class="card-body p-4">
+                <div class="list-group list-group-flush">
+                  <?php
+                  $account_id_clean = mysqli_real_escape_string($conn, $row['account_id']);
 
-                if ($result_t && mysqli_num_rows($result_t) > 0) {
-                  while ($row_t = mysqli_fetch_assoc($result_t)) {
+                  $query_t = "SELECT * FROM transactions
+                    WHERE account_id = '{$account_id_clean}'
+                    ORDER BY id DESC
+                    LIMIT 5";
 
-                    $is_deposit = strtolower($row_t['type']) === 'deposit';
-                    $type_badge = $is_deposit
-                      ? "<span class='badge bg-success-subtle text-success fw-bold px-2.5 py-1 rounded-pill uppercase font-mono' style='font-size: 0.65rem;'>Deposit</span>"
-                      : "<span class='badge bg-danger-subtle text-danger fw-bold px-2.5 py-1 rounded-pill uppercase font-mono' style='font-size: 0.65rem;'>Withdraw</span>";
+                  $result_t = mysqli_query($conn, $query_t);
 
-                    $amount_prefix = $is_deposit ? '+' : '-';
-                    $amount_color  = $is_deposit ? 'text-success' : 'text-danger';
+                  if ($result_t && mysqli_num_rows($result_t) > 0) {
+                    while ($row_t = mysqli_fetch_assoc($result_t)) {
 
+                      // Determine transaction type
+                      $is_deposit = strtolower(trim($row_t['type'])) === 'deposit';
+
+                      // Transaction badge colors
+                      $type_badge = $is_deposit
+                        ? "<span class='badge rounded-pill fw-bold px-2 py-1 text-uppercase' style='font-size:0.65rem; background-color:#d1fae5; color:#047857;'>Deposit</span>"
+                        : "<span class='badge rounded-pill fw-bold px-2 py-1 text-uppercase' style='font-size:0.65rem; background-color:#fee2e2; color:#dc2626;'>Withdraw</span>";
+
+                      // Transaction amount styling
+                      $amount_prefix = $is_deposit ? '+' : '-';
+                      $amount_color = $is_deposit ? '#198754' : '#dc2626';
+
+                      // Icon styling
+                      $icon_bg_color = $is_deposit
+                        ? 'background-color:#d1fae5; color:#047857;'
+                        : 'background-color:#fee2e2; color:#dc2626;';
+
+                      // Transaction icon
+                      $transaction_icon = $is_deposit
+                        ? 'bx-down-arrow-alt'
+                        : 'bx-up-arrow-alt';
+
+                      // Safely format transaction details
+                      $currency = htmlspecialchars($row_t['currency'] ?? '', ENT_QUOTES, 'UTF-8');
+                      $description = htmlspecialchars($row_t['description'] ?? '', ENT_QUOTES, 'UTF-8');
+                      $amount = number_format((float)($row_t['amount'] ?? 0), 2);
+
+                      $timestamp = !empty($row_t['created_at'])
+                        ? strtotime($row_t['created_at'])
+                        : false;
+
+                      $formatted_date = $timestamp
+                        ? date('M d, Y h:i A', $timestamp)
+                        : 'Date unavailable';
+
+                      echo '
+                <div class="py-3 border-bottom d-flex align-items-center justify-content-between">
+
+                    <div class="d-flex align-items-start me-3">
+
+                        <!-- Transaction Icon -->
+                        <div class="rounded-circle d-flex align-items-center justify-content-center flex-shrink-0 me-3 mt-1 shadow-sm"
+                             style="width:40px; height:40px; ' . $icon_bg_color . '">
+                            <i class="bx ' . $transaction_icon . ' fs-4"></i>
+                        </div>
+
+                        <!-- Transaction Details -->
+                        <div>
+                            <div class="d-flex align-items-center gap-2 mb-1">
+                                ' . $type_badge . '
+                                <span class="fw-bold text-dark small">' . $currency . '</span>
+                            </div>
+
+                            <p class="mb-0 text-muted small text-truncate"
+                               style="max-width:240px;">' . $description . '</p>
+                        </div>
+
+                    </div>
+
+                    <!-- Amount and Date -->
+                    <div class="text-end flex-shrink-0">
+                        <h6 class="mb-1 fw-bold font-mono"
+                            style="color:' . $amount_color . ';">
+                            ' . $amount_prefix . '$' . $amount . '
+                        </h6>
+
+                        <span class="text-muted font-mono small"
+                              style="font-size:0.72rem;">' . $formatted_date . '</span>
+                    </div>
+
+                </div>';
+                    }
+                  } else {
                     echo '
-          <div class="py-3 border-bottom d-flex align-items-center justify-content-between">
-            <div class="d-flex align-items-start me-3">
-              <div class="w-10 h-10 rounded-circle ' . ($is_deposit ? 'bg-success-subtle text-success' : 'bg-danger-subtle text-danger') . ' d-flex align-items-center justify-content-center flex-shrink-0 me-3 mt-1">
-                <i class="bx ' . ($is_deposit ? 'bx-down-arrow-alt' : 'bx-up-arrow-alt') . ' fs-4"></i>
-              </div>
-              <div>
-                <div class="d-flex align-items-center gap-2 mb-1">
-                  ' . $type_badge . '
-                  <span class="fw-bold text-dark small">' . htmlspecialchars($row_t['currency']) . '</span>
-                </div>
-                <p class="mb-0 text-muted small text-truncate" style="max-width: 240px;">' . htmlspecialchars($row_t['description']) . '</p>
-              </div>
-            </div>
-            <div class="text-end flex-shrink-0">
-              <h6 class="mb-1 fw-extrabold ' . $amount_color . '">
-                ' . $amount_prefix . '$' . number_format((float)$row_t['amount'], 2) . '
-              </h6>
-              <span class="text-muted font-mono" style="font-size: 0.72rem;">' . date('M d, Y h:i A', strtotime($row_t['created_at'])) . '</span>
-            </div>
-          </div>';
+            <div class="text-center py-4 text-muted">
+                <i class="bx bx-info-circle fs-3 mb-2 text-secondary"></i>
+                <p class="small mb-0">No recent transactions available.</p>
+            </div>';
                   }
-                } else {
-                  echo '
-        <div class="text-center py-4 text-muted">
-          <i class="bx bx-info-circle fs-3 mb-2"></i>
-          <p class="small mb-0">No recent transactions available.</p>
-        </div>';
-                }
-                ?>
+                  ?>
+                </div>
               </div>
-            </div>
 
+            </div>
           </div>
-        </div>
 
 
-        <!-- Footer -->
-        <br><br>
-        <footer class="content-footer footer bg-footer-theme">
-          <div class="container-xxl py-2 d-flex justify-content-center text-center">
-            <div>
-              &copy;
-              <script>
-                document.write(new Date().getFullYear());
-              </script>
-              , <strong>Altium Capitals.</strong>
-            </div>
-          </div><br>
-        </footer>
+          <!-- Footer -->
+          <br><br>
+          <footer class="content-footer footer bg-footer-theme">
+            <div class="container-xxl py-2 d-flex justify-content-center text-center">
+              <div>
+                &copy;
+                <script>
+                  document.write(new Date().getFullYear());
+                </script>
+                , <strong>Altium Capitals.</strong>
+              </div>
+            </div><br>
+          </footer>
 
-        <!-- / Footer -->
+          <!-- / Footer -->
 
-        <script>
-          const ctx = document.getElementById('incomeExpenseChart').getContext('2d');
-          const incomeExpenseChart = new Chart(ctx, {
-            type: 'pie',
-            data: {
-              labels: ['Income', 'Expenses'],
-              datasets: [{
-                label: 'Amount in USD',
-                data: [750, 500], // You can dynamically set these values
-                backgroundColor: ['#28a745', '#dc3545'],
-                borderColor: ['#fff', '#fff'],
-                borderWidth: 2
-              }]
-            },
-            options: {
-              responsive: true,
-              plugins: {
-                legend: {
-                  position: 'bottom'
-                },
-                tooltip: {
-                  callbacks: {
-                    label: function(context) {
-                      const label = context.label || '';
-                      const value = context.parsed || 0;
-                      return `${label}: $${value.toLocaleString()}`;
+          <script>
+            const ctx = document.getElementById('incomeExpenseChart').getContext('2d');
+            const incomeExpenseChart = new Chart(ctx, {
+              type: 'pie',
+              data: {
+                labels: ['Income', 'Expenses'],
+                datasets: [{
+                  label: 'Amount in USD',
+                  data: [750, 500], // You can dynamically set these values
+                  backgroundColor: ['#28a745', '#dc3545'],
+                  borderColor: ['#fff', '#fff'],
+                  borderWidth: 2
+                }]
+              },
+              options: {
+                responsive: true,
+                plugins: {
+                  legend: {
+                    position: 'bottom'
+                  },
+                  tooltip: {
+                    callbacks: {
+                      label: function(context) {
+                        const label = context.label || '';
+                        const value = context.parsed || 0;
+                        return `${label}: $${value.toLocaleString()}`;
+                      }
                     }
                   }
                 }
               }
-            }
-          });
-        </script>
+            });
+          </script>
 
-        <div class="content-backdrop fade"></div>
+          <div class="content-backdrop fade"></div>
+        </div>
+        <!-- Content wrapper -->
       </div>
-      <!-- Content wrapper -->
+      <!-- / Layout page -->
     </div>
-    <!-- / Layout page -->
-  </div>
 
-  <!-- Overlay -->
-  <div class="layout-overlay layout-menu-toggle"></div>
+    <!-- Overlay -->
+    <div class="layout-overlay layout-menu-toggle"></div>
   </div>
   <!-- / Layout wrapper -->
 

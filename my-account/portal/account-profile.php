@@ -50,7 +50,7 @@ $row = mysqli_fetch_array($res);
   <meta name="description" content="" />
 
   <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="./img/" />
+  <!-- <link rel="icon" type="image/x-icon" href="./img/" /> -->
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -392,33 +392,51 @@ $row = mysqli_fetch_array($res);
 
                         <!-- Crypto Wallet Section Divider -->
                         <div class="col-12 mt-4">
-                          <h6 class="fw-bold text-dark border-bottom pb-2 mb-0">
-                            <i class="bx bx-wallet me-1 text-primary"></i> Payout Crypto Wallet Addresses
+                          <h6 class="fw-bold text-dark border-bottom pb-2 mb-0 d-flex align-items-center gap-2">
+                            <!-- Wallet SVG Icon -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary">
+                              <path d="M20 12V8H6a2 2 0 0 1-2-2c0-1.1.9-2 2-2h12v4"></path>
+                              <path d="M4 6v12c0 1.1.9 2 2 2h14v-4"></path>
+                              <path d="M18 12a2 2 0 0 0-2 2c0 1.1.9 2 2 2h4v-4h-4z"></path>
+                            </svg>
+                            Payout Crypto Wallet Addresses
                           </h6>
                         </div>
 
-                        <!-- Bitcoin Address -->
+                        <!-- 1. Bitcoin Address -->
                         <div class="col-md-6">
-                          <label for="btc-address" class="form-label fw-bold text-secondary small uppercase tracking-wider">Bitcoin (BTC) Address</label>
-                          <input type="text" class="form-control font-mono fw-semibold" id="btc-address" name="btc-address" value="<?php echo htmlspecialchars($row['bitcoin_address'] ?? '', ENT_QUOTES, 'UTF-8'); ?>" placeholder="Enter BTC destination address" />
+                          <label for="btc-address" class="form-label fw-bold text-secondary small text-uppercase font-mono">Bitcoin (BTC) Address</label>
+                          <input type="text" class="form-control font-mono fw-semibold text-dark" id="btc-address" name="btc-address" style="height: 48px;" value="<?php echo htmlspecialchars(trim($row['bitcoin_address'] ?? ''), ENT_QUOTES, 'UTF-8'); ?>" placeholder="Enter BTC destination address" />
                         </div>
 
-                        <!-- USDT Address -->
+                        <!-- 2. Ethereum Address -->
                         <div class="col-md-6">
-                          <label for="usdt_address" class="form-label fw-bold text-secondary small uppercase tracking-wider">USDT Address (TRC20/ERC20)</label>
-                          <input type="text" class="form-control font-mono fw-semibold" id="usdt_address" name="usdt_address" value="<?php echo htmlspecialchars($row['usdt_address'] ?? '', ENT_QUOTES, 'UTF-8'); ?>" placeholder="Enter USDT destination address" />
+                          <label for="eth_address" class="form-label fw-bold text-secondary small text-uppercase font-mono">Ethereum (ETH) Address</label>
+                          <input type="text" class="form-control font-mono fw-semibold text-dark" id="eth_address" name="eth_address" style="height: 48px;" value="<?php echo htmlspecialchars(trim($row['eth_address'] ?? ''), ENT_QUOTES, 'UTF-8'); ?>" placeholder="Enter ETH destination address" />
                         </div>
 
-                        <!-- ETH Address -->
+                        <!-- 3. USDT (TRC20) Address -->
                         <div class="col-md-6">
-                          <label for="eth_address" class="form-label fw-bold text-secondary small uppercase tracking-wider">Ethereum (ETH) Address</label>
-                          <input type="text" class="form-control font-mono fw-semibold" id="eth_address" name="eth_address" value="<?php echo htmlspecialchars(trim($row['eth_address'] ?? ''), ENT_QUOTES, 'UTF-8'); ?>" placeholder="Enter ETH destination address" />
+                          <label for="usdt_address" class="form-label fw-bold text-secondary small text-uppercase font-mono">USDT (Tether TRC20) Address</label>
+                          <input type="text" class="form-control font-mono fw-semibold text-dark" id="usdt_address" name="usdt_address" style="height: 48px;" value="<?php echo htmlspecialchars(trim($row['usdt_address'] ?? ''), ENT_QUOTES, 'UTF-8'); ?>" placeholder="Enter USDT TRC20 destination address" />
                         </div>
 
-                        <!-- USDC Address -->
+                        <!-- 4. USDC (ERC20) Address -->
                         <div class="col-md-6">
-                          <label for="usdc_address" class="form-label fw-bold text-secondary small uppercase tracking-wider">USDC (ERC20) Address</label>
-                          <input type="text" class="form-control font-mono fw-semibold" id="usdc_address" name="usdc_address" value="<?php echo htmlspecialchars(trim($row['usdcErc20_address'] ?? ''), ENT_QUOTES, 'UTF-8'); ?>" placeholder="Enter USDC destination address" />
+                          <label for="usdc_address" class="form-label fw-bold text-secondary small text-uppercase font-mono">USDC (ERC20) Address</label>
+                          <input type="text" class="form-control font-mono fw-semibold text-dark" id="usdc_address" name="usdc_address" style="height: 48px;" value="<?php echo htmlspecialchars(trim($row['usdcErc20_address'] ?? $row['usdc_address'] ?? ''), ENT_QUOTES, 'UTF-8'); ?>" placeholder="Enter USDC ERC20 destination address" />
+                        </div>
+
+                        <!-- 5. USDT (ERC20) Address -->
+                        <div class="col-md-6">
+                          <label for="usdt_erc20_address" class="form-label fw-bold text-secondary small text-uppercase font-mono">USDT (ERC20) Address</label>
+                          <input type="text" class="form-control font-mono fw-semibold text-dark" id="usdt_erc20_address" name="usdt_erc20_address" style="height: 48px;" value="<?php echo htmlspecialchars(trim($row['usdtErc20_address'] ?? ''), ENT_QUOTES, 'UTF-8'); ?>" placeholder="Enter USDT ERC20 destination address" />
+                        </div>
+
+                        <!-- 6. Tron (TRX) Address -->
+                        <div class="col-md-6">
+                          <label for="tron_address" class="form-label fw-bold text-secondary small text-uppercase font-mono">Tron (TRX) Address</label>
+                          <input type="text" class="form-control font-mono fw-semibold text-dark" id="tron_address" name="tron_address" style="height: 48px;" value="<?php echo htmlspecialchars(trim($row['tron_address'] ?? ''), ENT_QUOTES, 'UTF-8'); ?>" placeholder="Enter Tron TRX destination address" />
                         </div>
 
                       </div>

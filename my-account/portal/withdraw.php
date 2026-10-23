@@ -366,65 +366,121 @@ $result = $stmt->get_result();
             </div>
 
             <!-- Withdrawal Form Card -->
-            <div class="card border-0 shadow-sm rounded-4 p-4 p-md-5 bg-white border max-w-4xl mx-auto mb-5" style="border-color: #e2e8f0 !important;">
+            <!-- Withdrawal Request Form (Bootstrap 5 + Executive Theme + SVG Icons) -->
+            <div class="row m-1">
+              <div class="col-lg-8 col-xl-7 mx-auto">
+                <!-- CARD CONTAINER -->
+                <div class="card border-0 shadow-sm rounded-4 overflow-hidden mb-4 bg-white" style="border: 1px solid #e2e8f0 !important;">
 
-              <div class="d-flex align-items-center mb-4 pb-3 border-bottom">
-                <div class="w-10 h-10 rounded-3 bg-primary-subtle text-primary d-flex align-items-center justify-content-center me-3">
-                  <i class="bx bx-transfer fs-4"></i>
-                </div>
-                <div>
-                  <h4 class="fw-bold text-dark mb-0">Withdrawal Gateway</h4>
-                  <p class="text-muted small mb-0">Ensure your external wallet details are valid before submission.</p>
+                  <!-- Executive Card Header -->
+                  <div class="card-header bg-dark text-white py-3.5 px-4 d-flex align-items-center justify-content-between">
+                    <div class="d-flex align-items-center">
+                      <div class="rounded-3 bg-danger text-white d-flex align-items-center justify-content-center me-3 shadow-sm" style="width: 40px; height: 40px;">
+                        <!-- Trending Down / Payout SVG Icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <polyline points="23 18 13.5 8.5 8.5 13.5 1 6"></polyline>
+                          <polyline points="17 18 23 18 23 12"></polyline>
+                        </svg>
+                      </div>
+                      <div>
+                        <h5 class="mb-0 fw-extrabold text-white fs-6">Request Payout</h5>
+                        <span class="text-muted small" style="font-size: 0.72rem;">Submit secure capital withdrawal request</span>
+                      </div>
+                    </div>
+                    <span class="badge bg-danger-subtle text-danger border border-danger-subtle font-mono fw-bold px-3 py-1.5 rounded-pill" style="font-size: 0.7rem;">
+                      Payout Portal
+                    </span>
+                  </div>
+
+                  <!-- Card Body Form -->
+                  <div class="card-body p-4">
+                    <form action="confirm_withdrawal" method="POST">
+                      <!-- Hidden Username Field -->
+                      <input type="hidden" id="username" name="username" value="<?php echo htmlspecialchars($row['username'] ?? '', ENT_QUOTES, 'UTF-8'); ?>">
+
+                      <!-- 1. Withdrawal Method -->
+                      <div class="mb-3">
+                        <label for="withdrawMethod" class="form-label fw-bold text-dark small">Select Payout Method <span class="text-danger">*</span></label>
+                        <div class="input-group">
+                          <span class="input-group-text bg-light text-secondary border-end-0" style="width: 46px; justify-content: center;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                              <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+                              <line x1="1" y1="10" x2="23" y2="10"></line>
+                            </svg>
+                          </span>
+                          <select class="form-select fw-semibold text-dark" id="withdrawMethod" name="method" style="height: 48px;" required>
+                            <option value="" disabled selected>-- Choose Withdrawal Method --</option>
+                            <option value="Bitcoin">Bitcoin (BTC)</option>
+                            <option value="Ethereum">Ethereum (ETH)</option>
+                            <option value="USDT">USDT (Tether TRC20)</option>
+                            <option value="USDC_ERC20">USDC (ERC20)</option>
+                            <option value="USDT_ERC20">USDT (ERC20)</option>
+                            <option value="Tron">Tron (TRX)</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <!-- 2. Amount & Auto Reference Row -->
+                      <div class="row g-3 mb-3">
+                        <div class="col-md-6">
+                          <label for="withdrawAmount" class="form-label fw-bold text-dark small">Withdrawal Amount (USD) <span class="text-danger">*</span></label>
+                          <div class="input-group">
+                            <span class="input-group-text bg-light text-danger fw-bold border-end-0" style="width: 46px; justify-content: center;">$</span>
+                            <input type="number" class="form-control fw-bold font-mono" id="withdrawAmount" name="amount" placeholder="0.00" min="1" step="any" style="height: 48px;" required>
+                          </div>
+                        </div>
+
+                        <div class="col-md-6">
+                          <label for="reference" class="form-label fw-bold text-dark small">Transaction Reference</label>
+                          <div class="input-group">
+                            <span class="input-group-text bg-light text-secondary border-end-0" style="width: 46px; justify-content: center;">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="4" y1="9" x2="20" y2="9"></line>
+                                <line x1="4" y1="15" x2="20" y2="15"></line>
+                                <line x1="10" y1="3" x2="8" y2="21"></line>
+                                <line x1="16" y1="3" x2="14" y2="21"></line>
+                              </svg>
+                            </span>
+                            <input type="text" class="form-control bg-light fw-bold text-dark font-mono" id="reference" name="reference" value="<?php echo '000' . rand(100, 999); ?>" style="height: 48px;" readonly>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- 3. Description -->
+                      <div class="mb-4">
+                        <label for="description" class="form-label fw-bold text-dark small">Description / Notes</label>
+                        <div class="input-group">
+                          <span class="input-group-text bg-light text-secondary border-end-0 align-items-start pt-3" style="width: 46px; justify-content: center;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                              <polyline points="14 2 14 8 20 8"></polyline>
+                              <line x1="16" y1="13" x2="8" y2="13"></line>
+                              <line x1="16" y1="17" x2="8" y2="17"></line>
+                              <polyline points="10 9 9 9 8 9"></polyline>
+                            </svg>
+                          </span>
+                          <textarea class="form-control fw-semibold" id="description" name="description" rows="3" placeholder="Optional note for this withdrawal (e.g. payout destination address note)..." style="min-height: 96px;"></textarea>
+                        </div>
+                      </div>
+
+                      <!-- Submit CTA Button -->
+                      <div class="pt-2 border-top">
+                        <button type="submit" class="btn btn-warning w-100 py-3 fw-bold text-dark shadow-sm d-inline-flex align-items-center justify-content-center" style="height: 48px; background-color: #ffc107; border: none;">
+                          <span>Proceed to Withdraw</span>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="ms-2">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                          </svg>
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+
                 </div>
               </div>
-
-              <form action="confirm_withdrawal" method="POST">
-                <!-- Hidden Username Field -->
-                <input type="hidden" id="username" name="username" value="<?php echo htmlspecialchars($row['username'] ?? '', ENT_QUOTES, 'UTF-8'); ?>">
-
-                <!-- Withdrawal Method -->
-                <div class="mb-3">
-                  <label for="withdrawMethod" class="form-label fw-bold text-secondary small uppercase tracking-wider">Select Payout Method</label>
-                  <select class="form-select py-2.5 fw-semibold text-dark" id="withdrawMethod" name="method" required>
-                    <option value="" disabled selected>-- Choose Withdrawal Method --</option>
-                    <option value="Bitcoin">Bitcoin (BTC)</option>
-                    <option value="Ethereum">Ethereum (ETH)</option>
-                    <option value="USDT">USDT (Tether TRC20/ERC20)</option>
-                    <option value="USDC_ERC20">USDC (ERC20)</option>
-                  </select>
-                </div>
-
-                <!-- Amount & Auto Reference Row -->
-                <div class="row g-3 mb-3">
-                  <div class="col-md-6">
-                    <label for="withdrawAmount" class="form-label fw-bold text-secondary small uppercase tracking-wider">Withdrawal Amount ($)</label>
-                    <div class="input-group">
-                      <span class="input-group-text bg-white fw-bold">$</span>
-                      <input type="number" class="form-control py-2.5 fw-semibold" id="withdrawAmount" name="amount" placeholder="0.00" min="1" step="any" required>
-                    </div>
-                  </div>
-
-                  <div class="col-md-6">
-                    <label for="reference" class="form-label fw-bold text-secondary small uppercase tracking-wider">Transaction Reference</label>
-                    <input type="text" class="form-control py-2.5 bg-light fw-bold text-dark font-mono" id="reference" name="reference" value="<?php echo '000' . rand(100, 999); ?>" readonly>
-                  </div>
-                </div>
-
-                <!-- Description -->
-                <div class="mb-4">
-                  <label for="description" class="form-label fw-bold text-secondary small uppercase tracking-wider">Description</label>
-                  <textarea class="form-control fw-semibold" id="description" name="description" rows="3" placeholder="Optional note for this withdrawal (e.g. additional payment reference or note)"></textarea>
-                </div>
-
-                <!-- Submit CTA Button -->
-                <div class="text-center">
-                  <button type="submit" class="btn btn-warning w-100 py-3 fw-extrabold text-dark rounded-3 shadow-sm hover-shadow" style="background-color: #ffc107; border: none;">
-                    Proceed to Withdraw <i class="bi bi-arrow-right ms-1"></i>
-                  </button>
-                </div>
-              </form>
             </div>
 
+            <br><br>
             <!-- Approved Withdrawals Table Section -->
             <div class="card border-0 shadow-sm rounded-4 overflow-hidden max-w-4xl mx-auto border" style="border-color: #e2e8f0 !important;">
               <div class="card-header bg-dark text-white py-3 px-4 d-flex align-items-center justify-content-between">
@@ -441,7 +497,7 @@ $result = $stmt->get_result();
                         <th class="py-3">Wallet Type</th>
                         <th class="py-3">Amount ($)</th>
                         <th class="py-3">Reference</th>
-                        <th class="py-3">Description / Wallet</th>
+                        <th class="py-3">Description </th>
                         <th class="py-3">Date Processed</th>
                       </tr>
                     </thead>
@@ -453,7 +509,7 @@ $result = $stmt->get_result();
                           echo "<tr>";
                           echo "<td class='fw-bold text-muted'>{$count}</td>";
                           echo "<td><span class='badge bg-primary-subtle text-primary fw-bold px-3 py-1.5 rounded-pill'>{$wRow['wallet_type']}</span></td>";
-                          echo "<td class='fw-bold text-success'>$" . number_format((float)$wRow['amount'], 2) . "</td>";
+                          echo "<td class='fw-bold' style='color: red;'>$" . number_format((float)$wRow['amount'], 2) . "</td>";
                           echo "<td><code class='text-dark fw-bold'>{$wRow['reference']}</code></td>";
                           echo "<td class='small text-muted'>" . htmlspecialchars($wRow['description'] ?? 'N/A', ENT_QUOTES, 'UTF-8') . "</td>";
                           echo "<td class='small font-mono text-secondary'>" . date('d M Y, H:i', strtotime($wRow['created_at'])) . "</td>";

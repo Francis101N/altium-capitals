@@ -41,12 +41,12 @@
 
         <!-- Desktop Nav Links -->
         <ul class="hidden md:flex items-center space-x-6 lg:space-x-10 text-xs font-bold tracking-wider">
-            <li><a href="index.php" class="hover:text-blue-200 transition py-1 border-b-2 border-transparent hover:border-white">HOME</a></li>
-            <li><a href="about.php" class="hover:text-blue-200 transition py-1 border-b-2 border-transparent hover:border-white">ABOUT US</a></li>
-            <li><a href="partnership.php" class="hover:text-blue-200 transition py-1 border-b-2 border-transparent hover:border-white">PARTNERSHIP</a></li>
-            <li><a href="services/real-estate.php" class="hover:text-blue-200 transition py-1 border-b-2 border-transparent hover:border-white">REAL ESTATE</a></li>
-            <li><a href="contact.php" class="hover:text-blue-200 transition py-1 border-b-2 border-transparent hover:border-white">CONTACT</a></li>
-            <li><a href="signin.php" class="bg-white text-[#3b82f6] px-5 py-2 rounded-md font-extrabold hover:bg-blue-50 transition shadow-sm">ACCOUNT</a></li>
+            <li><a href="index" class="hover:text-blue-200 transition py-1 border-b-2 border-transparent hover:border-white">HOME</a></li>
+            <li><a href="about" class="hover:text-blue-200 transition py-1 border-b-2 border-transparent hover:border-white">ABOUT US</a></li>
+            <li><a href="partnership" class="hover:text-blue-200 transition py-1 border-b-2 border-transparent hover:border-white">PARTNERSHIP</a></li>
+            <li><a href="services/real-estate" class="hover:text-blue-200 transition py-1 border-b-2 border-transparent hover:border-white">REAL ESTATE</a></li>
+            <li><a href="contact" class="hover:text-blue-200 transition py-1 border-b-2 border-transparent hover:border-white">CONTACT</a></li>
+            <li><a href="signin" class="bg-white text-[#3b82f6] px-5 py-2 rounded-md font-extrabold hover:bg-blue-50 transition shadow-sm">ACCOUNT</a></li>
         </ul>
 
         <!-- Mobile Menu Toggle Row -->
@@ -69,12 +69,12 @@
     <!-- Mobile Dropdown Menu -->
     <div id="mobile-menu" class="hidden md:hidden pt-4 pb-2 border-t border-blue-400/30 mt-3 transition-all duration-300">
         <ul class="flex flex-col space-y-3 text-xs font-bold tracking-wider px-2">
-            <li><a href="index.php" class="block py-2 px-3 rounded hover:bg-blue-600/60 transition">HOME</a></li>
-            <li><a href="about.php" class="block py-2 px-3 rounded hover:bg-blue-600/60 transition">ABOUT US</a></li>
-            <li><a href="partnership.php" class="block py-2 px-3 rounded hover:bg-blue-600/60 transition">PARTNERSHIP</a></li>
-            <li><a href="real-estate.php" class="block py-2 px-3 rounded hover:bg-blue-600/60 transition">REAL ESTATE</a></li>
-            <li><a href="contact.php" class="block py-2 px-3 rounded hover:bg-blue-600/60 transition">CONTACT</a></li>
-            <li><a href="signin.php" class="block py-2.5 px-3 rounded bg-white text-[#3b82f6] text-center font-extrabold shadow-sm hover:bg-blue-50 transition">ACCOUNT</a></li>
+            <li><a href="index" class="block py-2 px-3 rounded hover:bg-blue-600/60 transition">HOME</a></li>
+            <li><a href="about" class="block py-2 px-3 rounded hover:bg-blue-600/60 transition">ABOUT US</a></li>
+            <li><a href="partnership" class="block py-2 px-3 rounded hover:bg-blue-600/60 transition">PARTNERSHIP</a></li>
+            <li><a href="services/real-estate" class="block py-2 px-3 rounded hover:bg-blue-600/60 transition">REAL ESTATE</a></li>
+            <li><a href="contact" class="block py-2 px-3 rounded hover:bg-blue-600/60 transition">CONTACT</a></li>
+            <li><a href="signin" class="block py-2.5 px-3 rounded bg-white text-[#3b82f6] text-center font-extrabold shadow-sm hover:bg-blue-50 transition">ACCOUNT</a></li>
         </ul>
 
         <!-- Mobile Contact Info Bar -->

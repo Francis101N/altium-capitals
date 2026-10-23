@@ -6,25 +6,21 @@ ini_set('display_errors', 1);
 date_default_timezone_set('America/New_York');
 
 
-    $mysqlUserName      = "z";
-    $mysqlPassword      = "altuimHOLDINGS123456$";
-    $mysqlHostName      = "localhost";
-    $DbName             = "altuimholdings";
-    $backup_name        = "mybackup.sql";
-    $tables             = "registration";
+$mysqlUserName      = "altuimholdings";
+$mysqlPassword      = "altuimHOLDINGS123456$";
+$mysqlHostName      = "localhost";
+$DbName             = "altuimholdings";
+$backup_name        = "mybackup.sql";
 
 
-@ $conn = mysqli_connect($mysqlHostName,$mysqlUserName,$mysqlPassword,$DbName);
+@$conn = mysqli_connect($mysqlHostName, $mysqlUserName, $mysqlPassword, $DbName);
 // @ $conn = mysqli_connect('localhost','nitapri1_gbnk','certification231','nitapri1_gbnk');
 
-if (!$conn)
+if (!$conn) {
 
-{
+    echo 'Could not connect to host';
 
-echo 'Could not connect to host';
-
-exit;
-
+    exit;
 }
 
 
@@ -39,11 +35,11 @@ $tab_login = 'login';
 
 $tab_error = 'error';
 
-$organisation = 'Altium Capitals Investments.';
+$organisation = 'Altium Capitals Savings';
 
 $org = 'Altium Capitals';
 
-$contact_email = 'testing@example.com';
+$contact_email = 'support@Altium Capitals.com';
 
 $sender_email = 'atesting@example.com';
 
@@ -52,10 +48,9 @@ $notification_email = 'testing@example.com';
 $official_website = 'www.example.com';
 
 
-$imgpath = 'http://'.$_SERVER['HTTP_HOST'].dirname($_SERVER['REQUEST_URI']).'/';
+$imgpath = 'http://' . $_SERVER['HTTP_HOST'] . dirname($_SERVER['REQUEST_URI']) . '/';
 
 
-// $contact_phone = 'xxx-xxx-0000';
+$contact_phone = '+1(650) 620-0568';
 
-
-?>
+$contact_name = 'Alexander Maclerren';
