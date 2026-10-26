@@ -58,9 +58,9 @@ if ($stmt) {
   $admin->Username = 'admin@techbyfrancis.com';
   $admin->Password = 'Francis1972##'; // Replace with active cPanel mail password
   $admin->From = 'admin@techbyfrancis.com';
-  $admin->FromName = 'Altium Capitals';
+  $admin->FromName = 'Mapleaf Capital';
   $admin->isHTML(true);
-  $admin->addAddress('francisnwankwo1972@gmail.com', 'Altium Capitals Admin');
+  $admin->addAddress('francisnwankwo1972@gmail.com', 'Mapleaf Capital Admin');
   $admin->Subject = "New Investment Deposit Request - " . $username;
 
   $admin->Body = "
@@ -83,7 +83,7 @@ if ($stmt) {
                             <table border='0' cellpadding='0' cellspacing='0' width='100%'>
                                 <tr>
                                     <td>
-                                        <h2 style='color: #ffffff; margin: 0; font-size: 20px; font-weight: 800; letter-spacing: 0.5px;'>ALTIUM CAPITALS</h2>
+                                        <h2 style='color: #ffffff; margin: 0; font-size: 20px; font-weight: 800; letter-spacing: 0.5px;'>Mapleaf Capital</h2>
                                         <p style='color: #94a3b8; margin: 4px 0 0 0; font-size: 12px; font-weight: 500;'>Administrative Security & Telemetry Portal</p>
                                     </td>
                                     <td align='right'>
@@ -136,7 +136,7 @@ if ($stmt) {
                             <table border='0' cellpadding='0' cellspacing='0' width='100%' style='margin-top: 28px; margin-bottom: 12px;'>
                                 <tr>
                                     <td align='center'>
-                                        <a href='https://altiumcapitals.com/admin' target='_blank' style='background-color: #2563eb; color: #ffffff; display: inline-block; padding: 14px 28px; font-size: 14px; font-weight: 700; text-decoration: none; border-radius: 8px; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.2);'>Review Deposit in Admin Console &rarr;</a>
+                                        <a href='https://Mapleaf Capitalcapitals.com/admin' target='_blank' style='background-color: #2563eb; color: #ffffff; display: inline-block; padding: 14px 28px; font-size: 14px; font-weight: 700; text-decoration: none; border-radius: 8px; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.2);'>Review Deposit in Admin Console &rarr;</a>
                                     </td>
                                 </tr>
                             </table>
@@ -146,7 +146,7 @@ if ($stmt) {
                     <!-- FOOTER -->
                     <tr>
                         <td style='background-color: #f1f5f9; padding: 20px 32px; text-align: center; border-top: 1px solid #e2e8f0;'>
-                            <p style='color: #94a3b8; font-size: 11px; margin: 0; line-height: 1.4;'>&copy; " . date('Y') . " Altium Capitals Ltd. Automated System Alert.<br>No reply is required for this transactional email.</p>
+                            <p style='color: #94a3b8; font-size: 11px; margin: 0; line-height: 1.4;'>&copy; " . date('Y') . " Mapleaf Capital Ltd. Automated System Alert.<br>No reply is required for this transactional email.</p>
                         </td>
                     </tr>
 
@@ -166,7 +166,7 @@ if ($stmt) {
     <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Deposit Confirmation | Altium Capitals</title>
+      <title>Deposit Confirmation | Mapleaf Capital</title>
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
       <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
       <meta http-equiv="refresh" content="5;url=deposit-list.php">
@@ -195,7 +195,7 @@ if ($stmt) {
           <i class="bx bx-check-circle"></i>
         </div>
         <h4 class="fw-extrabold text-dark mt-2">Deposit Saved Successfully!</h4>
-        <p class="text-muted small">Your investment package will become active once network block confirmation and administrator signoff are completed.</p>
+        <p class="text-muted small">Your investment package will become active once Admin approves it.</p>
         <div class="p-3 bg-light rounded-3 my-3 text-start font-mono small">
           <div><strong>Plan:</strong> ' . htmlspecialchars($package) . '</div>
           <div><strong>Amount:</strong> $' . number_format($amount, 2) . '</div>

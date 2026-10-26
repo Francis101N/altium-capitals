@@ -18,7 +18,7 @@ if (!function_exists('get_magic_quotes_runtime')) {
 }
 
 // Fallback organization name
-$organization_name = isset($org) ? $org : 'Altium Capitals';
+$organization_name = isset($org) ? $org : 'Mapleaf Capital';
 
 $username = isset($_POST['username']) ? mysqli_real_escape_string($conn, $_POST['username']) : '';
 $password = isset($_POST['password']) ? mysqli_real_escape_string($conn, $_POST['password']) : '';
@@ -86,7 +86,7 @@ if ($count > 0) {
                         <tr>
                             <td bgcolor="#3b82f6" style="padding: 28px 32px; text-align: center;">
                                 <h1 style="margin: 0; font-size: 20px; font-weight: 800; color: #ffffff; letter-spacing: 2.5px; text-transform: uppercase;">
-                                    ALTIUM CAPITALS
+                                    Mapleaf Capital
                                 </h1>
                                 <p style="margin: 4px 0 0 0; font-size: 11px; color: #dbeaff; font-weight: 600; letter-spacing: 1px; text-transform: uppercase;">
                                     Security Verification Service
@@ -138,7 +138,7 @@ if ($count > 0) {
                         <!-- Footer -->
                         <tr>
                             <td bgcolor="#f8fafc" style="padding: 20px 32px; border-top: 1px solid #e2e8f0; text-align: center; font-size: 11px; color: #94a3b8;">
-                                &copy; ' . date('Y') . ' Altium Capitals. All rights reserved.<br>
+                                &copy; ' . date('Y') . ' Mapleaf Capital. All rights reserved.<br>
                                 Automated Security System Notice — Please do not reply directly to this email.
                             </td>
                         </tr>
@@ -208,7 +208,7 @@ if ($count > 0) {
     exit();
 } else {
     // Visitor's credentials are not correct
-    $error = 'You have entered an invalid credential';
-    include('index.php');
+    $error = 'Incorrect username/account ID or password. Please check your credentials and try again.';
+    include('signin.php');
     exit();
 }

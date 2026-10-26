@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Portal Login | Altium Capital Holdings</title>
+    <title>Admin Portal Login | Mapleaf Capital</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     <style>
@@ -117,7 +117,7 @@
     <div class="login-container">
         <!-- Brand Logo Header -->
         <div class="text-center mb-4">
-            <img src="./images/altium-logo.png" alt="Altium Capital Holdings" style="width: 100%; max-height: 70px; object-fit: contain;">
+            <img src="./images/mapleaf-logo.png" alt="Mapleaf Capital Capital Holdings" style="width: 100%; max-height: 100px; object-fit: contain;">
             <span class="badge bg-primary-subtle text-primary border border-primary-subtle rounded-pill font-mono fw-bold px-3 py-1.5 mt-3">
                 <i class="bx bx-shield-quarter me-1"></i> Executive Control Center
             </span>
@@ -155,7 +155,7 @@
 
         <!-- Footer Copyright -->
         <div class="text-center mt-4 pt-3 border-top">
-            <p class="text-muted small mb-0">&copy; <?php echo date('Y'); ?> <strong>Altium Capitals.</strong> All Rights Reserved.</p>
+            <p class="text-muted small mb-0">&copy; <?php echo date('Y'); ?> <strong>Mapleaf Capital.</strong> All Rights Reserved.</p>
         </div>
     </div>
 

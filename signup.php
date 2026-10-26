@@ -1,8 +1,8 @@
 <?php
 // Page configuration
-$pageTitle = "Altium Capitals";
+$pageTitle = "Mapleaf Capital";
 $address = "9th Floor, No. 1 Spinningfields, 1 Hardman Square, Manchester M3 3EB, United Kingdom";
-$email = "support@altiumcapitals.com";
+$email = "support@mapleafcapitals.com";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -10,7 +10,7 @@ $email = "support@altiumcapitals.com";
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up - Altium Capitals</title>
+    <title>Sign Up - Mapleaf Capital</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -98,7 +98,7 @@ $email = "support@altiumcapitals.com";
                         Open an Account
                     </h2>
                     <p class="text-xs sm:text-sm text-gray-500 font-medium mt-1">
-                        Fill in your details to create a secure Altium Capitals portfolio
+                        Fill in your details to create a secure Mapleaf Capital portfolio
                     </p>
                 </div>
 

@@ -36,11 +36,11 @@ $tab_login = 'login';
 
 $tab_error = 'error';
 
-$organisation = 'Altium Capitals Savings';
+$organisation = 'Mapleaf Capital Savings';
 
-$org = 'Altium Capitals';
+$org = 'Mapleaf Capital';
 
-$contact_email = 'support@Altium Capitals.com';
+$contact_email = 'support@Mapleaf Capital.com';
 
 $sender_email = 'atesting@example.com';
 

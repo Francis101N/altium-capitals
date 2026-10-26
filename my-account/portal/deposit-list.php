@@ -73,7 +73,7 @@ if ($calcStmt) {
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 
-  <title>Deposit List | Altium Capitals.</title>
+  <title>Deposit List | Mapleaf Capital.</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 
@@ -120,7 +120,7 @@ if ($calcStmt) {
         <div class="app-brand demo">
           <a href="index.html" class="app-brand-link">
             <span class="app-brand-logo demo">
-              <img src="./img/altium-logo-blue.jpeg" alt="" width="180px">
+              <img src="./img/mapleaf-logo.png" alt="" width="130px">
             </span>
           </a>
           <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none">
@@ -132,7 +132,7 @@ if ($calcStmt) {
 
         <ul class="menu-inner py-1">
           <li class="menu-item mt-2">
-            <a href="https://sovereignnexarcapital.org/" class="menu-link">
+            <a href="https://mapleafcapital.com/" class="menu-link">
               <i class="menu-icon tf-icons bx bx-home-circle"></i>
               <div data-i18n="Homepage">Home Page</div>
             </a>
@@ -248,7 +248,9 @@ if ($calcStmt) {
                     <div class="dropdown-divider"></div>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="logout">
+                    <a class="dropdown-item"
+                      href="logout"
+                      onclick="return confirm('Are you sure you want to log out of your account?');">
                       <i class="bx bx-power-off me-2"></i>
                       <span class="align-middle">Log Out</span>
                     </a>
@@ -422,7 +424,7 @@ if ($calcStmt) {
               <div>
                 &copy; <script>
                   document.write(new Date().getFullYear());
-                </script>, <strong>Altium Capitals.</strong> All Rights Reserved.
+                </script>, <strong>Mapleaf Capital.</strong> All Rights Reserved.
               </div>
             </div>
           </footer>

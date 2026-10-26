@@ -48,7 +48,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $mail->SMTPSecure = 'ssl';
   $mail->Port = 465;
 
-  $mail->setFrom('notification@sovereignnexarcapital.org', 'Altium Capitals.');
+  $mail->setFrom('notification@sovereignnexarcapital.org', 'Mapleaf Capital.');
             $mail->addAddress($email, $username);
             $mail->isHTML(true);
 

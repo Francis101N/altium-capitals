@@ -10,9 +10,9 @@ const REGISTRATION_DEBUG = true;
 function registrationFail(string $message, ?Throwable $exception = null): never
 {
     if ($exception !== null) {
-        error_log('[Altium registration] ' . get_class($exception) . ': ' . $exception->getMessage());
+        error_log('[Mapleaf Capital registration] ' . get_class($exception) . ': ' . $exception->getMessage());
     } else {
-        error_log('[Altium registration] ' . $message);
+        error_log('[Mapleaf Capital registration] ' . $message);
     }
 
     http_response_code(400);
@@ -179,7 +179,7 @@ try {
     $accountId = $surnamePrefix . '-' . random_int(1000, 9999) . '-' . $birthYear;
     $passwordHash = password_hash($password, PASSWORD_DEFAULT);
     $refBonus = $referral !== null ? '7' : null;
-    $organization_name = 'Altium Capitals';
+    $organization_name = 'Mapleaf Capital';
 
     // Save registration. No wallet address is invented or inserted.
     try {
@@ -222,7 +222,7 @@ try {
             $bonus->execute();
             $bonus->close();
         } catch (Throwable $refError) {
-            error_log('[Altium referral update] ' . $refError->getMessage());
+            error_log('[Mapleaf Capital referral update] ' . $refError->getMessage());
         }
     }
 
@@ -321,15 +321,15 @@ try {
                 // SMTP diagnostics go to the PHP error log, not the browser.
                 $mail->SMTPDebug = 2;
                 $mail->Debugoutput = static function (string $message, int $level): void {
-                    error_log('[Altium SMTP level ' . $level . '] ' . trim($message));
+                    error_log('[Mapleaf Capital SMTP level ' . $level . '] ' . trim($message));
                 };
 
                 $mail->send();
-                error_log('[Altium registration] Email accepted for ' . $recipient);
+                error_log('[Mapleaf Capital registration] Email accepted for ' . $recipient);
                 return true;
             } catch (Throwable $mailError) {
                 error_log(
-                    '[Altium registration mail failure] ' .
+                    '[Mapleaf Capital registration mail failure] ' .
                         get_class($mailError) . ': ' . $mailError->getMessage()
                 );
                 return false;
@@ -427,7 +427,7 @@ try {
         );
     } catch (Throwable $mailSetupError) {
         error_log(
-            '[Altium registration mail setup] ' .
+            '[Mapleaf Capital registration mail setup] ' .
                 get_class($mailSetupError) . ': ' . $mailSetupError->getMessage()
         );
     }

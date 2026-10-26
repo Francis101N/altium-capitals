@@ -2,7 +2,7 @@
 [15-Nov-2025 17:14:52 America/New_York] PHP Warning:  Undefined array key "admin_fullnames" in /home/trustva2/public_html/cooladmin/update_account.php on line 310
 [15-Nov-2025 17:14:52 America/New_York] PHP Warning:  Undefined variable $msg in /home/trustva2/public_html/cooladmin/update_account.php on line 348
 [15-Nov-2025 17:14:52 America/New_York] PHP Warning:  Undefined variable $msg in /home/trustva2/public_html/cooladmin/update_account.php on line 354
-[15-Nov-2025 17:14:52 America/New_York] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'trustva2_Altium Capitals.account' doesn't exist in /home/trustva2/public_html/cooladmin/update_account.php:370
+[15-Nov-2025 17:14:52 America/New_York] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'trustva2_Mapleaf Capital.account' doesn't exist in /home/trustva2/public_html/cooladmin/update_account.php:370
 Stack trace:
 #0 /home/trustva2/public_html/cooladmin/update_account.php(370): mysqli_query()
 #1 {main}
@@ -10,7 +10,7 @@ Stack trace:
 [15-Nov-2025 17:15:09 America/New_York] PHP Warning:  Undefined array key "admin_fullnames" in /home/trustva2/public_html/cooladmin/update_account.php on line 310
 [15-Nov-2025 17:15:09 America/New_York] PHP Warning:  Undefined variable $msg in /home/trustva2/public_html/cooladmin/update_account.php on line 348
 [15-Nov-2025 17:15:09 America/New_York] PHP Warning:  Undefined variable $msg in /home/trustva2/public_html/cooladmin/update_account.php on line 354
-[15-Nov-2025 17:15:09 America/New_York] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'trustva2_Altium Capitals.account' doesn't exist in /home/trustva2/public_html/cooladmin/update_account.php:370
+[15-Nov-2025 17:15:09 America/New_York] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'trustva2_Mapleaf Capital.account' doesn't exist in /home/trustva2/public_html/cooladmin/update_account.php:370
 Stack trace:
 #0 /home/trustva2/public_html/cooladmin/update_account.php(370): mysqli_query()
 #1 {main}
@@ -18,7 +18,7 @@ Stack trace:
 [15-Nov-2025 17:16:20 America/New_York] PHP Warning:  Undefined array key "admin_fullnames" in /home/trustva2/public_html/cooladmin/update_account.php on line 310
 [15-Nov-2025 17:16:20 America/New_York] PHP Warning:  Undefined variable $msg in /home/trustva2/public_html/cooladmin/update_account.php on line 348
 [15-Nov-2025 17:16:20 America/New_York] PHP Warning:  Undefined variable $msg in /home/trustva2/public_html/cooladmin/update_account.php on line 354
-[15-Nov-2025 17:16:20 America/New_York] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'trustva2_Altium Capitals.account' doesn't exist in /home/trustva2/public_html/cooladmin/update_account.php:370
+[15-Nov-2025 17:16:20 America/New_York] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'trustva2_Mapleaf Capital.account' doesn't exist in /home/trustva2/public_html/cooladmin/update_account.php:370
 Stack trace:
 #0 /home/trustva2/public_html/cooladmin/update_account.php(370): mysqli_query()
 #1 {main}
@@ -27,7 +27,7 @@ Stack trace:
 [15-Nov-2025 17:57:28 America/New_York] PHP Warning:  Undefined array key "admin_fullnames" in /home/trustva2/public_html/cooladmin/update_account.php on line 310
 [15-Nov-2025 17:57:28 America/New_York] PHP Warning:  Undefined variable $msg in /home/trustva2/public_html/cooladmin/update_account.php on line 348
 [15-Nov-2025 17:57:28 America/New_York] PHP Warning:  Undefined variable $msg in /home/trustva2/public_html/cooladmin/update_account.php on line 354
-[15-Nov-2025 17:57:28 America/New_York] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'trustva2_Altium Capitals.account' doesn't exist in /home/trustva2/public_html/cooladmin/update_account.php:370
+[15-Nov-2025 17:57:28 America/New_York] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'trustva2_Mapleaf Capital.account' doesn't exist in /home/trustva2/public_html/cooladmin/update_account.php:370
 Stack trace:
 #0 /home/trustva2/public_html/cooladmin/update_account.php(370): mysqli_query()
 #1 {main}
@@ -35,7 +35,7 @@ Stack trace:
 [15-Nov-2025 17:57:53 America/New_York] PHP Warning:  Undefined array key "admin_fullnames" in /home/trustva2/public_html/cooladmin/update_account.php on line 310
 [15-Nov-2025 17:57:53 America/New_York] PHP Warning:  Undefined variable $msg in /home/trustva2/public_html/cooladmin/update_account.php on line 348
 [15-Nov-2025 17:57:53 America/New_York] PHP Warning:  Undefined variable $msg in /home/trustva2/public_html/cooladmin/update_account.php on line 354
-[15-Nov-2025 17:57:53 America/New_York] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'trustva2_Altium Capitals.account' doesn't exist in /home/trustva2/public_html/cooladmin/update_account.php:370
+[15-Nov-2025 17:57:53 America/New_York] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'trustva2_Mapleaf Capital.account' doesn't exist in /home/trustva2/public_html/cooladmin/update_account.php:370
 Stack trace:
 #0 /home/trustva2/public_html/cooladmin/update_account.php(370): mysqli_query()
 #1 {main}

@@ -1,8 +1,8 @@
 <?php
 // Page configuration
-$pageTitle = "Altium Capitals";
+$pageTitle = "Mapleaf Capital";
 $address = "9th Floor, No. 1 Spinningfields, 1 Hardman Square, Manchester M3 3EB, United Kingdom";
-$email = "support@altiumcapitals.com";
+$email = "support@mapleafcapitals.com";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -10,7 +10,7 @@ $email = "support@altiumcapitals.com";
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Partnership - Altium Capitals</title>
+    <title>Partnership - Mapleaf Capital</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -122,7 +122,7 @@ $email = "support@altiumcapitals.com";
                     </h2>
 
                     <p class="text-sm sm:text-base text-gray-900 font-bold leading-relaxed">
-                        Earn Unlimited Commissions with Altium Capitals online Affiliate Program. Our partner program can increase your income by receiving percentage from the purchases made by your referrals into.[cite: 10]
+                        Earn Unlimited Commissions with Mapleaf Capital online Affiliate Program. Our partner program can increase your income by receiving percentage from the purchases made by your referrals into.[cite: 10]
                     </p>
                 </div>
 
@@ -135,7 +135,7 @@ $email = "support@altiumcapitals.com";
                             ZONAL/REGIONAL REPRESENTATIVES
                         </h2>
                         <p class="text-xs sm:text-sm font-medium text-gray-500">
-                            Altium Capitals Online[cite: 10]
+                            Mapleaf Capital Online[cite: 10]
                         </p>
                     </div>
 
@@ -350,7 +350,7 @@ $email = "support@altiumcapitals.com";
 
             <!-- Footer Acceptance Paragraph -->
             <p class="text-xs sm:text-sm text-gray-700 font-medium pt-6 border-t border-gray-100">
-                If you accept the above requirements, kindly open an investment in the regional representative plan and for more information on this offer kindly send an email to <a href="mailto:support@altiumholdingcapital.com" class="text-gray-900 font-bold hover:underline">support@altiumholdingcapital.com</a>
+                If you accept the above requirements, kindly open an investment in the regional representative plan and for more information on this offer kindly send an email to <a href="mailto:support@Mapleaf Capitalholdingcapital.com" class="text-gray-900 font-bold hover:underline">support@Mapleaf Capitalholdingcapital.com</a>
             </p>
 
         </div>
@@ -364,7 +364,7 @@ $email = "support@altiumcapitals.com";
             <!-- Wide Team Banner Image -->
             <div class="relative w-full h-[220px] sm:h-[300px] md:h-[380px] lg:h-[420px] overflow-hidden">
                 <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=2000&q=80"
-                    alt="Altium Capital Global Advisory & Corporate Team"
+                    alt="Mapleaf Capital Capital Global Advisory & Corporate Team"
                     class="w-full h-full object-cover object-center filter contrast-105 brightness-105" />
 
                 <!-- Soft Top/Bottom/Side Gradient Fades to White -->
@@ -423,7 +423,7 @@ $email = "support@altiumcapitals.com";
                         Invest in Top-Deals
                     </h3>
                     <p class="text-xs text-gray-600 font-normal leading-relaxed">
-                        Take a look at our previous deals - you invest in the same deals top Altium Capitals Online investors and venture capitalists are investing in without the huge minimum amounts of a traditional venture capital fund.[cite: 12]
+                        Take a look at our previous deals - you invest in the same deals top Mapleaf Capital Online investors and venture capitalists are investing in without the huge minimum amounts of a traditional venture capital fund.[cite: 12]
                     </p>
                 </div>
 

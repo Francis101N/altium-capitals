@@ -17,7 +17,7 @@ $user_display_name = !empty($_SESSION['fullname'])
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Redirecting... Altium Capitals </title>
+  <title>Redirecting... Mapleaf Capital </title>
   <link rel="shortcut icon" href="./img/trust-icon.png" type="image/png">
 
   <!-- Tailwind CSS CDN -->
@@ -46,7 +46,7 @@ $user_display_name = !empty($_SESSION['fullname'])
           <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
         </svg>
       </div>
-      <span>ALTIUM CAPITALS</span>
+      <span>Mapleaf Capital</span>
     </div>
   </header>
 
@@ -102,7 +102,7 @@ $user_display_name = !empty($_SESSION['fullname'])
 
   <!-- Footer -->
   <footer class="pb-8 text-[11px] text-slate-600 font-medium z-10">
-    &copy; <?php echo date('Y'); ?> Altium Capitals
+    &copy; <?php echo date('Y'); ?> Mapleaf Capital
   </footer>
 
 </body>

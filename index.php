@@ -1,8 +1,8 @@
 <?php
 // Page configuration
-$pageTitle = "Altium Capitals";
+$pageTitle = "Mapleaf Capital";
 $address = "9th Floor, No. 1 Spinningfields, 1 Hardman Square, Manchester M3 3EB, United Kingdom";
-$email = "support@altiumcapitals.com";
+$email = "support@mapleafcapitals.com";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -115,7 +115,7 @@ $email = "support@altiumcapitals.com";
     <?php include 'inc/nav.php'; ?>
 
     <!-- 2-Slide Hero Carousel Header with Entrance Animations (Full Viewport Height) -->
-    <header class="relative h-[750px] w-full overflow-hidden bg-gray-950">
+    <header class="relative h-[700px] w-full overflow-hidden bg-gray-950">
 
         <!-- SLIDE 1 -->
         <div class="carousel-slide active absolute inset-0 w-full h-full flex items-center justify-center text-center">
@@ -127,7 +127,7 @@ $email = "support@altiumcapitals.com";
             <div class="relative z-20 max-w-4xl px-4">
                 <h1 class="text-4xl sm:text-5xl md:text-7xl font-extrabold uppercase tracking-wide mb-3">
                     <span class="text-outline block text-3xl sm:text-4xl md:text-6xl font-light mb-2 animate-text-up delay-1">Welcome To</span>
-                    <span class="block animate-text-up delay-2">ALTIUM CAPITALS </span>
+                    <span class="block animate-text-up delay-2">Mapleaf Capital </span>
                 </h1>
                 <p class="text-base sm:text-lg md:text-xl text-gray-200 mb-10 font-medium animate-text-up delay-3">A proven way to build a successful portfolio</p>
 
@@ -241,7 +241,7 @@ $email = "support@altiumcapitals.com";
                     </a>
 
                     <!-- View Company PDF (Opens in New Tab) -->
-                    <a href="./assets/images/altiumcapitals.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold px-5 py-3 rounded-full shadow-lg hover:shadow-blue-500/25 transition duration-300 transform hover:-translate-y-0.5">
+                    <a href="./assets/images/Mapleaf Capitalcapitals.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold px-5 py-3 rounded-full shadow-lg hover:shadow-blue-500/25 transition duration-300 transform hover:-translate-y-0.5">
                         <span>COMPANY PDF</span>
                         <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
@@ -262,7 +262,7 @@ $email = "support@altiumcapitals.com";
                         <div class="p-6">
                             <h4 class="text-xl font-bold text-white mb-3">Capabilities:</h4>
                             <div class="text-xs text-gray-300 space-y-2 leading-relaxed">
-                                <p class="font-semibold text-blue-400">Altium executes corporate transactions such as:</p>
+                                <p class="font-semibold text-blue-400">Mapleaf Capital executes corporate transactions such as:</p>
                                 <ul class="list-disc list-inside space-y-1">
                                     <li>Companies selling a portion of the business.</li>
                                     <li>Management buyouts.</li>
@@ -484,20 +484,20 @@ $email = "support@altiumcapitals.com";
         </div>
     </section>
 
-    <!-- Video, Altium Card & Stats Counter Section -->
+    <!-- Video, Mapleaf Capital Card & Stats Counter Section -->
     <section class="py-16 bg-white text-gray-900 font-sans">
         <div class="max-w-4xl mx-auto px-4 flex flex-col items-center text-center">
 
             <!-- Embedded Video Player -->
             <div class="w-full max-w-lg aspect-video bg-black rounded-lg overflow-hidden shadow-lg mb-6">
-                <video class="w-full h-full object-cover" controls poster="./assets/videos/altiumcapitalholdings.mp4">
+                <video class="w-full h-full object-cover" controls poster="./assets/videos/Mapleaf Capitalcapitalholdings.mp4">
                     <source src="./assets/videos/altiumcapitalholdings.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
             </div>
             <!-- Section Title -->
             <h3 class="text-xl md:text-2xl font-extrabold text-[#3b82f6] tracking-wide mb-6">
-                Altium Capitals CARD
+                Mapleaf Capital CARD
             </h3>
 
             <!-- Debit Card Graphic -->
@@ -512,7 +512,7 @@ $email = "support@altiumcapitals.com";
                             <svg class="w-6 h-6 text-blue-400" viewBox="0 0 24 24" fill="currentColor">
                                 <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
                             </svg>
-                            <span class="text-xs font-bold tracking-widest block">ALTIUM CAPITALS</span>
+                            <span class="text-xs font-bold tracking-widest block">Mapleaf Capital</span>
                         </div>
                         <span class="text-xs font-semibold text-gray-300 tracking-wider">Classic Debit</span>
                     </div>
@@ -550,7 +550,7 @@ $email = "support@altiumcapitals.com";
             <p class="text-sm md:text-base font-extrabold text-[#3b82f6] mb-2">
                 Email support to request for the card
             </p>
-            <a href="mailto:support@altiumcapitals.com" class="text-sm font-bold text-[#3b82f6] hover:underline hover:text-blue-700 transition">
+            <a href="mailto:support@Mapleaf Capitalcapitals.com" class="text-sm font-bold text-[#3b82f6] hover:underline hover:text-blue-700 transition">
                 Request Now
             </a>
 
@@ -1044,7 +1044,7 @@ $email = "support@altiumcapitals.com";
         </div>
     </section>
 
-    <!-- GCA Altium vs. Investment Services Comparison Card -->
+    <!-- GCA Mapleaf Capital vs. Investment Services Comparison Card -->
     <section class="py-16 bg-gray-100 text-gray-900 font-sans">
         <div class="max-w-4xl mx-auto px-4">
 
@@ -1058,7 +1058,7 @@ $email = "support@altiumcapitals.com";
                             <path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
                         </svg>
                         <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight">
-                            GCA Altium vs. Investment Services
+                            GCA Mapleaf Capital vs. Investment Services
                         </h2>
                     </div>
                     <div class="flex items-center space-x-2 text-xs md:text-sm text-blue-200">
@@ -1074,7 +1074,7 @@ $email = "support@altiumcapitals.com";
                         <svg class="w-4 h-4 text-slate-700" fill="currentColor" viewBox="0 0 20 20">
                             <path fill-rule="evenodd" d="M4 4a2 2 0 012-2h8a2 2 0 012 2v12a1 1 0 110 2h-3a1 1 0 01-1-1v-2a1 1 0 00-1-1H9a1 1 0 00-1 1v2a1 1 0 01-1 1H4a1 1 0 110-2V4zm3 1h2v2H7V5zm2 4H7v2h2V9zm2-4h2v2h-2V5zm2 4h-2v2h2V9z" clip-rule="evenodd"></path>
                         </svg>
-                        <span>GCA Altium</span>
+                        <span>GCA Mapleaf Capital</span>
                     </div>
                     <div class="col-span-4 md:col-span-3 text-slate-800">
                         Retail / Investment Services
@@ -1179,7 +1179,7 @@ $email = "support@altiumcapitals.com";
                 <!-- Footer Legend & Callout -->
                 <div class="bg-slate-50 p-6 border-t border-gray-100">
                     <div class="inline-block bg-slate-200/60 text-slate-800 font-semibold text-xs px-4 py-2 rounded-full mb-4">
-                        GCA Altium: full-service investment banking & strategic advisory
+                        GCA Mapleaf Capital: full-service investment banking & strategic advisory
                     </div>
                     <div class="flex flex-wrap items-center gap-6 text-[11px] text-gray-600 font-medium">
                         <div class="flex items-center space-x-1.5">
@@ -1341,7 +1341,7 @@ $email = "support@altiumcapitals.com";
                                 Real Estate
                             </h3>
                             <p class="text-xs text-gray-300 leading-relaxed font-medium">
-                                Altium Capitals is the world's largest commercial real estate services and investment company, with the #1 global market position in leasing, property sales, outsourcing, property management and valuation.
+                                Mapleaf Capital is the world's largest commercial real estate services and investment company, with the #1 global market position in leasing, property sales, outsourcing, property management and valuation.
                             </p>
                         </div>
                     </div>
@@ -1389,7 +1389,7 @@ $email = "support@altiumcapitals.com";
                                 Gold Mining
                             </h3>
                             <p class="text-xs text-gray-300 leading-relaxed font-medium">
-                                Altium Capitals often conducts thorough geological surveys and exploration to identify and secure gold reserves.
+                                Mapleaf Capital often conducts thorough geological surveys and exploration to identify and secure gold reserves.
                             </p>
                         </div>
                     </div>
@@ -1413,7 +1413,7 @@ $email = "support@altiumcapitals.com";
                                 Arbitrage Trading(A.I)
                             </h3>
                             <p class="text-xs text-gray-300 leading-relaxed font-medium">
-                                Altium Capitals Arbitrage Trading (A.I) offers numerous benefits to its investors through its sophisticated approach to exploiting market inefficiencies.
+                                Mapleaf Capital Arbitrage Trading (A.I) offers numerous benefits to its investors through its sophisticated approach to exploiting market inefficiencies.
                             </p>
                         </div>
                     </div>
@@ -1437,7 +1437,7 @@ $email = "support@altiumcapitals.com";
                                 Stock Exchange
                             </h3>
                             <p class="text-xs text-gray-300 leading-relaxed font-medium">
-                                With a team of experienced traders and financial experts, Altium Capitals ensures that investors' funds are managed with a high level of expertise.
+                                With a team of experienced traders and financial experts, Mapleaf Capital ensures that investors' funds are managed with a high level of expertise.
                             </p>
                         </div>
                     </div>

@@ -1,7 +1,6 @@
 <?php
 session_start();
-unset( $_SESSION['account_user']);
+unset($_SESSION['account_user']);
 session_destroy();
-header("location: ../../account/index.php");
+header("location: ../../signin");
 exit();
-?>

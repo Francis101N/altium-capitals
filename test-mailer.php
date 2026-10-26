@@ -22,7 +22,7 @@ $mail->Debugoutput = function ($message, $level) {
     error_log("SMTP DEBUG [$level]: $message");
 };
 
-$mail->setFrom('admin@techbyfrancis.com', 'Altium Capitals');
+$mail->setFrom('admin@techbyfrancis.com', 'Mapleaf Capital');
 $mail->addAddress('francisnwankwo1972@gmail.com', 'Test Recipient');
 $mail->Subject = 'SMTP diagnostic test';
 $mail->Body = 'Testing SMTP delivery from the MAMP PHP environment.';

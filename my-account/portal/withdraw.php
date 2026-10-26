@@ -57,7 +57,7 @@ $result = $stmt->get_result();
     name="viewport"
     content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 
-  <title>Withdraw | Altium Capitals.</title>
+  <title>Withdraw | Mapleaf Capital.</title>
 
   <meta name="description" content="" />
 
@@ -163,7 +163,7 @@ $result = $stmt->get_result();
         <div class="app-brand demo">
           <a href="index.html" class="app-brand-link">
             <span class="app-brand-logo demo">
-              <img src="./img/altium-logo-blue.jpeg" alt="" width="180px">
+              <img src="./img/mapleaf-logo.png" alt="" width="130px">
             </span>
           </a>
 
@@ -177,7 +177,7 @@ $result = $stmt->get_result();
         <ul class="menu-inner py-1">
           <!-- Dashboard -->
           <li class="menu-item mt-2">
-            <a href="https://sovereignnexarcapital.org/" class="menu-link">
+            <a href="https://mapleafcapital.com/" class="menu-link">
               <i class="menu-icon tf-icons bx bx-home-circle"></i>
               <div data-i18n="Homepage">Home Page</div>
             </a>
@@ -319,7 +319,9 @@ $result = $stmt->get_result();
                     <div class="dropdown-divider"></div>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="logout">
+                    <a class="dropdown-item"
+                      href="logout"
+                      onclick="return confirm('Are you sure you want to log out of your account?');">
                       <i class="bx bx-power-off me-2"></i>
                       <span class="align-middle">Log Out</span>
                     </a>
@@ -532,7 +534,7 @@ $result = $stmt->get_result();
           <footer class="content-footer footer bg-footer-theme border-top py-4 mt-5">
             <div class="container-xxl d-flex justify-content-center text-center">
               <div class="text-muted small">
-                &copy; <?php echo date('Y'); ?>, <strong>Altium Capital Holdings. All Rights Reserved.</strong>
+                &copy; <?php echo date('Y'); ?>, <strong>Mapleaf Capital Capital Holdings. All Rights Reserved.</strong>
               </div>
             </div>
           </footer>

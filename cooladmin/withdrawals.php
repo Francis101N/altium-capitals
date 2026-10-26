@@ -55,7 +55,7 @@ if (!isset($_SESSION['admin_user'])) {
                 <div class="container-fluid">
                     <div class="header-mobile-inner">
                         <a class="logo" href="index">
-                            <img src="images/altium-logo.png" alt="CoolAdmin" width="180px" height="15px" />
+                            <img src="images/mapleaf-logo.png" alt="CoolAdmin" width="130px" height="15px" />
                         </a>
                         <button class="hamburger hamburger--slider" type="button">
                             <span class="hamburger-box">
@@ -117,7 +117,7 @@ if (!isset($_SESSION['admin_user'])) {
         <aside class="menu-sidebar d-none d-lg-block">
             <div class="logo">
                 <a href="#">
-                    <img src="images/altium-logo.png" alt="CoolAdmin" width="180px" height="10px" />
+                    <img src="images/mapleaf-logo.png" alt="CoolAdmin" width="150px" height="10px" />
                 </a>
             </div>
             <div class="menu-sidebar__content js-scrollbar1">
@@ -361,7 +361,7 @@ if (!isset($_SESSION['admin_user'])) {
                     <div class="row">
                         <div class="col-md-12">
                             <div class="copyright">
-                                <p>Copyright © 2025 Altium Capitals. All rights reserved. </p>
+                                <p>Copyright © 2025 Mapleaf Capital. All rights reserved. </p>
                             </div>
                         </div>
                     </div>

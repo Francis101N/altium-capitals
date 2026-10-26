@@ -92,7 +92,7 @@ if (!$withdrawal) {
                 <div class="container-fluid">
                     <div class="header-mobile-inner">
                         <a class="logo" href="#">
-                            <img src="images/altium-logo.png" alt="CoolAdmin" width="180px" height="15px" />
+                            <img src="images/mapleaf-logo.png" alt="CoolAdmin" width="130px" height="15px" />
                         </a>
                         <button class="hamburger hamburger--slider" type="button">
                             <span class="hamburger-box">
@@ -155,7 +155,7 @@ if (!$withdrawal) {
         <aside class="menu-sidebar d-none d-lg-block">
             <div class="logo">
                 <a href="#">
-                    <img src="images/altium-logo.png" alt="CoolAdmin" width="180px" height="10px" />
+                    <img src="images/mapleaf-logo.png" alt="CoolAdmin" width="150px" height="10px" />
                 </a>
             </div>
             <div class="menu-sidebar__content js-scrollbar1">

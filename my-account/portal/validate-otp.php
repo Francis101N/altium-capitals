@@ -21,119 +21,117 @@ ini_set('display_errors', 0);
   dir="ltr"
   data-theme="theme-default"
   data-assets-path="../assets/"
-  data-template="vertical-menu-template-free"
->
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
-    />
+  data-template="vertical-menu-template-free">
 
-    <title>Validate OTP| Altium Capitals.</title>
+</html>
 
-    <meta name="description" content="" />
+<head>
+  <meta charset="utf-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 
-    <!-- Favicon -->
-       <link rel="icon" type="image/x-icon" href="../assets/img/icon.png" />
+  <title>Validate OTP| Mapleaf Capital.</title>
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
-      rel="stylesheet"
-    />
+  <meta name="description" content="" />
 
-    <!-- Icons. Uncomment required icon fonts -->
-    <link rel="stylesheet" href="../assets/vendor/fonts/boxicons.css" />
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="../assets/img/icon.png" />
 
-    <!-- Core CSS -->
-    <link rel="stylesheet" href="../assets/vendor/css/core.css" class="template-customizer-core-css" />
-    <link rel="stylesheet" href="../assets/vendor/css/theme-default.css" class="template-customizer-theme-css" />
-    <link rel="stylesheet" href="../assets/css/demo.css" />
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+    rel="stylesheet" />
 
-    <!-- Vendors CSS -->
-    <link rel="stylesheet" href="../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
+  <!-- Icons. Uncomment required icon fonts -->
+  <link rel="stylesheet" href="../assets/vendor/fonts/boxicons.css" />
 
-    <!-- Page CSS -->
-    <!-- Page -->
-    <link rel="stylesheet" href="../assets/vendor/css/pages/page-auth.css" />
-    <!-- Helpers -->
-    <script src="../assets/vendor/js/helpers.js"></script>
+  <!-- Core CSS -->
+  <link rel="stylesheet" href="../assets/vendor/css/core.css" class="template-customizer-core-css" />
+  <link rel="stylesheet" href="../assets/vendor/css/theme-default.css" class="template-customizer-theme-css" />
+  <link rel="stylesheet" href="../assets/css/demo.css" />
 
-    <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
-    <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
-    <script src="../assets/js/config.js"></script>
-  </head>
+  <!-- Vendors CSS -->
+  <link rel="stylesheet" href="../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
 
-  <body>
-    <!-- Content -->
+  <!-- Page CSS -->
+  <!-- Page -->
+  <link rel="stylesheet" href="../assets/vendor/css/pages/page-auth.css" />
+  <!-- Helpers -->
+  <script src="../assets/vendor/js/helpers.js"></script>
 
-    <div class="container-xxl">
-      <div class="authentication-wrapper authentication-basic container-p-y">
-        <div class="authentication-inner py-4">
-          <!-- Forgot Password -->
-          <div class="card">
-            <div class="card-body">
-              <!-- Logo -->
-              <div class="app-brand justify-content-center">
-                  <a href="index.html" class="app-brand-link">
-            <span class="app-brand-logo demo">
-      <img src="../assets/img/logo.png" alt="Logo" width="180px">
-       </span>
-          </a>
+  <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
+  <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
+  <script src="../assets/js/config.js"></script>
+</head>
 
-             </div>
-             <br><br>
-<!-- /Logo -->
-<h4 class="mb-2">Verify Your Identity 🔐</h4>
-<p class="mb-4">Enter the One-Time Password (OTP) sent to your email to continue.</p>
+<body>
+  <!-- Content -->
 
-         <?php
-         if ($error) {
-           echo '
+  <div class="container-xxl">
+    <div class="authentication-wrapper authentication-basic container-p-y">
+      <div class="authentication-inner py-4">
+        <!-- Forgot Password -->
+        <div class="card">
+          <div class="card-body">
+            <!-- Logo -->
+            <div class="app-brand justify-content-center">
+              <a href="index.html" class="app-brand-link">
+                <span class="app-brand-logo demo">
+                  <img src="./img/mapleaf-logo.png" alt="" width="130px">
+                </span>
+              </a>
+
+            </div>
+            <br><br>
+            <!-- /Logo -->
+            <h4 class="mb-2">Verify Your Identity 🔐</h4>
+            <p class="mb-4">Enter the One-Time Password (OTP) sent to your email to continue.</p>
+
+            <?php
+            if ($error) {
+              echo '
     <div class="alert alert-primary alert-dismissible fade show" role="alert">
       <strong>Error:</strong> ' . htmlspecialchars($error) . '
       <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>';
-         }
+            }
 
-         if
-         ($success) {
-           echo '
+            if ($success) {
+              echo '
     <div class="alert alert-success alert-dismissible fade show" role="alert">
       <strong>Success:</strong> ' . htmlspecialchars($success) . '
       <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>';
-         }
-         ?>
+            }
+            ?>
 
-<form id="formAuthentication" class="mb-3" action="verify-otp.php" method="POST">
-  <div class="mb-3">
-    <label for="otp" class="form-label">OTP Code</label>
-    <input
-      type="text"
-      class="form-control"
-      id="otp"
-      name="otp"
-      placeholder="Enter OTP"
-      autofocus
-    />
-  </div>
-  <button class="btn btn-primary d-grid w-100">Verify OTP</button>
-</form>
+            <form id="formAuthentication" class="mb-3" action="verify-otp.php" method="POST">
+              <div class="mb-3">
+                <label for="otp" class="form-label">OTP Code</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="otp"
+                  name="otp"
+                  placeholder="Enter OTP"
+                  autofocus />
+              </div>
+              <button class="btn btn-primary d-grid w-100">Verify OTP</button>
+            </form>
 
-<div class="text-center">
-  <a href="resend-otp.php" class="d-flex align-items-center justify-content-center mb-2 text-primary">
-    <i class="bx bx-refresh bx-sm me-1"></i>
-    Resend OTP
-  </a>
-  <a href="index.php" class="d-flex align-items-center justify-content-center">
-    <i class="bx bx-chevron-left scaleX-n1-rtl bx-sm"></i>
-    Back to login
-  </a>
-</div>
+            <div class="text-center">
+              <a href="resend-otp.php" class="d-flex align-items-center justify-content-center mb-2 text-primary">
+                <i class="bx bx-refresh bx-sm me-1"></i>
+                Resend OTP
+              </a>
+              <a href="index.php" class="d-flex align-items-center justify-content-center">
+                <i class="bx bx-chevron-left scaleX-n1-rtl bx-sm"></i>
+                Back to login
+              </a>
+            </div>
 
           </div>
           <!-- /Forgot Password -->
@@ -162,5 +160,6 @@ ini_set('display_errors', 0);
 
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
-  </body>
+</body>
+
 </html>

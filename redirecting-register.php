@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Registration Successful | Altium Capitals</title>
+    <title> Registration Successful | Mapleaf Capital</title>
     <link rel="shortcut icon" href="./img/trust-icon.png" type="image/png">
 
     <!-- Tailwind CSS CDN -->
@@ -33,7 +33,7 @@
                     <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
                 </svg>
             </div>
-            <span>ALTIUM CAPITALS</span>
+            <span>Mapleaf Capital</span>
         </div>
     </header>
 
@@ -63,7 +63,7 @@
 
             <!-- Welcome Message -->
             <p class="text-sm font-medium text-slate-400 mb-6">
-                Welcome to Altium Capitals — your account has been created successfully. You will be redirected to the login page shortly.
+                Welcome to Mapleaf Capital — your account has been created successfully. You will be redirected to the login page shortly.
             </p>
 
             <!-- Status Bar & Dots -->
@@ -89,7 +89,7 @@
 
     <!-- Footer -->
     <footer class="pb-8 text-[11px] text-slate-600 font-medium z-10">
-        &copy; <?php echo date('Y'); ?> Altium Capitals
+        &copy; <?php echo date('Y'); ?> Mapleaf Capital
     </footer>
 
 </body>

@@ -45,17 +45,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $mail->SMTPSecure = 'ssl';
             $mail->Port = 465;
 
-            $mail->setFrom('admin@techbyfrancis.com', 'Altium Capitals');
+            $mail->setFrom('admin@techbyfrancis.com', 'Mapleaf Capital');
             $mail->addAddress($email, $username);
             $mail->isHTML(true);
 
             // Subject & Body based on deposit status
             if ($status === 'Approved') {
-                $mail->Subject = "Deposit Approved & Active - Altium Capital Holdings";
+                $mail->Subject = "Deposit Approved & Active - Mapleaf Capital Capital Holdings";
                 $mail->Body = "
                 <div style='font-family: \"Plus Jakarta Sans\", Arial, sans-serif; max-width: 600px; margin: 0 auto; background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; overflow: hidden;'>
                     <div style='background-color: #0f172a; padding: 24px; text-align: center;'>
-                        <h2 style='color: #ffffff; margin: 0; font-size: 20px; font-weight: 700;'>Altium Capital Holdings</h2>
+                        <h2 style='color: #ffffff; margin: 0; font-size: 20px; font-weight: 700;'>Mapleaf Capital Capital Holdings</h2>
                         <span style='color: #3b82f6; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;'>Investment Confirmation</span>
                     </div>
                     <div style='padding: 32px; color: #334155; line-height: 1.6;'>
@@ -84,20 +84,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         </div>
                         
                         <p style='font-size: 14px;'>Your investment yield cycle is now active. You can track real-time daily returns directly on your executive dashboard.</p>
-                        <p style='font-size: 14px; margin-bottom: 0;'>Thank you for choosing Altium Capital Holdings.</p>
+                        <p style='font-size: 14px; margin-bottom: 0;'>Thank you for choosing Mapleaf Capital Capital Holdings.</p>
                     </div>
                     <div style='background-color: #f1f5f9; padding: 16px; text-align: center; border-top: 1px solid #e2e8f0; font-size: 12px; color: #64748b;'>
                         Regards,<br>
-                        <strong style='color: #0f172a;'>Altium Capital Holdings Executive Desk</strong>
+                        <strong style='color: #0f172a;'>Mapleaf Capital Capital Holdings Executive Desk</strong>
                     </div>
                 </div>
             ";
             } elseif ($status === 'Rejected') {
-                $mail->Subject = "Deposit Status Update - Altium Capital Holdings";
+                $mail->Subject = "Deposit Status Update - Mapleaf Capital Capital Holdings";
                 $mail->Body = "
                 <div style='font-family: \"Plus Jakarta Sans\", Arial, sans-serif; max-width: 600px; margin: 0 auto; background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; overflow: hidden;'>
                     <div style='background-color: #0f172a; padding: 24px; text-align: center;'>
-                        <h2 style='color: #ffffff; margin: 0; font-size: 20px; font-weight: 700;'>Altium Capital Holdings</h2>
+                        <h2 style='color: #ffffff; margin: 0; font-size: 20px; font-weight: 700;'>Mapleaf Capital Capital Holdings</h2>
                         <span style='color: #ef4444; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;'>Transaction Notice</span>
                     </div>
                     <div style='padding: 32px; color: #334155; line-height: 1.6;'>
@@ -110,11 +110,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             </p>
                         </div>
                         
-                        <p style='font-size: 14px;'>If you believe this is an error or need further assistance, please contact our support team at <a href='mailto:support@altiumcapitalholdings.com' style='color: #3b82f6;'>support@altiumcapitalholdings.com</a>.</p>
+                        <p style='font-size: 14px;'>If you believe this is an error or need further assistance, please contact our support team at <a href='mailto:support@Mapleaf Capitalcapitalholdings.com' style='color: #3b82f6;'>support@Mapleaf Capitalcapitalholdings.com</a>.</p>
                     </div>
                     <div style='background-color: #f1f5f9; padding: 16px; text-align: center; border-top: 1px solid #e2e8f0; font-size: 12px; color: #64748b;'>
                         Regards,<br>
-                        <strong style='color: #0f172a;'>Altium Capital Holdings Support Team</strong>
+                        <strong style='color: #0f172a;'>Mapleaf Capital Capital Holdings Support Team</strong>
                     </div>
                 </div>
             ";

@@ -92,14 +92,14 @@ if ($stmt_update->execute()) {
     $mail->SMTPSecure = 'ssl';
     $mail->Port       = 465;
 
-    $mail->setFrom('admin@techbyfrancis.com', 'Altium Capitals');
+    $mail->setFrom('admin@techbyfrancis.com', 'Mapleaf Capital');
     $mail->addAddress($email, $user['firstname']);
 
     $mail->isHTML(true);
-    $mail->Subject = "Transaction Alert: " . ucfirst($action) . " of $" . number_format($amount, 2) . " - Altium Capitals";
+    $mail->Subject = "Transaction Alert: " . ucfirst($action) . " of $" . number_format($amount, 2) . " - Mapleaf Capital";
 
     // Direct Web URL Header Logo (Avoids local file path errors)
-    $logoHeader = "<img src='https://altiumcapitals.com/images/edited.png' alt='Altium Capitals Logo' style='width: 130px; display: block; margin: 0 auto;'>";
+    $logoHeader = "<img src='https://Mapleaf Capitalcapitals.com/images/edited.png' alt='Mapleaf Capital Logo' style='width: 130px; display: block; margin: 0 auto;'>";
 
     $formattedAmount     = number_format($amount, 2);
     $formattedNewBalance = number_format($newBalance, 2);
@@ -164,14 +164,14 @@ if ($stmt_update->execute()) {
                                         </tr>
                                     </table>
 
-                                    <p style='color: #64748b; font-size: 13px; margin: 0; line-height: 1.5;'>Thank you for choosing <strong>Altium Capitals</strong>.</p>
+                                    <p style='color: #64748b; font-size: 13px; margin: 0; line-height: 1.5;'>Thank you for choosing <strong>Mapleaf Capital</strong>.</p>
                                 </td>
                             </tr>
 
                             <!-- FOOTER -->
                             <tr>
                                 <td style='background-color: #f1f5f9; padding: 20px 32px; text-align: center; border-top: 1px solid #e2e8f0;'>
-                                    <p style='color: #94a3b8; font-size: 11px; margin: 0; line-height: 1.4;'>&copy; " . date('Y') . " Altium Capitals Ltd. All Rights Reserved.<br>Automated System Advice.</p>
+                                    <p style='color: #94a3b8; font-size: 11px; margin: 0; line-height: 1.4;'>&copy; " . date('Y') . " Mapleaf Capital Ltd. All Rights Reserved.<br>Automated System Advice.</p>
                                 </td>
                             </tr>
 

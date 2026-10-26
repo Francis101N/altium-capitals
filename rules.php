@@ -1,8 +1,8 @@
 <?php
 // Page configuration
-$pageTitle = "Altium Capitals";
+$pageTitle = "Mapleaf Capital";
 $address = "9th Floor, No. 1 Spinningfields, 1 Hardman Square, Manchester M3 3EB, United Kingdom";
-$email = "support@altiumcapitals.com";
+$email = "support@mapleafcapitals.com";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -10,7 +10,7 @@ $email = "support@altiumcapitals.com";
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terms & Conditions - Altium Capitals</title>
+    <title>Terms & Conditions - Mapleaf Capital</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -126,7 +126,7 @@ $email = "support@altiumcapitals.com";
                         User Agreement
                     </h3>
                     <p>
-                        Welcome to the Altium Capitals Official website. By accessing this website, you agree to comply with this binding user agreement between you and Altium Capitals, which governs your access and use of the website. If you do not accept these terms and conditions, do not use this website. Your use of this website indicates your full acceptance of this user agreement in its then-current form each time you use the website. Altium Capitals reserves the right to change the terms and conditions at any time, without notice.
+                        Welcome to the Mapleaf Capital Official website. By accessing this website, you agree to comply with this binding user agreement between you and Mapleaf Capital, which governs your access and use of the website. If you do not accept these terms and conditions, do not use this website. Your use of this website indicates your full acceptance of this user agreement in its then-current form each time you use the website. Mapleaf Capital reserves the right to change the terms and conditions at any time, without notice.
                     </p>
                 </div>
 
@@ -136,7 +136,7 @@ $email = "support@altiumcapitals.com";
                         Ownership and Restrictions on Use
                     </h3>
                     <p>
-                        All content included on this website is the property of Altium Capitals or others and is protected by copyright with all rights reserved. You may download or print out a hard copy of individual pages and/or sections of the Altium Capitals website, provided that you do not remove any copyright or other proprietary notices. Any downloading or otherwise copying from the Altium Capitals website will not transfer title to any software or material to you. You may not reproduce (in whole or in part), transmit (by electronic means or otherwise), modify, link into or use for any public or commercial purpose the Altium Capitals website without the prior written permission of Altium Capitals. You may not disassemble, deconstruct or otherwise violate the security of all or any portion of this website. At any time and for any reason we may revoke your right to use all or any portion of the website.
+                        All content included on this website is the property of Mapleaf Capital or others and is protected by copyright with all rights reserved. You may download or print out a hard copy of individual pages and/or sections of the Mapleaf Capital website, provided that you do not remove any copyright or other proprietary notices. Any downloading or otherwise copying from the Mapleaf Capital website will not transfer title to any software or material to you. You may not reproduce (in whole or in part), transmit (by electronic means or otherwise), modify, link into or use for any public or commercial purpose the Mapleaf Capital website without the prior written permission of Mapleaf Capital. You may not disassemble, deconstruct or otherwise violate the security of all or any portion of this website. At any time and for any reason we may revoke your right to use all or any portion of the website.
                     </p>
                 </div>
                 <!-- Risks You Assume by Using This Website -->
@@ -173,7 +173,7 @@ $email = "support@altiumcapitals.com";
                         No Warranty
                     </h3>
                     <p>
-                        The information and opinions contained on the Altium Capitals website are provided without any warranty of any kind, either express or implied.
+                        The information and opinions contained on the Mapleaf Capital website are provided without any warranty of any kind, either express or implied.
                     </p>
                 </div>
 

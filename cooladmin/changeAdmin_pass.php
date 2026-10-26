@@ -58,7 +58,7 @@ if (!isset($_SESSION['admin_user'])) {
                 <div class="container-fluid">
                     <div class="header-mobile-inner">
                         <a class="logo" href="index.html">
-                            <img src="images/logo.png" alt="CoolAdmin" width="180px" height="30px" />
+                            <img src="images/mapleaf-logo.png" alt="CoolAdmin" width="130px" height="15px" />
                         </a>
                         <button class="hamburger hamburger--slider" type="button">
                             <span class="hamburger-box">
@@ -121,7 +121,7 @@ if (!isset($_SESSION['admin_user'])) {
         <aside class="menu-sidebar d-none d-lg-block">
             <div class="logo">
                 <a href="#">
-                    <img src="images/altium-logo.png" alt="CoolAdmin" width="180px" height="10px" />
+                    <img src="images/mapleaf-logo.png" alt="CoolAdmin" width="150px" height="10px" />
                 </a>
             </div>
             <div class="menu-sidebar__content js-scrollbar1">
@@ -234,129 +234,130 @@ if (!isset($_SESSION['admin_user'])) {
                 </div>
             </header>
             <!-- HEADER DESKTOP-->
-   <br><br><br><br><
-            <!-- MAIN CONTENT -->
-            <div class="main-content container py-4">
-                <div class="row">
-                    <div class="col-lg-8 col-xl-6 mx-auto">
+            <br><br><br><br>
+            <
+                <!-- MAIN CONTENT -->
+                <div class="main-content container py-4">
+                    <div class="row">
+                        <div class="col-lg-8 col-xl-6 mx-auto">
 
-                        <!-- EXECUTIVE CARD CONTAINER -->
-                        <div class="card border-0 shadow-sm rounded-4 overflow-hidden mb-4 bg-white" style="border: 1px solid #e2e8f0 !important;">
+                            <!-- EXECUTIVE CARD CONTAINER -->
+                            <div class="card border-0 shadow-sm rounded-4 overflow-hidden mb-4 bg-white" style="border: 1px solid #e2e8f0 !important;">
 
-                            <!-- Executive Card Header -->
-                            <div class="card-header bg-dark text-white py-3.5 px-4 d-flex align-items-center justify-content-between">
-                                <div class="d-flex align-items-center">
-                                    <div class="rounded-3 bg-primary text-white d-flex align-items-center justify-content-center me-3 shadow-sm" style="width: 40px; height: 40px;">
-                                        <!-- Lock SVG Icon -->
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
-                                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
-                                        </svg>
+                                <!-- Executive Card Header -->
+                                <div class="card-header bg-dark text-white py-3.5 px-4 d-flex align-items-center justify-content-between">
+                                    <div class="d-flex align-items-center">
+                                        <div class="rounded-3 bg-primary text-white d-flex align-items-center justify-content-center me-3 shadow-sm" style="width: 40px; height: 40px;">
+                                            <!-- Lock SVG Icon -->
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                                                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <h5 class="mb-0 fw-extrabold text-white fs-6">Change Admin Password</h5>
+                                            <span class="text-muted small" style="font-size: 0.72rem;">Update administrative access and security credentials</span>
+                                        </div>
                                     </div>
-                                    <div>
-                                        <h5 class="mb-0 fw-extrabold text-white fs-6">Change Admin Password</h5>
-                                        <span class="text-muted small" style="font-size: 0.72rem;">Update administrative access and security credentials</span>
-                                    </div>
+                                    <span class="badge bg-primary-subtle text-primary border border-primary-subtle font-mono fw-bold px-3 py-1.5 rounded-pill" style="font-size: 0.7rem;">
+                                        Security Vault
+                                    </span>
                                 </div>
-                                <span class="badge bg-primary-subtle text-primary border border-primary-subtle font-mono fw-bold px-3 py-1.5 rounded-pill" style="font-size: 0.7rem;">
-                                    Security Vault
-                                </span>
-                            </div>
 
-                            <!-- Card Body Form -->
-                            <div class="card-body p-4">
+                                <!-- Card Body Form -->
+                                <div class="card-body p-4">
 
-                                <!-- Alert Banners -->
-                                <?php if (isset($section) && $section == 'pass-change'): ?>
-                                    <div class="alert alert-success alert-dismissible fade show d-flex align-items-center mb-4 shadow-sm" role="alert">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="me-2 flex-shrink-0">
-                                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                                        </svg>
-                                        <div>Your password has been changed successfully.</div>
-                                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                                    </div>
-                                <?php endif; ?>
-
-                                <?php if (isset($section) && $section == 'pass-error'): ?>
-                                    <div class="alert alert-danger alert-dismissible fade show d-flex align-items-center mb-4 shadow-sm" role="alert">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="me-2 flex-shrink-0">
-                                            <circle cx="12" cy="12" r="10"></circle>
-                                            <line x1="12" y1="8" x2="12" y2="12"></line>
-                                            <line x1="12" y1="16" x2="12.01" y2="16"></line>
-                                        </svg>
-                                        <div>Error - Password change failed. Ensure your password and confirmation match.</div>
-                                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                                    </div>
-                                <?php endif; ?>
-
-                                <form action="proc_changeAdminPass" method="post">
-
-                                    <!-- New Password Field -->
-                                    <div class="mb-3">
-                                        <label for="password" class="form-label fw-bold text-dark small">New Password <span class="text-danger">*</span></label>
-                                        <div class="input-group">
-                                            <span class="input-group-text bg-light text-secondary border-end-0" style="width: 46px; justify-content: center;">
-                                                <!-- Key SVG Icon -->
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                    <path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"></path>
-                                                </svg>
-                                            </span>
-                                            <input type="password" id="password" name="password" placeholder="Enter new password..." class="form-control font-mono" style="height: 48px;" required>
-                                        </div>
-                                        <div class="form-text text-muted small mt-1">Provide a strong password containing at least 8 characters.</div>
-                                    </div>
-
-                                    <!-- Confirm Password Field -->
-                                    <div class="mb-4">
-                                        <label for="confirm_password" class="form-label fw-bold text-dark small">Confirm New Password <span class="text-danger">*</span></label>
-                                        <div class="input-group">
-                                            <span class="input-group-text bg-light text-secondary border-end-0" style="width: 46px; justify-content: center;">
-                                                <!-- Shield Check SVG Icon -->
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                                                    <path d="m9 12 2 2 4-4"></path>
-                                                </svg>
-                                            </span>
-                                            <input type="password" id="confirm_password" name="confirm_password" placeholder="Re-enter new password..." class="form-control font-mono" style="height: 48px;" required>
-                                        </div>
-                                        <div class="form-text text-muted small mt-1">Please re-enter your new password to verify accuracy.</div>
-                                    </div>
-
-                                    <!-- Action Buttons -->
-                                    <div class="d-flex gap-2 pt-3 border-top">
-                                        <button type="submit" class="btn btn-success px-4 py-2.5 fw-bold shadow-sm d-inline-flex align-items-center justify-content-center" style="height: 48px;">
-                                            <!-- Check Circle SVG Icon -->
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="me-2">
+                                    <!-- Alert Banners -->
+                                    <?php if (isset($section) && $section == 'pass-change'): ?>
+                                        <div class="alert alert-success alert-dismissible fade show d-flex align-items-center mb-4 shadow-sm" role="alert">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="me-2 flex-shrink-0">
                                                 <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
                                                 <polyline points="22 4 12 14.01 9 11.01"></polyline>
                                             </svg>
-                                            Update Password
-                                        </button>
-                                        <button type="reset" class="btn btn-outline-danger px-3 py-2.5 fw-semibold d-inline-flex align-items-center justify-content-center" style="height: 48px;">
-                                            <!-- Ban SVG Icon -->
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="me-1">
+                                            <div>Your password has been changed successfully.</div>
+                                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                        </div>
+                                    <?php endif; ?>
+
+                                    <?php if (isset($section) && $section == 'pass-error'): ?>
+                                        <div class="alert alert-danger alert-dismissible fade show d-flex align-items-center mb-4 shadow-sm" role="alert">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="me-2 flex-shrink-0">
                                                 <circle cx="12" cy="12" r="10"></circle>
-                                                <line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line>
+                                                <line x1="12" y1="8" x2="12" y2="12"></line>
+                                                <line x1="12" y1="16" x2="12.01" y2="16"></line>
                                             </svg>
-                                            Reset
-                                        </button>
-                                    </div>
+                                            <div>Error - Password change failed. Ensure your password and confirmation match.</div>
+                                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                        </div>
+                                    <?php endif; ?>
 
-                                </form>
+                                    <form action="proc_changeAdminPass" method="post">
+
+                                        <!-- New Password Field -->
+                                        <div class="mb-3">
+                                            <label for="password" class="form-label fw-bold text-dark small">New Password <span class="text-danger">*</span></label>
+                                            <div class="input-group">
+                                                <span class="input-group-text bg-light text-secondary border-end-0" style="width: 46px; justify-content: center;">
+                                                    <!-- Key SVG Icon -->
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                        <path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"></path>
+                                                    </svg>
+                                                </span>
+                                                <input type="password" id="password" name="password" placeholder="Enter new password..." class="form-control font-mono" style="height: 48px;" required>
+                                            </div>
+                                            <div class="form-text text-muted small mt-1">Provide a strong password containing at least 8 characters.</div>
+                                        </div>
+
+                                        <!-- Confirm Password Field -->
+                                        <div class="mb-4">
+                                            <label for="confirm_password" class="form-label fw-bold text-dark small">Confirm New Password <span class="text-danger">*</span></label>
+                                            <div class="input-group">
+                                                <span class="input-group-text bg-light text-secondary border-end-0" style="width: 46px; justify-content: center;">
+                                                    <!-- Shield Check SVG Icon -->
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                                        <path d="m9 12 2 2 4-4"></path>
+                                                    </svg>
+                                                </span>
+                                                <input type="password" id="confirm_password" name="confirm_password" placeholder="Re-enter new password..." class="form-control font-mono" style="height: 48px;" required>
+                                            </div>
+                                            <div class="form-text text-muted small mt-1">Please re-enter your new password to verify accuracy.</div>
+                                        </div>
+
+                                        <!-- Action Buttons -->
+                                        <div class="d-flex gap-2 pt-3 border-top">
+                                            <button type="submit" class="btn btn-success px-4 py-2.5 fw-bold shadow-sm d-inline-flex align-items-center justify-content-center" style="height: 48px;">
+                                                <!-- Check Circle SVG Icon -->
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="me-2">
+                                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                                </svg>
+                                                Update Password
+                                            </button>
+                                            <button type="reset" class="btn btn-outline-danger px-3 py-2.5 fw-semibold d-inline-flex align-items-center justify-content-center" style="height: 48px;">
+                                                <!-- Ban SVG Icon -->
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="me-1">
+                                                    <circle cx="12" cy="12" r="10"></circle>
+                                                    <line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line>
+                                                </svg>
+                                                Reset
+                                            </button>
+                                        </div>
+
+                                    </form>
+                                </div>
+
                             </div>
-
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="copyright">
-                        Copyright © 2025 Altium Capitals., All rights reserved.
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="copyright">
+                            Copyright © 2025 Mapleaf Capital., All rights reserved.
+                        </div>
                     </div>
                 </div>
-            </div>
         </div>
 
     </div>

@@ -1,8 +1,8 @@
 <?php
 // Page configuration
-$pageTitle = "Altium Capitals";
+$pageTitle = "Mapleaf Capital";
 $address = "9th Floor, No. 1 Spinningfields, 1 Hardman Square, Manchester M3 3EB, United Kingdom";
-$email = "support@altiumcapitals.com";
+$email = "support@mapleafcapitals.com";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -10,7 +10,7 @@ $email = "support@altiumcapitals.com";
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Altium Capitals</title>
+    <title>About Us - Mapleaf Capital</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -74,7 +74,7 @@ $email = "support@altiumcapitals.com";
     <!-- Floating Chat Widgets -->
     <?php include 'inc/floating-whatsapp.php'; ?>
 
-    <!-- About Altium Capitals Hero Banner Section -->
+    <!-- About Mapleaf Capital Hero Banner Section -->
     <section class="relative bg-slate-900 text-white min-h-[500px] flex items-center justify-center overflow-hidden font-sans">
 
         <!-- Background Image with Dark Blue Overlay -->
@@ -92,7 +92,7 @@ $email = "support@altiumcapitals.com";
 
             <!-- Main Heading -->
             <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-white mb-4 leading-tight">
-                About Altium Capitals Holdings
+                About Mapleaf Capital Holdings
             </h1>
 
             <!-- Subheading -->
@@ -118,22 +118,22 @@ $email = "support@altiumcapitals.com";
         </div>
     </section>
 
-    <!-- Altium Capital Investment Summary Section -->
+    <!-- Mapleaf Capital Capital Investment Summary Section -->
     <section class="py-20 bg-white text-gray-900 font-sans">
         <div class="max-w-4xl mx-auto px-6 text-center">
 
             <!-- Main Title -->
             <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#1f2937] tracking-tight mb-8">
-                Altium Capitals Investment
+                Mapleaf Capital Investment
             </h2>
 
             <!-- Description Paragraphs -->
             <div class="space-y-4 text-base sm:text-lg md:text-xl text-gray-800 font-normal leading-relaxed max-w-3xl mx-auto">
                 <p>
-                    Altium Capitals is an international financial firm that enables individuals worldwide to invest and provides advisory services in mergers and acquisitions, capital raising, and other related corporate finance solutions.
+                    Mapleaf Capital is an international financial firm that enables individuals worldwide to invest and provides advisory services in mergers and acquisitions, capital raising, and other related corporate finance solutions.
                 </p>
                 <p>
-                    Altium partners with companies and institutions through corporate finance and capital markets advisory, and empowers individuals with direct investment and trading opportunities.
+                    Mapleaf Capital partners with companies and institutions through corporate finance and capital markets advisory, and empowers individuals with direct investment and trading opportunities.
                 </p>
             </div>
 
@@ -172,7 +172,7 @@ $email = "support@altiumcapitals.com";
                         FAST FACTS
                     </h2>
                     <p class="text-sm font-medium text-gray-500 mb-8">
-                        Altium Capitals
+                        Mapleaf Capital
                     </p>
 
                     <!-- Bullet Items with Checkmarks -->
@@ -275,16 +275,16 @@ $email = "support@altiumcapitals.com";
 
                     <!-- Introductory Blue Banner Paragraph -->
                     <p class="text-sm sm:text-base text-blue-500 font-bold leading-relaxed">
-                        At Altium Capitals, we pride ourselves on asking questions, planning and creating something out of nothing. We are entrepreneurs, inventors, scientists, and engineers shaping the future of finance in a collaborative, stimulating environment.
+                        At Mapleaf Capital, we pride ourselves on asking questions, planning and creating something out of nothing. We are entrepreneurs, inventors, scientists, and engineers shaping the future of finance in a collaborative, stimulating environment.
                     </p>
 
                     <!-- 2-Column Checklist Grid -->
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 pt-2">
 
-                        <!-- Column 1: The Altium Capitals -->
+                        <!-- Column 1: The Mapleaf Capital -->
                         <div>
                             <h4 class="text-lg font-bold text-[#f8b88b] mb-4 leading-snug">
-                                The Altium Capital<br>Holdings
+                                The Mapleaf Capital Capital<br>Holdings
                             </h4>
 
                             <ul class="space-y-4 text-xs sm:text-sm text-gray-700 font-normal">
@@ -318,7 +318,7 @@ $email = "support@altiumcapitals.com";
                         <!-- Column 2: Transactions Since 2015 -->
                         <div>
                             <h4 class="text-lg font-bold text-[#f8b88b] mb-4 leading-snug">
-                                Altium Capitals,<br>Transactions Since 2015
+                                Mapleaf Capital,<br>Transactions Since 2015
                             </h4>
 
                             <ul class="space-y-4 text-xs sm:text-sm text-gray-700 font-normal">
@@ -400,7 +400,7 @@ $email = "support@altiumcapitals.com";
 
             <!-- Introductory Header Paragraph -->
             <p class="text-xs sm:text-sm text-gray-700 font-normal leading-relaxed mb-12 text-center max-w-4xl mx-auto">
-                Altium Capital has over 20 office locations globally in major financial and commercial hubs across Europe, North America, Asia and the Middle East. These offices support corporate advisory, capital markets and cross-border financing activities.[cite: 6]
+                Mapleaf Capital Capital has over 20 office locations globally in major financial and commercial hubs across Europe, North America, Asia and the Middle East. These offices support corporate advisory, capital markets and cross-border financing activities.[cite: 6]
             </p>
 
             <!-- Global Offices Grid (Strict 2-Column Desktop Grid) -->
@@ -552,7 +552,7 @@ $email = "support@altiumcapitals.com";
             <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-12">
                 <div>
                     <h2 class="text-3xl sm:text-4xl font-extrabold text-[#1e293b] tracking-tight uppercase">
-                        WHY CHOOSE Altium Capital<br class="hidden sm:inline" /> Holdings
+                        WHY CHOOSE Mapleaf Capital Capital<br class="hidden sm:inline" /> Holdings
                     </h2>
                 </div>
                 <div class="mt-4 md:mt-0">

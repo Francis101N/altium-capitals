@@ -55,10 +55,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $mail->SMTPSecure = 'ssl';
             $mail->Port       = 465;
 
-            $mail->setFrom('admin@techbyfrancis.com', 'Altium Capitals');
+            $mail->setFrom('admin@techbyfrancis.com', 'Mapleaf Capital');
             $mail->addAddress('francisnwankwo1972@gmail.com', 'Admin');
             $mail->isHTML(true);
-            $mail->Subject = "New Withdrawal Request [#{$reference}] - Altium Capitals";
+            $mail->Subject = "New Withdrawal Request [#{$reference}] - Mapleaf Capital";
 
             $formattedAmount = number_format($amount, 2);
             $currentTimestamp = date('Y-m-d H:i:s');
@@ -84,7 +84,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                         <table border='0' cellpadding='0' cellspacing='0' width='100%'>
                                             <tr>
                                                 <td>
-                                                    <h2 style='color: #ffffff; margin: 0; font-size: 20px; font-weight: 800; letter-spacing: 0.5px;'>ALTIUM CAPITALS</h2>
+                                                    <h2 style='color: #ffffff; margin: 0; font-size: 20px; font-weight: 800; letter-spacing: 0.5px;'>Mapleaf Capital</h2>
                                                     <p style='color: #94a3b8; margin: 4px 0 0 0; font-size: 12px; font-weight: 500;'>Administrative Security & Telemetry Portal</p>
                                                 </td>
                                                 <td align='right'>
@@ -133,7 +133,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                         <table border='0' cellpadding='0' cellspacing='0' width='100%' style='margin-top: 28px; margin-bottom: 12px;'>
                                             <tr>
                                                 <td align='center'>
-                                                    <a href='https://altiumcapitals.com/cooladmin' target='_blank' style='background-color: #2563eb; color: #ffffff; display: inline-block; padding: 14px 28px; font-size: 14px; font-weight: 700; text-decoration: none; border-radius: 8px; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.2);'>Review in Admin Console &rarr;</a>
+                                                    <a href='https://Mapleaf Capitalcapitals.com/cooladmin' target='_blank' style='background-color: #2563eb; color: #ffffff; display: inline-block; padding: 14px 28px; font-size: 14px; font-weight: 700; text-decoration: none; border-radius: 8px; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.2);'>Review in Admin Console &rarr;</a>
                                                 </td>
                                             </tr>
                                         </table>
@@ -143,7 +143,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 <!-- FOOTER -->
                                 <tr>
                                     <td style='background-color: #f1f5f9; padding: 20px 32px; text-align: center; border-top: 1px solid #e2e8f0;'>
-                                        <p style='color: #94a3b8; font-size: 11px; margin: 0; line-height: 1.4;'>&copy; " . date('Y') . " Altium Capitals Ltd. Automated System Alert.<br>No reply is required for this transactional email.</p>
+                                        <p style='color: #94a3b8; font-size: 11px; margin: 0; line-height: 1.4;'>&copy; " . date('Y') . " Mapleaf Capital Ltd. Automated System Alert.<br>No reply is required for this transactional email.</p>
                                     </td>
                                 </tr>
 

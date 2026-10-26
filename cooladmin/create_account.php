@@ -1,7 +1,7 @@
 <?php
 session_start();
 require('connect.php');
-require_once ('fns.php');
+require_once('fns.php');
 
 if (!isset($_SESSION['admin_user'])) {
     // Redirect to login page if not logged in
@@ -32,7 +32,7 @@ if (!isset($_SESSION['admin_user'])) {
 
     <!-- Bootstrap CSS-->
     <link href="vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" media="all">
-    
+
 
     <!-- Vendor CSS-->
     <link href="vendor/animsition/animsition.min.css" rel="stylesheet" media="all">
@@ -297,7 +297,7 @@ if (!isset($_SESSION['admin_user'])) {
                                         </div>
                                         <div class="content">
                                             <a class="js-acc-btn" href="#">Admin
-                                                <?php echo $_SESSION['admin_user'];?></a>
+                                                <?php echo $_SESSION['admin_user']; ?></a>
                                         </div>
                                         <div class="account-dropdown js-dropdown">
                                             <div class="info clearfix">
@@ -308,9 +308,9 @@ if (!isset($_SESSION['admin_user'])) {
                                                 </div>
                                                 <div class="content">
                                                     <h5 class="name">
-                                                        <a href="#"><?php echo $_SESSION['admin_fullnames'];?></a>
+                                                        <a href="#"><?php echo $_SESSION['admin_fullnames']; ?></a>
                                                     </h5>
-                                                    <span class="email"><?php echo $_SESSION['admin_email'];?></span>
+                                                    <span class="email"><?php echo $_SESSION['admin_email']; ?></span>
                                                 </div>
                                             </div>
                                             <div class="account-dropdown__body">
@@ -350,38 +350,38 @@ if (!isset($_SESSION['admin_user'])) {
                                         <div class="card-body">
                                             <div class="card-title">
                                                 <h6 class="text-center title-2"><small>Make sure to input all correct
-                                                    informations
-                                                    matching with your credentials..</small></h6>
+                                                        informations
+                                                        matching with your credentials..</small></h6>
                                             </div>
                                             <hr>
-                                            <?php 
-              if ($msg == 'success') {
-                echo '<div class="alert alert-success" role="alert">
+                                            <?php
+                                            if ($msg == 'success') {
+                                                echo '<div class="alert alert-success" role="alert">
                  Account Created successfully.
                  </div>';
-                } 
+                                            }
 
-               if ($msg == 'error') {
-                echo '<div class="alert alert-danger" role="alert">
+                                            if ($msg == 'error') {
+                                                echo '<div class="alert alert-danger" role="alert">
                  Error - No Input Field should be left Empty!.
                 </div>';
-                }
-               if ($msg == 'error2') {
-                echo '<div class="alert alert-danger" role="alert">
+                                            }
+                                            if ($msg == 'error2') {
+                                                echo '<div class="alert alert-danger" role="alert">
                  Error - Password $ Confirm Password does not Match!.
                 </div>';
-                }
-               if ($msg == 'error3') {
-                echo '<div class="alert alert-danger" role="alert">
+                                            }
+                                            if ($msg == 'error3') {
+                                                echo '<div class="alert alert-danger" role="alert">
                  Error - User Exist.!.
                 </div>';
-                }
-               if ($msg == 'error4') {
-                echo '<div class="alert alert-danger" role="alert">
+                                            }
+                                            if ($msg == 'error4') {
+                                                echo '<div class="alert alert-danger" role="alert">
                  Error - The email address you entered is not valid. Please check the format and try again (e.g., name@example.com).!.
                 </div>';
-                }
-            ?>
+                                            }
+                                            ?>
                                             <div class="form-group">
                                                 <label for="firstname" class="control-label mb-1">Firstname</label>
                                                 <input id="firstname" name="firstname" type="text" class="form-control"
@@ -426,7 +426,7 @@ if (!isset($_SESSION['admin_user'])) {
                                                 <label for="country" class="control-label mb-1">Country</label>
                                                 <select id="country" name="country" class="form-control"
                                                     aria-required="true" aria-invalid="false" required>
-                                                     <option value="<?php echo $country; ?>">
+                                                    <option value="<?php echo $country; ?>">
                                                         <?php echo $country; ?></option>
                                                     <option value="">Select a country</option>
                                                     <option value="Afghanistan">Afghanistan</option>
@@ -631,7 +631,7 @@ if (!isset($_SESSION['admin_user'])) {
                                                 <label for="sex" class="control-label mb-1">Sex</label>
                                                 <select id="sex" name="sex" class="form-control" aria-required="true"
                                                     aria-invalid="false" required>
-                                                     <option value="<?php echo $sex; ?>">
+                                                    <option value="<?php echo $sex; ?>">
                                                         <?php echo $sex; ?></option>
                                                     <option value="">Select sex</option>
                                                     <option value="male">Male</option>
@@ -720,19 +720,19 @@ if (!isset($_SESSION['admin_user'])) {
                                             <div class="form-group">
                                                 <label for="username" class=" form-control-label">Username</label>
                                                 <input type="text" id="username" name="username" placeholder="username"
-                                                    class="form-control" value="<?php echo $username ;?>" required>
+                                                    class="form-control" value="<?php echo $username; ?>" required>
                                             </div>
                                             <div class="form-group">
                                                 <label for="password" class=" form-control-label">Password</label><small
                                                     style="color: red;"> (numbers only)</small>
                                                 <input type="password" id="password" name="password"
-                                                    placeholder="password" class="form-control" value="<?php echo $password ;?>" required>
+                                                    placeholder="password" class="form-control" value="<?php echo $password; ?>" required>
                                             </div>
                                             <div class="form-group">
                                                 <label for="confirm_password" class=" form-control-label">Confirm
                                                     Password</label><small style="color: red;"> (numbers only)</small>
                                                 <input type="password" id="confirm_password" name="confirm_password"
-                                                    placeholder="confirm_password" class="form-control" value="<?php echo $password ;?>" required>
+                                                    placeholder="confirm_password" class="form-control" value="<?php echo $password; ?>" required>
                                             </div>
                                         </div>
                                     </div>
@@ -750,35 +750,35 @@ if (!isset($_SESSION['admin_user'])) {
                     </div>
                 </div>
             </div><br><br><br><br><br><br><br><br>
-        
-                <div class="copyright">
-                    <p>Copyright © 2018 Colorlib. All rights reserved. Template by <a
-                            href="https://colorlib.com">Colorlib</a>.</p>
-                </div>
 
-                <!-- Jquery JS-->
-                <script src="vendor/jquery-3.2.1.min.js"></script>
-                <!-- Bootstrap JS-->
-                <script src="vendor/bootstrap-4.1/popper.min.js"></script>
-                <script src="vendor/bootstrap-4.1/bootstrap.min.js"></script>
-                <!-- Vendor JS       -->
-                <script src="vendor/slick/slick.min.js">
-                </script>
-                <script src="vendor/wow/wow.min.js"></script>
-                <script src="vendor/animsition/animsition.min.js"></script>
-                <script src="vendor/bootstrap-progressbar/bootstrap-progressbar.min.js">
-                </script>
-                <script src="vendor/counter-up/jquery.waypoints.min.js"></script>
-                <script src="vendor/counter-up/jquery.counterup.min.js">
-                </script>
-                <script src="vendor/circle-progress/circle-progress.min.js"></script>
-                <script src="vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
-                <script src="vendor/chartjs/Chart.bundle.min.js"></script>
-                <script src="vendor/select2/select2.min.js">
-                </script>
+            <div class="copyright">
+                <p>Copyright © 2018 Colorlib. All rights reserved. Template by <a
+                        href="https://colorlib.com">Colorlib</a>.</p>
+            </div>
 
-                <!-- Main JS-->
-                <script src="js/main.js"></script>
+            <!-- Jquery JS-->
+            <script src="vendor/jquery-3.2.1.min.js"></script>
+            <!-- Bootstrap JS-->
+            <script src="vendor/bootstrap-4.1/popper.min.js"></script>
+            <script src="vendor/bootstrap-4.1/bootstrap.min.js"></script>
+            <!-- Vendor JS       -->
+            <script src="vendor/slick/slick.min.js">
+            </script>
+            <script src="vendor/wow/wow.min.js"></script>
+            <script src="vendor/animsition/animsition.min.js"></script>
+            <script src="vendor/bootstrap-progressbar/bootstrap-progressbar.min.js">
+            </script>
+            <script src="vendor/counter-up/jquery.waypoints.min.js"></script>
+            <script src="vendor/counter-up/jquery.counterup.min.js">
+            </script>
+            <script src="vendor/circle-progress/circle-progress.min.js"></script>
+            <script src="vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
+            <script src="vendor/chartjs/Chart.bundle.min.js"></script>
+            <script src="vendor/select2/select2.min.js">
+            </script>
+
+            <!-- Main JS-->
+            <script src="js/main.js"></script>
 
 </body>
 

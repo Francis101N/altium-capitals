@@ -1,8 +1,8 @@
 <?php
 // Page configuration
-$pageTitle = "Altium Capitals";
+$pageTitle = "Mapleaf Capital";
 $address = "9th Floor, No. 1 Spinningfields, 1 Hardman Square, Manchester M3 3EB, United Kingdom";
-$email = "support@altiumcapitals.com";
+$email = "support@mapleafcapitals.com";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -10,7 +10,7 @@ $email = "support@altiumcapitals.com";
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oil & Gas - Altium Capitals</title>
+    <title>Oil & Gas - Mapleaf Capital</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -70,111 +70,299 @@ $email = "support@altiumcapitals.com";
 <body class="text-white font-sans antialiased m-0 p-0">
 
     <!-- Top Utility Bar -->
-    <div class="bg-[#3b82f6] text-white text-xs py-2 px-4 sm:px-6 border-b border-blue-400/30 flex flex-wrap justify-between items-center relative z-50">
-        <!-- Company Logo & Universal Language Dropdown -->
-        <div class="flex items-center space-x-3 sm:space-x-6">
-            <a href="index.php"
-                class="flex items-center flex-shrink-0"
-                aria-label="Altium Capitals Home">
+    <div class="relative z-[60] bg-[#3b82f6] text-white border-b border-blue-400/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex flex-wrap items-center justify-between gap-3">
 
-                <img
-                    src="../assets/images/altium-logo.png"
-                    alt="Altium Capitals Logo"
-                    class="h-10 sm:h-12 w-auto max-w-[180px] object-contain">
-            </a>
+            <!-- Logo & Language Selector -->
+            <div class="flex items-center justify-between gap-3 sm:gap-5 w-full lg:w-auto min-w-0">
 
-            <!-- Universal Google Translate Dropdown -->
-            <div class="bg-white px-2 py-1 rounded shadow-sm flex items-center space-x-1">
-                <span class="text-gray-700 text-xs font-bold" aria-hidden="true">🌐</span>
-                <div id="google_translate_element"></div>
+                <a href="index.php"
+                    class="flex items-center flex-shrink-0"
+                    aria-label="Mapleaf Capital Home">
+                    <img
+                        src="../assets/images/mapleaf-logo-white.png"
+                        alt="Mapleaf Capital Logo"
+                        class="h-15 sm:h-18 w-auto max-w-[150px] object-contain"
+                        fetchpriority="high">
+                </a>
+
+                <!-- Google Translate -->
+                <div class="flex-shrink-0 bg-white px-2 py-1.5 rounded-md shadow-sm flex items-center gap-2 text-gray-700">
+                    <span aria-hidden="true">🌐</span>
+                    <div id="google_translate_element"></div>
+                </div>
             </div>
-        </div>
 
-        <!-- Address & Support Email -->
-        <div class="hidden lg:flex items-center space-x-8 text-[11px] text-blue-100">
-            <div class="flex items-center space-x-2">
-                <svg class="w-4 h-4 text-white flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                </svg>
-                <span><?php echo $address; ?></span>
-            </div>
-            <div class="text-right">
-                <a href="mailto:<?php echo $email; ?>" class="hover:underline block text-white font-medium"><?php echo $email; ?></a>
-                <span class="text-[10px] text-blue-200">UK</span>
+            <!-- Desktop Contact Details -->
+            <div class="hidden lg:flex items-center gap-6 xl:gap-8 text-[11px] text-blue-100 min-w-0">
+
+                <div class="flex items-center gap-2 min-w-0 max-w-[360px]">
+                    <svg class="w-4 h-4 text-white flex-shrink-0"
+                        fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                    <span class="break-words">
+                        <?php echo htmlspecialchars($address ?? '', ENT_QUOTES, 'UTF-8'); ?>
+                    </span>
+                </div>
+
+                <div class="text-right min-w-0">
+                    <a href="mailto:<?php echo htmlspecialchars($email ?? '', ENT_QUOTES, 'UTF-8'); ?>"
+                        class="block text-white font-medium hover:underline break-all">
+                        <?php echo htmlspecialchars($email ?? '', ENT_QUOTES, 'UTF-8'); ?>
+                    </a>
+                    <span class="text-[10px] text-blue-200">UK</span>
+                </div>
             </div>
         </div>
     </div>
 
     <!-- Main Navigation Bar -->
-    <nav class="bg-[#3b82f6]/95 backdrop-blur-md text-white py-3.5 px-4 sm:px-8 shadow-lg sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto flex justify-between md:justify-center items-center">
+    <nav class="sticky top-0 z-50 bg-[#3b82f6]/[0.97] backdrop-blur-md text-white shadow-lg"
+        aria-label="Main navigation">
 
-            <!-- Desktop Nav Links -->
-            <ul class="hidden md:flex items-center space-x-6 lg:space-x-10 text-xs font-bold tracking-wider">
-                <li><a href="../index" class="hover:text-blue-200 transition py-1 border-b-2 border-transparent hover:border-white">HOME</a></li>
-                <li><a href="../about" class="hover:text-blue-200 transition py-1 border-b-2 border-transparent hover:border-white">ABOUT US</a></li>
-                <li><a href="../partnership" class="hover:text-blue-200 transition py-1 border-b-2 border-transparent hover:border-white">PARTNERSHIP</a></li>
-                <li><a href="../services/real-estate" class="hover:text-blue-200 transition py-1 border-b-2 border-transparent hover:border-white">REAL ESTATE</a></li>
-                <li><a href="../contact" class="hover:text-blue-200 transition py-1 border-b-2 border-transparent hover:border-white">CONTACT</a></li>
-                <li><a href="../signin" class="bg-white text-[#3b82f6] px-5 py-2 rounded-md font-extrabold hover:bg-blue-50 transition shadow-sm">ACCOUNT</a></li>
-            </ul>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-            <!-- Mobile Menu Toggle Row -->
-            <div class="flex md:hidden items-center justify-between w-full">
-                <span class="text-xs font-extrabold tracking-widest text-blue-100 uppercase">Navigation Menu</span>
-                <button id="mobile-menu-toggle" type="button" onclick="toggleAltiumMobileMenu()" aria-label="Toggle Navigation" class="text-white hover:text-blue-200 focus:outline-none p-2 rounded-lg bg-blue-600/70 border border-blue-400/30 cursor-pointer active:scale-95 transition">
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex items-center justify-center min-h-[64px]">
+                <ul class="flex items-center justify-center gap-5 lg:gap-8 xl:gap-10 text-[11px] lg:text-xs font-bold tracking-wide">
+
+                    <li>
+                        <a href="../index"
+                            class="inline-block py-3 border-b-2 border-transparent hover:border-white hover:text-blue-100 transition">
+                            HOME
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../about"
+                            class="inline-block py-3 border-b-2 border-transparent hover:border-white hover:text-blue-100 transition">
+                            ABOUT US
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../partnership"
+                            class="inline-block py-3 border-b-2 border-transparent hover:border-white hover:text-blue-100 transition">
+                            PARTNERSHIP
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../services/real-estate"
+                            class="inline-block py-3 border-b-2 border-transparent hover:border-white hover:text-blue-100 transition">
+                            REAL ESTATE
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../contact"
+                            class="inline-block py-3 border-b-2 border-transparent hover:border-white hover:text-blue-100 transition">
+                            CONTACT
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../signin"
+                            class="inline-flex items-center justify-center bg-white text-[#2563eb] px-5 py-2.5 rounded-md font-extrabold hover:bg-blue-50 transition shadow-sm">
+                            ACCOUNT
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Mobile & Tablet Navigation Toggle -->
+            <div class="flex md:hidden items-center justify-between gap-3 min-h-[60px]">
+
+                <span class="text-[11px] sm:text-xs font-extrabold tracking-widest text-blue-100 uppercase">
+                    Navigation Menu
+                </span>
+
+                <button
+                    id="mobile-menu-toggle"
+                    type="button"
+                    aria-label="Open navigation menu"
+                    aria-controls="mobile-menu"
+                    aria-expanded="false"
+                    class="flex-shrink-0 flex items-center justify-center w-11 h-11 text-white bg-blue-600/70 border border-blue-300/40 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-600 active:scale-95 transition">
+
                     <!-- Hamburger Icon -->
-                    <svg id="hamburger-icon" class="w-6 h-6 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16M4 18h16"></path>
+                    <svg id="hamburger-icon"
+                        class="w-6 h-6"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="2.5"
+                            d="M4 6h16M4 12h16M4 18h16" />
                     </svg>
+
                     <!-- Close Icon -->
-                    <svg id="close-icon" class="w-6 h-6 hidden pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"></path>
+                    <svg id="close-icon"
+                        class="hidden w-6 h-6"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="2.5"
+                            d="M6 18L18 6M6 6l12 12" />
                     </svg>
                 </button>
             </div>
 
-        </div>
+            <!-- Mobile Dropdown Menu -->
+            <div id="mobile-menu"
+                class="hidden md:hidden pb-4 border-t border-blue-300/30">
 
-        <!-- Mobile Dropdown Menu -->
-        <div id="mobile-menu" class="hidden md:hidden pt-4 pb-2 border-t border-blue-400/30 mt-3 transition-all duration-300">
-            <ul class="flex flex-col space-y-3 text-xs font-bold tracking-wider px-2">
-                <li><a href="../index" class="block py-2 px-3 rounded hover:bg-blue-600/60 transition">HOME</a></li>
-                <li><a href="../about" class="block py-2 px-3 rounded hover:bg-blue-600/60 transition">ABOUT US</a></li>
-                <li><a href="../partnership" class="block py-2 px-3 rounded hover:bg-blue-600/60 transition">PARTNERSHIP</a></li>
-                <li><a href="../services/real-estate" class="block py-2 px-3 rounded hover:bg-blue-600/60 transition">REAL ESTATE</a></li>
-                <li><a href="../contact" class="block py-2 px-3 rounded hover:bg-blue-600/60 transition">CONTACT</a></li>
-                <li><a href="../signin" class="block py-2.5 px-3 rounded bg-white text-[#3b82f6] text-center font-extrabold shadow-sm hover:bg-blue-50 transition">ACCOUNT</a></li>
-            </ul>
+                <ul class="flex flex-col gap-1 pt-3 text-xs font-bold tracking-wide">
 
-            <!-- Mobile Contact Info Bar -->
-            <div class="mt-4 pt-3 border-t border-blue-400/20 text-[11px] text-blue-100 px-3 space-y-1">
-                <p class="truncate">📍 <?php echo $address; ?></p>
-                <p>✉️ <a href="mailto:<?php echo $email; ?>" class="hover:underline text-white"><?php echo $email; ?></a> (UK)</p>
+                    <li>
+                        <a href="../index"
+                            class="mobile-menu-link block py-3 px-4 rounded-lg hover:bg-blue-600/70 transition">
+                            HOME
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../about"
+                            class="mobile-menu-link block py-3 px-4 rounded-lg hover:bg-blue-600/70 transition">
+                            ABOUT US
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../partnership"
+                            class="mobile-menu-link block py-3 px-4 rounded-lg hover:bg-blue-600/70 transition">
+                            PARTNERSHIP
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../services/real-estate"
+                            class="mobile-menu-link block py-3 px-4 rounded-lg hover:bg-blue-600/70 transition">
+                            REAL ESTATE
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../contact"
+                            class="mobile-menu-link block py-3 px-4 rounded-lg hover:bg-blue-600/70 transition">
+                            CONTACT
+                        </a>
+                    </li>
+
+                    <li class="pt-2">
+                        <a href="../signin"
+                            class="mobile-menu-link flex items-center justify-center py-3 px-4 rounded-lg bg-white text-[#2563eb] font-extrabold hover:bg-blue-50 transition shadow-sm">
+                            ACCOUNT
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- Mobile Contact Information -->
+                <div class="mt-4 pt-4 px-3 border-t border-blue-300/30 text-[11px] text-blue-100 space-y-3">
+
+                    <div class="flex items-start gap-2">
+                        <span aria-hidden="true">📍</span>
+                        <span class="min-w-0 break-words">
+                            <?php echo htmlspecialchars($address ?? '', ENT_QUOTES, 'UTF-8'); ?>
+                        </span>
+                    </div>
+
+                    <div class="flex items-start gap-2">
+                        <span aria-hidden="true">✉️</span>
+                        <a href="mailto:<?php echo htmlspecialchars($email ?? '', ENT_QUOTES, 'UTF-8'); ?>"
+                            class="min-w-0 break-all text-white hover:underline">
+                            <?php echo htmlspecialchars($email ?? '', ENT_QUOTES, 'UTF-8'); ?>
+                        </a>
+                    </div>
+
+                    <p class="text-blue-200 pl-6">United Kingdom (UK)</p>
+                </div>
             </div>
         </div>
     </nav>
 
-    <!-- Global Fail-Safe Mobile Menu Toggle Script -->
+    <!-- Responsive Mobile Menu Script -->
     <script>
-        function toggleAltiumMobileMenu() {
-            var mobileMenu = document.getElementById('mobile-menu');
-            var hamburgerIcon = document.getElementById('hamburger-icon');
-            var closeIcon = document.getElementById('close-icon');
+        (function() {
+            function initMapleafMobileMenu() {
+                const toggleButton = document.getElementById('mobile-menu-toggle');
+                const mobileMenu = document.getElementById('mobile-menu');
+                const hamburgerIcon = document.getElementById('hamburger-icon');
+                const closeIcon = document.getElementById('close-icon');
 
-            if (mobileMenu) {
-                if (mobileMenu.classList.contains('hidden')) {
-                    mobileMenu.classList.remove('hidden');
-                    if (hamburgerIcon) hamburgerIcon.classList.add('hidden');
-                    if (closeIcon) closeIcon.classList.remove('hidden');
-                } else {
-                    mobileMenu.classList.add('hidden');
-                    if (hamburgerIcon) hamburgerIcon.classList.remove('hidden');
-                    if (closeIcon) closeIcon.classList.add('hidden');
+                if (!toggleButton || !mobileMenu || !hamburgerIcon || !closeIcon) {
+                    return;
                 }
+
+                // Prevent duplicate event listeners if this script is initialized again.
+                if (toggleButton.dataset.menuInitialized === 'true') {
+                    return;
+                }
+
+                toggleButton.dataset.menuInitialized = 'true';
+
+                function setMenuState(isOpen) {
+                    mobileMenu.classList.toggle('hidden', !isOpen);
+                    hamburgerIcon.classList.toggle('hidden', isOpen);
+                    closeIcon.classList.toggle('hidden', !isOpen);
+
+                    toggleButton.setAttribute('aria-expanded', String(isOpen));
+                    toggleButton.setAttribute(
+                        'aria-label',
+                        isOpen ? 'Close navigation menu' : 'Open navigation menu'
+                    );
+                }
+
+                toggleButton.addEventListener('click', function() {
+                    const isOpen =
+                        toggleButton.getAttribute('aria-expanded') === 'true';
+
+                    setMenuState(!isOpen);
+                });
+
+                // Close the menu after a navigation link is selected.
+                mobileMenu.querySelectorAll('a').forEach(function(link) {
+                    link.addEventListener('click', function() {
+                        setMenuState(false);
+                    });
+                });
+
+                // Close the menu with the Escape key.
+                document.addEventListener('keydown', function(event) {
+                    if (event.key === 'Escape') {
+                        setMenuState(false);
+                    }
+                });
+
+                // Reset the mobile menu when switching to desktop width.
+                window.addEventListener('resize', function() {
+                    if (window.innerWidth >= 768) {
+                        setMenuState(false);
+                    }
+                });
+
+                setMenuState(false);
             }
-        }
+
+            if (document.readyState === 'loading') {
+                document.addEventListener(
+                    'DOMContentLoaded',
+                    initMapleafMobileMenu
+                );
+            } else {
+                initMapleafMobileMenu();
+            }
+        })();
     </script>
 
     <!-- Floating Chat Widgets -->
@@ -225,7 +413,7 @@ $email = "support@altiumcapitals.com";
 
             <!-- Description Paragraph -->
             <p class="text-xs sm:text-sm md:text-base text-gray-600 font-normal leading-relaxed text-justify sm:text-center max-w-4xl mx-auto">
-                The growing global demand for energy, led mainly by China and India over the past decade, coupled with the shift in energy transition has driven a strong increase in gas demand, particularly LNG due to its suitability for long-distance transportation. Australia's geographic/geological positioning, ability to attract foreign investors/oil and gas majors and key Asian LNG buyers has enabled Australia to meet the various demands and emerge as one of the world's largest LNG exporters. Altium Capitals is a capital formation entity created specifically for the purpose of aggregating and connecting accredited private investors and institutional investors with quality Oil & Gas Opportunities and Operators. As one of the leading oil & gas investment companies, our team currently evaluates Oil & Gas projects from seasoned operators in the lower Australia and Canada. Each project is selected through a process that focuses on and looks for ROI as well as certain niche plays other firms might overlook while following the herd mentality of the energy business. Altium Capitals relies on its internal team with over decades of Oil & Gas experience to select solid and worthwhile opportunities for capital formation and participation.
+                The growing global demand for energy, led mainly by China and India over the past decade, coupled with the shift in energy transition has driven a strong increase in gas demand, particularly LNG due to its suitability for long-distance transportation. Australia's geographic/geological positioning, ability to attract foreign investors/oil and gas majors and key Asian LNG buyers has enabled Australia to meet the various demands and emerge as one of the world's largest LNG exporters. Mapleaf Capital is a capital formation entity created specifically for the purpose of aggregating and connecting accredited private investors and institutional investors with quality Oil & Gas Opportunities and Operators. As one of the leading oil & gas investment companies, our team currently evaluates Oil & Gas projects from seasoned operators in the lower Australia and Canada. Each project is selected through a process that focuses on and looks for ROI as well as certain niche plays other firms might overlook while following the herd mentality of the energy business. Mapleaf Capital relies on its internal team with over decades of Oil & Gas experience to select solid and worthwhile opportunities for capital formation and participation.
             </p>
 
         </div>
@@ -249,11 +437,11 @@ $email = "support@altiumcapitals.com";
                     <!-- Logo -->
                     <a href="index.php"
                         class="flex items-center flex-shrink-0"
-                        aria-label="Altium Capitals Home">
+                        aria-label="Mapleaf Capital Home">
 
                         <img
-                            src="../assets/images/altium-logo.png"
-                            alt="Altium Capitals Logo"
+                            src="../assets/images/Mapleaf Capital-logo.png"
+                            alt="Mapleaf Capital Logo"
                             class="h-10 sm:h-12 w-auto max-w-[180px] object-contain">
                     </a>
                     <!-- About Paragraph -->
@@ -306,8 +494,8 @@ $email = "support@altiumcapitals.com";
                     </p>
 
                     <!-- Support Email -->
-                    <a href="mailto:support@altiumhcapitals.com" class="text-xs font-medium text-blue-50 hover:underline">
-                        support@altiumhcapitals.com
+                    <a href="mailto:support@Mapleaf Capitalhcapitals.com" class="text-xs font-medium text-blue-50 hover:underline">
+                        support@Mapleaf Capitalhcapitals.com
                     </a>
                 </div>
 
@@ -315,7 +503,7 @@ $email = "support@altiumcapitals.com";
 
             <!-- Copyright Row -->
             <div class="mt-16 text-center text-xs text-amber-300 font-semibold tracking-wide">
-                © Copyright <?php echo date("Y"); ?> <a href="#" class="hover:underline text-amber-300">altiumcapitals.com</a>
+                © Copyright <?php echo date("Y"); ?> <a href="#" class="hover:underline text-amber-300">Mapleaf Capitalcapitals.com</a>
             </div>
 
         </div>

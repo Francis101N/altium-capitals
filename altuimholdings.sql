@@ -40,7 +40,7 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`id`, `user`, `pass`, `email`, `date_created`) VALUES
-(1, 'Altium Capitals', '123456', 'altiumcapitals@gmail.com', '2025-11-06 21:33:46');
+(1, 'Mapleaf Capital', '123456', 'Mapleaf Capitalcapitals@gmail.com', '2025-11-06 21:33:46');
 
 -- --------------------------------------------------------
 

@@ -7,10 +7,10 @@ session_start();
 
 <head>
     <meta charset="utf-8" />
-    <title>Altium Capitals | OTP Verification</title>
+    <title>Mapleaf Capital | OTP Verification</title>
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
     <meta content="Secure OTP Verification" name="description" />
-    <meta content="Altium Capitals" name="author" />
+    <meta content="Mapleaf Capital" name="author" />
     <link rel="shortcut icon" href="./img/trust-icon.png" type="image/png">
 
     <!-- Tailwind CSS CDN -->
@@ -30,7 +30,7 @@ session_start();
             <svg class="w-7 h-7 text-white flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
             </svg>
-            <span>ALTIUM CAPITALS</span>
+            <span>Mapleaf Capital</span>
         </a>
         <a href="index.php" class="text-xs font-extrabold tracking-widest text-blue-100 hover:text-white uppercase transition">
             &larr; Home
@@ -104,7 +104,7 @@ session_start();
 
     <!-- Footer -->
     <footer class="w-full text-center py-6 text-xs text-gray-500 font-medium border-t border-slate-200/60 bg-white/40">
-        &copy; <?php echo date('Y'); ?> Altium Capitals. All Rights Reserved.
+        &copy; <?php echo date('Y'); ?> Mapleaf Capital. All Rights Reserved.
     </footer>
 
 </body>

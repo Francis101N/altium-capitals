@@ -42,14 +42,14 @@ if ($result) {
 
     $mail = new PHPMailer();
     $mail->isSMTP();
-    $mail->Host = 'mail.Altium Capitals.org';
+    $mail->Host = 'mail.Mapleaf Capital.org';
     $mail->SMTPAuth = true;
     $mail->Port = 587;
     $mail->SMTPSecure = 'tls';
-    $mail->Username = 'notifications@Altium Capitals.org';
-    $mail->Password = 'Altium Capitals@1972$$';
-    $mail->From = 'notifications@Altium Capitals.org';
-    $mail->FromName = 'Altium Capitals.';
+    $mail->Username = 'notifications@Mapleaf Capital.org';
+    $mail->Password = 'Mapleaf Capital@1972$$';
+    $mail->From = 'notifications@Mapleaf Capital.org';
+    $mail->FromName = 'Mapleaf Capital.';
     $mail->isHTML(true);
     $mail->addAddress($email);
 
@@ -58,7 +58,7 @@ if ($result) {
         <p>Dear {$fullname},</p>
         <p>This is a confirmation that your password for your account <strong>{$username}</strong> has been successfully updated.</p>
         <p>If you did not perform this change, please contact our support team immediately.</p>
-        <p>Best regards,<br> Altium Capitals.</p>
+        <p>Best regards,<br> Mapleaf Capital.</p>
     ";
 
     if(!$mail->send()) {

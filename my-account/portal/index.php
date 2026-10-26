@@ -5,7 +5,7 @@ session_start();
 include('connect.php');
 
 if (!isset($_SESSION['account_user']) || empty($_SESSION['account_user'])) {
-  header("Location: ../../account/index?error=session_expired");
+  header("Location: ../../signin");
   exit;
 }
 
@@ -84,7 +84,7 @@ if ($result_) {
     name="viewport"
     content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 
-  <title>Dashboard | Altium Capitals.</title>
+  <title>Dashboard | Mapleaf Capital.</title>
 
   <meta name="description" content="" />
 
@@ -135,7 +135,7 @@ if ($result_) {
         <div class="app-brand demo">
           <a href="index.html" class="app-brand-link">
             <span class="app-brand-logo demo">
-              <img src="./img/altium-logo-blue.jpeg" alt="" width="180px">
+              <img src="./img/mapleaf-logo.png" alt="" width="130px">
             </span>
           </a>
 
@@ -149,7 +149,7 @@ if ($result_) {
         <ul class="menu-inner py-1">
           <!-- Dashboard -->
           <li class="menu-item mt-2">
-            <a href="https://sovereignnexarcapital.org/" class="menu-link">
+            <a href="https://mapleafcapital.com/" class="menu-link">
               <i class="menu-icon tf-icons bx bx-home-circle"></i>
               <div data-i18n="Homepage">Home Page</div>
             </a>
@@ -291,7 +291,9 @@ if ($result_) {
                     <div class="dropdown-divider"></div>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="logout">
+                    <a class="dropdown-item"
+                      href="logout"
+                      onclick="return confirm('Are you sure you want to log out of your account?');">
                       <i class="bx bx-power-off me-2"></i>
                       <span class="align-middle">Log Out</span>
                     </a>
@@ -315,13 +317,13 @@ if ($result_) {
 
                 <!-- Welcome Heading -->
                 <h3 class="fw-bold mb-3" style="color: #d1fae5; font-size: 1.50rem;">
-                  <marquee behavior="" direction="" class="text-primary">Welcome To Altium Capitals, <?php echo $_SESSION['account_user']; ?> 👋</marquee>
+                  <marquee behavior="" direction="" class="text-primary">Welcome To Mapleaf Capital, <?php echo $_SESSION['account_user']; ?> 👋</marquee>
                 </h3>
                 <big class="text-primary fw-bold">ACCOUNT ID :</big> <span><b> <?php echo $row['account_id'] ?></span></b><br><br>
 
                 <!-- Subtext Intro -->
                 <p class="fs-6 mb-4 text-white-50" style="color: #f1f5f9 !important;">
-                  Get familiar with altiumholdingcapital.com, here are some ways to get started.
+                  Get familiar with Mapleaf Capitalholdingcapital.com, here are some ways to get started.
                 </p>
 
                 <!-- Bullet List -->
@@ -771,7 +773,7 @@ if ($result_) {
                 <script>
                   document.write(new Date().getFullYear());
                 </script>
-                , <strong>Altium Capitals.</strong>
+                , <strong>Mapleaf Capital.</strong>
               </div>
             </div><br>
           </footer>

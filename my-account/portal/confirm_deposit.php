@@ -53,12 +53,12 @@ $amount_display = number_format($amount, 2);
 
 // 6. Complete Crypto Wallet Destination Addresses Mapping
 $walletAddresses = [
-  'Bitcoin'    => 'bc1qrzdnsecuv6j5yxapf2d879rt05hd52zltghc8n',
-  'Ethereum'   => '0xd201F741769d742b52bCAc919b700DF6e692a380',
-  'USDT'       => 'TQGoQYn54VzUgB8RumRMuLnyAisS31yoqW',       // TRC20
-  'USDC_ERC20' => '0x7Cbfb53dD3fa08ac98c92cca034e0Cc0Ea7703BD',
-  'USDT_ERC20' => '0x7Cbfb53dD3fa08ac98c92cca034e0Cc0Ea7703BD', // ERC20
-  'Tron'       => 'TQGoQYn54VzUgB8RumRMuLnyAisS31yoqW'        // TRX
+  'Bitcoin'    => 'bc1qamxnelpnytttm4wrdyh7pxy7kjzyjj0mrvnds5',
+  'Ethereum'   => '0x2a44833C83C0DDB3E537B525DE398581cBFF99A4',
+  'USDT'       => 'TTBu2rTN3rpKW88CoPEMfKni3VVjjEofQV',       // TRC20
+  'USDC_ERC20' => '0x2a44833C83C0DDB3E537B525DE398581cBFF99A4',
+  'USDT_ERC20' => '0x2a44833C83C0DDB3E537B525DE398581cBFF99A4',
+  'Tron'       => 'TTBu2rTN3rpKW88CoPEMfKni3VVjjEofQV'
 ];
 
 // Retrieve matching address or default to 'N/A'
@@ -94,7 +94,7 @@ $walletAddress = $walletAddresses[$payment_method] ?? 'N/A';
     name="viewport"
     content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 
-  <title>Confirm Deposit | Altium Capitals.</title>
+  <title>Confirm Deposit | Mapleaf Capital.</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 
@@ -191,7 +191,7 @@ $walletAddress = $walletAddresses[$payment_method] ?? 'N/A';
         <div class="app-brand demo">
           <a href="index.html" class="app-brand-link">
             <span class="app-brand-logo demo">
-              <img src="./img/altium-logo-blue.jpeg" alt="" width="180px">
+              <img src="./img/mapleaf-logo.png" alt="" width="130px">
             </span>
           </a>
 
@@ -205,7 +205,7 @@ $walletAddress = $walletAddresses[$payment_method] ?? 'N/A';
         <ul class="menu-inner py-1">
           <!-- Dashboard -->
           <li class="menu-item mt-2">
-            <a href="http://localhost/Altium Capitals/" class="menu-link">
+            <a href="http://localhost/Mapleaf Capital/" class="menu-link">
               <i class="menu-icon tf-icons bx bx-home-circle"></i>
               <div data-i18n="Homepage">Home Page</div>
             </a>
@@ -347,7 +347,9 @@ $walletAddress = $walletAddresses[$payment_method] ?? 'N/A';
                     <div class="dropdown-divider"></div>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="logout">
+                    <a class="dropdown-item"
+                      href="logout"
+                      onclick="return confirm('Are you sure you want to log out of your account?');">
                       <i class="bx bx-power-off me-2"></i>
                       <span class="align-middle">Log Out</span>
                     </a>
@@ -530,7 +532,7 @@ $walletAddress = $walletAddresses[$payment_method] ?? 'N/A';
               <script>
                 document.write(new Date().getFullYear());
               </script>
-              , <strong>Altium Capitals.</strong>
+              , <strong>Mapleaf Capital.</strong>
             </div>
           </div><br>
         </footer>

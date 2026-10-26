@@ -44,7 +44,7 @@ $row = mysqli_fetch_array($res);
     name="viewport"
     content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 
-  <title>Customer Care | Altium Capitals.</title>
+  <title>Customer Care | Mapleaf Capital.</title>
 
   <meta name="description" content="" />
 
@@ -133,7 +133,7 @@ $row = mysqli_fetch_array($res);
         <div class="app-brand demo">
           <a href="index.html" class="app-brand-link">
             <span class="app-brand-logo demo">
-              <img src="./img/altium-logo-blue.jpeg" alt="" width="180px">
+              <img src="./img/mapleaf-logo.png" alt="" width="130px">
             </span>
           </a>
 
@@ -147,7 +147,7 @@ $row = mysqli_fetch_array($res);
         <ul class="menu-inner py-1">
           <!-- Dashboard -->
           <li class="menu-item mt-2">
-            <a href="https://sovereignnexarcapital.org/" class="menu-link">
+            <a href="https://mapleafcapital.com/" class="menu-link">
               <i class="menu-icon tf-icons bx bx-home-circle"></i>
               <div data-i18n="Homepage">Home Page</div>
             </a>
@@ -289,7 +289,9 @@ $row = mysqli_fetch_array($res);
                     <div class="dropdown-divider"></div>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="logout">
+                    <a class="dropdown-item"
+                      href="logout"
+                      onclick="return confirm('Are you sure you want to log out of your account?');">
                       <i class="bx bx-power-off me-2"></i>
                       <span class="align-middle">Log Out</span>
                     </a>
@@ -341,20 +343,20 @@ $row = mysqli_fetch_array($res);
                 </div>
 
                 <!-- Name & Role -->
-                <h4 class="fw-extrabold text-dark mb-1"><?php echo htmlspecialchars($contact_name ?? 'Altium Support Agent', ENT_QUOTES, 'UTF-8'); ?></h4>
+                <h4 class="fw-extrabold text-dark mb-1"><?php echo htmlspecialchars($contact_name ?? 'Mapleaf Capital Support Agent', ENT_QUOTES, 'UTF-8'); ?></h4>
                 <p class="text-muted small fw-semibold uppercase tracking-wider mb-4">Dedicated Account Specialist</p>
 
                 <!-- Contact Information List -->
                 <div class="p-3 bg-light rounded-3 mb-4 border text-start space-y-2">
                   <div class="d-flex align-items-center justify-content-between py-1 border-bottom">
                     <span class="text-muted small fw-bold"><i class="bi bi-telephone text-primary me-2"></i>Phone Support:</span>
-                    <a href="tel:+84588382181" class="text-decoration-none fw-bold text-dark small">+84 58 838 2181</a>
+                    <a href="tel:+13213959088" class="text-decoration-none fw-bold text-dark small">+1 (321) 395‑9088</a>
                   </div>
 
                   <div class="d-flex align-items-center justify-content-between py-1 border-bottom">
                     <span class="text-muted small fw-bold"><i class="bi bi-envelope text-primary me-2"></i>Email Address:</span>
-                    <a href="mailto:<?php echo htmlspecialchars($contact_email ?? 'support@altiumcapitalholdings.com', ENT_QUOTES, 'UTF-8'); ?>" class="text-decoration-none fw-bold text-dark small">
-                      <?php echo htmlspecialchars($contact_email ?? 'support@altiumcapitalholdings.com', ENT_QUOTES, 'UTF-8'); ?>
+                    <a href="mailto:<?php echo htmlspecialchars($contact_email ?? 'support@mapleafcapitals.com', ENT_QUOTES, 'UTF-8'); ?>" class="text-decoration-none fw-bold text-dark small">
+                      <?php echo htmlspecialchars($contact_email ?? 'support@mapleafcapitals.com', ENT_QUOTES, 'UTF-8'); ?>
                     </a>
                   </div>
 
@@ -364,34 +366,39 @@ $row = mysqli_fetch_array($res);
                   </div>
                 </div>
 
-                <!-- Action Button -->
-                <a href="https://wa.me/84588382181" class="btn btn-success btn-lg w-100 fw-bold rounded-pill shadow-sm hover-shadow d-flex align-items-center justify-content-center py-3" target="_blank" style="background-color: #25d366; border: none;">
-                  <i class="bi bi-whatsapp me-2 fs-5"></i> Message on WhatsApp
+                <!-- WhatsApp Contact Button -->
+                <a href="https://wa.me/13213959088"
+                  class="btn btn-success btn-lg w-100 fw-bold rounded-pill shadow-sm hover-shadow d-flex align-items-center justify-content-center py-3"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style="background-color: #25d366; border: none; color: #fff;">
+                  <i class="bi bi-whatsapp me-2 fs-5"></i>
+                  Message on WhatsApp
                 </a>
-
               </div>
             </div>
           </div>
         </div>
-
-        <footer class="content-footer footer bg-footer-theme">
-          <div class="container-xxl py-2 d-flex justify-content-center text-center">
-            <div>
-              &copy;
-              <script>
-                document.write(new Date().getFullYear());
-              </script>
-              , <strong>Altium Capitals.</strong>
-            </div>
-          </div><br>
-        </footer>
-        <!-- / Footer -->
-
-        <div class="content-backdrop fade"></div>
       </div>
-      <!-- Content wrapper -->
+
+      <footer class="content-footer footer bg-footer-theme">
+        <div class="container-xxl py-2 d-flex justify-content-center text-center">
+          <div>
+            &copy;
+            <script>
+              document.write(new Date().getFullYear());
+            </script>
+            , <strong>Mapleaf Capital.</strong>
+          </div>
+        </div><br>
+      </footer>
+      <!-- / Footer -->
+
+      <div class="content-backdrop fade"></div>
     </div>
-    <!-- / Layout page -->
+    <!-- Content wrapper -->
+  </div>
+  <!-- / Layout page -->
   </div>
 
   <!-- Overlay -->

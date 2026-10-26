@@ -45,7 +45,7 @@ $row = mysqli_fetch_array($res);
     name="viewport"
     content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 
-  <title>Account Profile | Altium Capitals.</title>
+  <title>Account Profile | Mapleaf Capital.</title>
 
   <meta name="description" content="" />
 
@@ -90,7 +90,7 @@ $row = mysqli_fetch_array($res);
         <div class="app-brand demo">
           <a href="index.html" class="app-brand-link">
             <span class="app-brand-logo demo">
-              <img src="./img/altium-logo-blue.jpeg" alt="" width="180px">
+              <img src="./img/mapleaf-logo.png" alt="" width="130px">
             </span>
           </a>
 
@@ -104,7 +104,7 @@ $row = mysqli_fetch_array($res);
         <ul class="menu-inner py-1">
           <!-- Dashboard -->
           <li class="menu-item mt-2">
-            <a href="https://sovereignnexarcapital.org/" class="menu-link">
+            <a href="https://mapleafcapital.com/" class="menu-link">
               <i class="menu-icon tf-icons bx bx-home-circle"></i>
               <div data-i18n="Homepage">Home Page</div>
             </a>
@@ -246,7 +246,9 @@ $row = mysqli_fetch_array($res);
                     <div class="dropdown-divider"></div>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="logout">
+                    <a class="dropdown-item"
+                      href="logout"
+                      onclick="return confirm('Are you sure you want to log out of your account?');">
                       <i class="bx bx-power-off me-2"></i>
                       <span class="align-middle">Log Out</span>
                     </a>
@@ -471,7 +473,7 @@ $row = mysqli_fetch_array($res);
                 <script>
                   document.write(new Date().getFullYear());
                 </script>
-                , <strong>Altium Capitals.</strong>
+                , <strong>Mapleaf Capital.</strong>
               </div>
             </div><br>
           </footer>

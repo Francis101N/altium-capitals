@@ -102,7 +102,7 @@
     <h1>404</h1>
     <h2>Oops! Page Not Found</h2>
     <p>The page you’re looking for doesn’t exist or has been moved.</p>
-    <a href="http://localhost/Altium Capitals/" class="btn">Go Back Home</a>
+    <a href="http://localhost/Mapleaf Capital/" class="btn">Go Back Home</a>
   </div>
 </body>
 </html>

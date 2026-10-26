@@ -39,7 +39,7 @@ $organisation = 'sovereignnexarcapital Savings';
 
 $org = 'sovereignnexarcapital';
 
-$contact_email = 'Sovereignnexarcapitalsupportte@gmail.com';
+$contact_email = 'support@mapleafcapital.com';
 
 $sender_email = 'atesting@example.com';
 

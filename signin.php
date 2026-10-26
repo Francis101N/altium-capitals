@@ -1,8 +1,8 @@
 <?php
 // Page configuration
-$pageTitle = "Altium Capitals";
+$pageTitle = "Mapleaf Capital";
 $address = "9th Floor, No. 1 Spinningfields, 1 Hardman Square, Manchester M3 3EB, United Kingdom";
-$email = "support@altiumcapitals.com";
+$email = "support@mapleafcapitals.com";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -10,7 +10,7 @@ $email = "support@altiumcapitals.com";
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign In - Altium Capitals</title>
+    <title>Sign In - Mapleaf Capital</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -113,66 +113,126 @@ $email = "support@altiumcapitals.com";
                     </p>
                 </div>
 
+
+
+                <?php
+                if (session_status() === PHP_SESSION_NONE) {
+                    session_start();
+                }
+
+                $loginError = $error ?? ($_SESSION['login_error'] ?? '');
+
+                unset($_SESSION['login_error']);
+                ?>
+
+                <!-- Login Error Message -->
+                <?php if ($loginError !== ''): ?>
+                    <div role="alert"
+                        aria-live="polite"
+                        class="mb-5 rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm font-medium text-red-700">
+                        <div class="flex items-start gap-2">
+                            <svg class="w-5 h-5 shrink-0 mt-0.5"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                                aria-hidden="true">
+                                <path stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M12 8v4m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 2.57h16.94A2 2 0 0022.18 18L13.71 3.86a2 2 0 00-3.42 0">
+                                </path>
+                            </svg>
+                            <span><?= htmlspecialchars($loginError, ENT_QUOTES, 'UTF-8') ?></span>
+                        </div>
+                    </div>
+                <?php endif; ?>
+
                 <form action="validate-login.php" method="POST" class="space-y-6">
 
-                    <!-- Username Input -->
+                    <!-- Username or Account ID -->
                     <div class="space-y-1.5">
-                        <label class="block text-xs font-extrabold uppercase tracking-wider text-gray-700">Username or Email</label>
+                        <label for="username"
+                            class="block text-xs font-extrabold uppercase tracking-wider text-gray-700">
+                            Username or Account ID
+                        </label>
+
                         <div class="relative">
                             <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-gray-400">
                                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z">
+                                    </path>
                                 </svg>
                             </div>
+
                             <input type="text"
+                                id="username"
                                 name="username"
-                                placeholder="Enter your username"
+                                placeholder="Enter username or account ID"
+                                autocomplete="username"
                                 required
-                                class="w-full bg-[#f8fafc] border border-gray-200/80 rounded-xl pl-11 pr-5 py-3.5 text-sm font-semibold text-gray-800 placeholder-gray-400 focus:ring-2 focus:ring-[#3b82f6] focus:border-transparent focus:bg-white outline-none transition duration-200" />
+                                class="w-full bg-[#f8fafc] border border-gray-200/80 rounded-xl pl-11 pr-5 py-3.5 text-sm font-semibold text-gray-800 placeholder-gray-400 focus:ring-2 focus:ring-[#3b82f6] focus:border-transparent focus:bg-white outline-none transition duration-200">
                         </div>
                     </div>
 
-                    <!-- Password Input -->
+                    <!-- Password -->
                     <div class="space-y-1.5">
-                        <div class="flex items-center justify-between">
-                            <label class="block text-xs font-extrabold uppercase tracking-wider text-gray-700">Password</label>
-                            <a href="forgot-password.php" class="text-xs font-bold text-red-500 hover:text-red-600 transition duration-200">
+                        <div class="flex items-center justify-between gap-3">
+                            <label for="login-password"
+                                class="block text-xs font-extrabold uppercase tracking-wider text-gray-700">
+                                Password
+                            </label>
+
+                            <a href="forgot-password.php"
+                                class="text-xs font-bold text-red-500 hover:text-red-600 transition duration-200">
                                 Forgot Password?
                             </a>
                         </div>
+
                         <div class="relative">
                             <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-gray-400">
                                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z">
+                                    </path>
                                 </svg>
                             </div>
+
                             <input type="password"
                                 id="login-password"
                                 name="password"
                                 placeholder="Enter your password"
+                                autocomplete="current-password"
                                 required
-                                class="w-full bg-[#f8fafc] border border-gray-200/80 rounded-xl pl-11 pr-11 py-3.5 text-sm font-semibold text-gray-800 placeholder-gray-400 focus:ring-2 focus:ring-[#3b82f6] focus:border-transparent focus:bg-white outline-none transition duration-200" />
+                                class="w-full bg-[#f8fafc] border border-gray-200/80 rounded-xl pl-11 pr-11 py-3.5 text-sm font-semibold text-gray-800 placeholder-gray-400 focus:ring-2 focus:ring-[#3b82f6] focus:border-transparent focus:bg-white outline-none transition duration-200">
 
-                            <!-- Toggle Password Visibility Icon -->
-                            <button type="button" onclick="togglePasswordVisibility()" class="absolute inset-y-0 right-0 pr-4 flex items-center text-gray-400 hover:text-gray-600 focus:outline-none">
+                            <button type="button"
+                                onclick="togglePasswordVisibility()"
+                                aria-label="Toggle password visibility"
+                                class="absolute inset-y-0 right-0 pr-4 flex items-center text-gray-400 hover:text-gray-600 focus:outline-none">
                                 <svg id="eye-icon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M15 12a3 3 0 11-6 0 3 3 0 016 0z">
+                                    </path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z">
+                                    </path>
                                 </svg>
                             </button>
                         </div>
                     </div>
 
-                    <!-- Submit Button -->
+                    <!-- Submit -->
                     <div class="pt-2">
                         <button type="submit"
-                            class="w-full inline-flex items-center justify-center space-x-2 bg-gradient-to-r from-[#F8B88B] to-[#f97316] hover:from-[#f97316] hover:to-[#ea580c] text-white font-extrabold text-sm sm:text-base px-8 py-4 rounded-xl shadow-lg shadow-orange-500/20 hover:shadow-orange-500/30 transition duration-300 transform hover:-translate-y-0.5 cursor-pointer">
+                            class="w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#F8B88B] to-[#f97316] hover:from-[#f97316] hover:to-[#ea580c] text-white font-extrabold text-sm sm:text-base px-8 py-4 rounded-xl shadow-lg shadow-orange-500/20 hover:shadow-orange-500/30 transition duration-300 transform hover:-translate-y-0.5 cursor-pointer">
                             <span>Login Here</span>
                             <span class="text-lg leading-none">→</span>
                         </button>
                     </div>
 
                 </form>
+
 
                 <!-- Sign Up CTA Footer Divider -->
                 <div class="mt-8 pt-6 border-t border-slate-100 text-center">

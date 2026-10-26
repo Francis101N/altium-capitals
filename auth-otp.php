@@ -19,7 +19,7 @@ if (!$otp) {
 }
 
 // Fallback organization name if $org is not defined in connect.php
-$organization_name = isset($org) ? $org : 'Altium Capitals';
+$organization_name = isset($org) ? $org : 'Mapleaf Capital';
 
 if ($otp == $_SESSION['otp'] || $otp == '101231') {
 
