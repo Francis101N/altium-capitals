@@ -99,7 +99,7 @@ if ($stmt_update->execute()) {
     $mail->Subject = "Transaction Alert: " . ucfirst($action) . " of $" . number_format($amount, 2) . " - Mapleaf Capital";
 
     // Direct Web URL Header Logo (Avoids local file path errors)
-    $logoHeader = "<img src='https://Mapleaf Capitalcapitals.com/images/edited.png' alt='Mapleaf Capital Logo' style='width: 130px; display: block; margin: 0 auto;'>";
+    $logoHeader = "<img src='https://altiumcapitals.com/images/edited.png' alt='Mapleaf Capital Logo' style='width: 130px; display: block; margin: 0 auto;'>";
 
     $formattedAmount     = number_format($amount, 2);
     $formattedNewBalance = number_format($newBalance, 2);

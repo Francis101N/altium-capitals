@@ -172,16 +172,16 @@ try {
         registrationFail('PHP received the image but could not move it into the uploads folder.');
     }
 
-    // Generate account ID and hash password.
+    // Generate account ID (Plain text password used directly).
     $surnameClean = preg_replace('/[^a-zA-Z]/', '', $lname) ?: 'ACC';
     $surnamePrefix = strtoupper(substr($surnameClean, 0, 3));
     $birthYear = $date->format('Y');
     $accountId = $surnamePrefix . '-' . random_int(1000, 9999) . '-' . $birthYear;
-    $passwordHash = password_hash($password, PASSWORD_DEFAULT);
+
     $refBonus = $referral !== null ? '7' : null;
     $organization_name = 'Mapleaf Capital';
 
-    // Save registration. No wallet address is invented or inserted.
+    // Save registration with plain text password.
     try {
         $sql = 'INSERT INTO registration
             (account_id, surname, firstname, middlename, sex, dob, address, email, phone, username, password, passport, ref, total_referral_bonus)
@@ -200,7 +200,7 @@ try {
             $email,
             $phone,
             $username,
-            $passwordHash,
+            $password, // Plain-text password stored directly
             $passportPath,
             $referral,
             $refBonus
@@ -227,8 +227,8 @@ try {
     }
 
     /*
-     * Email delivery runs after the account has been saved.
-     * SMTP failures are logged and do not prevent the success redirect.
+- Email delivery runs after the account has been saved.
+- SMTP failures are logged and do not prevent the success redirect.
      */
     try {
         $phpmailerDir = __DIR__ . '/PHPMailer/';
@@ -354,7 +354,7 @@ try {
         $loginUrl = $websiteUrl . '/signin.php';
 
         $safeLoginUrl = htmlspecialchars($loginUrl, ENT_QUOTES, 'UTF-8');
-        $safePassword = htmlspecialchars($password ?? '', ENT_QUOTES, 'UTF-8');
+        $safePassword = htmlspecialchars($password, ENT_QUOTES, 'UTF-8');
 
         $welcomeBody = '
         <!doctype html><html lang="en"><head><meta charset="UTF-8"></head>

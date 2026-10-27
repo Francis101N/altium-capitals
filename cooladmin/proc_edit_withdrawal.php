@@ -31,8 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Update Withdrawal record
     $stmt = $conn->prepare("UPDATE withdrawal 
     SET status=? 
-    WHERE token=?");
-    ;
+    WHERE token=?");;
 
     if ($stmt) {
         $stmt->bind_param("ss", $status, $token); // both are strings
@@ -40,15 +39,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if ($stmt->execute()) {
             // Send email notification
             $mail = new PHPMailer();
-              $mail->isSMTP();
-  $mail->Host = 'mail.sovereignnexarcapital.org';
-  $mail->SMTPAuth = true;
-  $mail->Username = 'notification@sovereignnexarcapital.org';
-  $mail->Password = 'sovereignnexarCAPITAL1972$$$';
-  $mail->SMTPSecure = 'ssl';
-  $mail->Port = 465;
+            $mail->isSMTP();
+            $mail->Host = 'mail.sovereignnexarcapital.org';
+            $mail->SMTPAuth = true;
+            $mail->Username = 'notification@sovereignnexarcapital.org';
+            $mail->Password = 'sovereignnexarCAPITAL1972$$$';
+            $mail->SMTPSecure = 'ssl';
+            $mail->Port = 465;
 
-  $mail->setFrom('notification@sovereignnexarcapital.org', 'Mapleaf Capital.');
+            $mail->setFrom('notification@sovereignnexarcapital.org', 'Mapleaf Capital.');
             $mail->addAddress($email, $username);
             $mail->isHTML(true);
 
@@ -81,7 +80,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 header("Location: edit_withdrawal.php?token=" . urlencode($token) . "&success=1");
                 exit;
             }
-
         } else {
             header("Location: edit_withdrawal.php?token=" . urlencode($token) . "&error=1");
             exit;
@@ -93,4 +91,3 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit;
     }
 }
-?>
