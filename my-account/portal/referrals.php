@@ -478,7 +478,7 @@ if ($total_referrals >= 20 || $total_earnings >= 200) {
               <?php
               $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? "https://" : "http://";
               $domain = $_SERVER['HTTP_HOST'];
-              $referral_url = $protocol . $domain . "/account/register?ref=" . urlencode($row['username'] ?? '');
+              $referral_url = $protocol . $domain . "/my-account/portal?ref=" . urlencode($row['username'] ?? '');
               ?>
               <div class="input-group input-group-lg mb-2">
                 <input type="text" id="refLink" class="form-control bg-light font-mono text-dark fw-bold border-end-0 fs-6" readonly value="<?php echo htmlspecialchars($referral_url, ENT_QUOTES, 'UTF-8'); ?>">
