@@ -390,7 +390,7 @@ $email = "support@mapleafcapitals.com";
                 </div>
                 <div class="flex flex-wrap gap-3">
                     <!-- View Company Certificate (Opens in New Tab) -->
-                    <a href="./assets/images/company-cert.jpeg" target="_blank" rel="noopener noreferrer" class="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold px-5 py-3 rounded-full shadow-lg hover:shadow-blue-500/25 transition duration-300 transform hover:-translate-y-0.5">
+                    <a href="./assets/images/mapleaf_certificate.png" target="_blank" rel="noopener noreferrer" class="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold px-5 py-3 rounded-full shadow-lg hover:shadow-blue-500/25 transition duration-300 transform hover:-translate-y-0.5">
                         <span>COMPANY CERT</span>
                         <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
@@ -398,7 +398,7 @@ $email = "support@mapleafcapitals.com";
                     </a>
 
                     <!-- View Company PDF (Opens in New Tab) -->
-                    <a href="./assets/images/Mapleaf Capitalcapitals.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold px-5 py-3 rounded-full shadow-lg hover:shadow-blue-500/25 transition duration-300 transform hover:-translate-y-0.5">
+                    <a href="./assets/images/altiumcapitals.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold px-5 py-3 rounded-full shadow-lg hover:shadow-blue-500/25 transition duration-300 transform hover:-translate-y-0.5">
                         <span>COMPANY PDF</span>
                         <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
