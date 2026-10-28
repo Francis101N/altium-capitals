@@ -556,7 +556,7 @@ $email = "support@mapleafcapitals.com";
                     </h2>
                 </div>
                 <div class="mt-4 md:mt-0">
-                    <a href="#register" class="inline-flex items-center space-x-2 bg-slate-100 hover:bg-slate-200 text-blue-600 font-bold text-xs px-5 py-2.5 rounded-full transition duration-200 shadow-sm">
+                    <a href="signin" class="inline-flex items-center space-x-2 bg-slate-100 hover:bg-slate-200 text-blue-600 font-bold text-xs px-5 py-2.5 rounded-full transition duration-200 shadow-sm">
                         <span>Let's Get Started</span>
                         <span>→</span>
                     </a>
@@ -622,7 +622,7 @@ $email = "support@mapleafcapitals.com";
                     The easiest way to invest in the growth of Bitcoin & the Crypto Currency Sector
                 </p>
                 <div>
-                    <a href="#register" class="inline-flex items-center space-x-2 bg-[#F8B88B] hover:bg-[#f87171] text-white font-bold text-xs sm:text-sm px-7 py-3 rounded-full shadow-md transition duration-300 transform hover:-translate-y-0.5">
+                    <a href="signin" class="inline-flex items-center space-x-2 bg-[#F8B88B] hover:bg-[#f87171] text-white font-bold text-xs sm:text-sm px-7 py-3 rounded-full shadow-md transition duration-300 transform hover:-translate-y-0.5">
                         <span>Let's Get Started</span>
                         <span>→</span>
                     </a>
