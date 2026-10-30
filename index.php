@@ -707,7 +707,7 @@ $email = "support@mapleafcapitals.com";
             <p class="text-sm md:text-base font-extrabold text-[#3b82f6] mb-2">
                 Email support to request for the card
             </p>
-            <a href="mailto:support@Mapleaf Capitalcapitals.com" class="text-sm font-bold text-[#3b82f6] hover:underline hover:text-blue-700 transition">
+            <a href="mailto:support@mapleafcapitals.com" class="text-sm font-bold text-[#3b82f6] hover:underline hover:text-blue-700 transition">
                 Request Now
             </a>
 
